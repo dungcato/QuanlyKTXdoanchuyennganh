@@ -1,0 +1,1068 @@
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\QuanlyKTX.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\QuanlyKTX.AssemblyInfoInputs.cache
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\QuanlyKTX.AssemblyInfo.cs
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\QuanlyKTX.csproj.CoreCompileInputs.cache
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\QuanlyKTX.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\QuanlyKTX.RazorAssemblyInfo.cache
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\QuanlyKTX.RazorAssemblyInfo.cs
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\appsettings.json
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\QuanlyKTX.staticwebassets.runtime.json
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\QuanlyKTX.staticwebassets.endpoints.json
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\QuanlyKTX.exe
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\QuanlyKTX.deps.json
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\QuanlyKTX.runtimeconfig.json
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\QuanlyKTX.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\QuanlyKTX.pdb
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\scopedcss\bundle\QuanlyKTX.styles.css
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\scopedcss\projectbundle\QuanlyKTX.bundle.scp.css
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\6g43cu0nos-b9sayid5wm.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\3swrvieudi-61n19gt1b8.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\0fif0fbjl9-xtxxf3hu2r.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\mzt7tgzb9o-bqjiyaj88i.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\v4x1e3ps97-c2jlpeoesf.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\r8vxhlfd5t-erw9l3u2r3.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\ysdpu248di-aexeepp0ev.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\q2cfb100hi-d7shbmvgxk.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\gzkwue00p3-ausgxo2sd3.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\j5vxmqip31-k8d9w2qqmf.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\zum868v1kj-cosvhxvwiu.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\ier4pcgefe-ub07r2b239.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\vdxnxwi8hc-fvhpjtyr6v.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\5enudfdj7q-b7pk76d08c.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\xjnppgbbwz-fsbi9cje9m.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\aw00k9uzad-rzd6atqjts.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\mtbu74pdk7-ee0r1s7dh0.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\2swftbrn1k-dxx9fxp4il.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\raxdutqfad-jd9uben2k1.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\1j6o64hcel-khv3u5hwcm.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\efgsj9ibra-r4e9w2rdcm.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\idt995d0ft-lcd1t2u6c8.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\3gdzrdy2z1-c2oey78nd0.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\5o9gbcgnl2-tdbxkamptv.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\it5i97gptr-j5mq2jizvt.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\1z7wdg5n57-06098lyss8.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\2d6fo3pqwz-nvvlpmu67g.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\ab8xda53ay-s35ty4nyc5.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\5l8m6hczg2-pj5nd1wqec.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\hgh04idscy-46ein0sx1k.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\ar3radmzm1-v0zj4ognzu.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\rw5l6d262z-37tfw0ft22.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\po1ydyh042-hrwsygsryq.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\u2gllt31ba-pk9g2wxc8p.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\aadgcbqzuo-ft3s53vfgj.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\qyht3sq2y7-6cfz1n2cew.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\827wolu1sf-6pdc2jztkx.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\vcikeiypgy-493y06b0oq.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\fd6m6e02nt-iovd86k7lj.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\gmxhmn3f1k-vr1egmr9el.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\i382687ghz-kbrnm935zg.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\72vjc99hpi-jj8uyg4cgr.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\f4c075fv17-y7v9cxd14o.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\3oje7aaihy-notf2xhcfb.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\zw2zwhdt7f-h1s4sie4z3.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\boh5qnci2g-63fj8s7r0e.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\okyzh6xvvf-0j3bgjxly4.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\yrzbsc7sl4-47otxtyo56.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\o3f39rtz04-4v8eqarkd7.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\qncxdn8v6d-356vix0kms.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\lma25vtoto-83jwlth58m.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\4mb4tp02dt-mrlpezrjn3.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\skmp98vvr2-lzl9nlhx6b.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\lkbxu5bxd9-ag7o75518u.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\9gsvmf66xl-x0q3zqp4vz.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\x1duj063df-0i3buxo5is.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\esb2kb4fb0-o1o13a6vjx.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\mdw5du20ht-ttgo8qnofa.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\jwtxvhqa4f-2z0ns9nrw6.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\abom17oul4-muycvpuwrr.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\xrw049wtzz-87fc7y1x7t.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\07ve6hh96h-mlv21k5csn.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\oaqyongsmm-g95nmz2i6u.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\8cxo4ewyqz-g95nmz2i6u.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\staticwebassets.build.json.cache
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\QuanlyKTX.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\refint\QuanlyKTX.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\QuanlyKTX.pdb
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\QuanlyKTX.genruntimeconfig.cache
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\ref\QuanlyKTX.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Antiforgery.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authentication.BearerToken.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authentication.Cookies.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authentication.Core.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authentication.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authentication.OAuth.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authorization.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authorization.Policy.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Components.Authorization.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Components.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Components.Endpoints.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Components.Server.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.CookiePolicy.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Cors.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.DataProtection.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.DataProtection.Extensions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Diagnostics.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Diagnostics.HealthChecks.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.HostFiltering.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Hosting.Abstractions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Hosting.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Html.Abstractions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Http.Connections.Common.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Http.Connections.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Http.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Http.Results.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.HttpLogging.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.HttpOverrides.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.HttpsPolicy.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Identity.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Localization.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Localization.Routing.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Metadata.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.ApiExplorer.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.Core.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.Cors.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.Formatters.Xml.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.Localization.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.Razor.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.RazorPages.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.TagHelpers.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.OutputCaching.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.RateLimiting.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Razor.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Razor.Runtime.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.RequestDecompression.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.ResponseCaching.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.ResponseCompression.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Rewrite.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Routing.Abstractions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Routing.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.HttpSys.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.IIS.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.IISIntegration.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.Kestrel.Core.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.Kestrel.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.Kestrel.Transport.NamedPipes.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.Kestrel.Transport.Quic.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Session.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.SignalR.Core.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.SignalR.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.StaticAssets.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.StaticFiles.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.WebSockets.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.CSharp.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.CommandLine.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.Ini.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.KeyPerFile.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.Xml.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Diagnostics.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Diagnostics.HealthChecks.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Features.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.FileProviders.Composite.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Hosting.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Http.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Localization.Abstractions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Localization.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.Configuration.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.Console.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.Debug.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.EventLog.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.EventSource.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.TraceSource.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.ObjectPool.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Options.DataAnnotations.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Options.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Primitives.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.WebEncoders.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.JSInterop.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Net.Http.Headers.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.VisualBasic.Core.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.VisualBasic.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Win32.Primitives.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Win32.Registry.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\mscorlib.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\netstandard.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.AppContext.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Buffers.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Collections.Concurrent.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Collections.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Collections.Immutable.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Collections.NonGeneric.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Collections.Specialized.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.ComponentModel.Annotations.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.ComponentModel.DataAnnotations.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.ComponentModel.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.ComponentModel.EventBasedAsync.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.ComponentModel.Primitives.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.ComponentModel.TypeConverter.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Configuration.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Console.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Core.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Data.Common.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Data.DataSetExtensions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Data.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Diagnostics.Contracts.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Diagnostics.Debug.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Diagnostics.EventLog.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Diagnostics.Process.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Diagnostics.StackTrace.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Diagnostics.TextWriterTraceListener.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Diagnostics.Tools.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Diagnostics.TraceSource.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Diagnostics.Tracing.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Drawing.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Drawing.Primitives.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Dynamic.Runtime.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Formats.Asn1.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Formats.Tar.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Globalization.Calendars.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Globalization.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Globalization.Extensions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.Compression.Brotli.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.Compression.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.Compression.FileSystem.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.Compression.ZipFile.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.FileSystem.AccessControl.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.FileSystem.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.FileSystem.DriveInfo.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.FileSystem.Primitives.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.FileSystem.Watcher.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.IsolatedStorage.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.MemoryMappedFiles.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.Pipelines.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.Pipes.AccessControl.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.Pipes.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.UnmanagedMemoryStream.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Linq.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Linq.Expressions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Linq.Parallel.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Linq.Queryable.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Memory.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.Http.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.Http.Json.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.HttpListener.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.Mail.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.NameResolution.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.NetworkInformation.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.Ping.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.Primitives.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.Quic.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.Requests.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.Security.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.ServicePoint.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.Sockets.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.WebClient.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.WebHeaderCollection.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.WebProxy.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.WebSockets.Client.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.WebSockets.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Numerics.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Numerics.Vectors.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.ObjectModel.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Reflection.DispatchProxy.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Reflection.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Reflection.Emit.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Reflection.Emit.ILGeneration.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Reflection.Emit.Lightweight.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Reflection.Extensions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Reflection.Metadata.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Reflection.Primitives.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Reflection.TypeExtensions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Resources.Reader.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Resources.ResourceManager.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Resources.Writer.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.CompilerServices.VisualC.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.Extensions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.Handles.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.InteropServices.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.InteropServices.JavaScript.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.Intrinsics.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.Loader.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.Numerics.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.Serialization.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.Serialization.Formatters.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.Serialization.Json.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.Serialization.Primitives.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.Serialization.Xml.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.AccessControl.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.Claims.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.Cryptography.Algorithms.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.Cryptography.Cng.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.Cryptography.Csp.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.Cryptography.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.Cryptography.Encoding.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.Cryptography.OpenSsl.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.Cryptography.Primitives.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.Cryptography.Xml.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.Principal.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.Principal.Windows.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.SecureString.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.ServiceModel.Web.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.ServiceProcess.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Text.Encoding.CodePages.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Text.Encoding.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Text.Encoding.Extensions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Text.Encodings.Web.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Text.Json.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Text.RegularExpressions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Threading.Channels.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Threading.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Threading.Overlapped.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Threading.RateLimiting.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Threading.Tasks.Dataflow.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Threading.Tasks.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Threading.Tasks.Extensions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Threading.Tasks.Parallel.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Threading.Thread.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Threading.ThreadPool.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Threading.Timer.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Transactions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Transactions.Local.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.ValueTuple.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Web.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Web.HttpUtility.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Windows.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Xml.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Xml.Linq.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Xml.ReaderWriter.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Xml.Serialization.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Xml.XDocument.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Xml.XmlDocument.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Xml.XmlSerializer.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Xml.XPath.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Xml.XPath.XDocument.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\WindowsBase.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Azure.Core.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Azure.Identity.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\elFinder.NetCore.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Humanizer.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.Build.Locator.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.CodeAnalysis.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.Identity.Client.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.SqlServer.Server.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Mono.TextTemplating.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\SixLabors.ImageSharp.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\SlugGenerator.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.ClientModel.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.CodeDom.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.Composition.AttributedModel.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.Composition.Convention.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.Composition.Hosting.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.Composition.Runtime.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.Composition.TypedParts.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.Drawing.Common.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.Memory.Data.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.Runtime.Caching.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.Security.Permissions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.Windows.Extensions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\X.PagedList.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\X.PagedList.Mvc.Core.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\QuanlyKTX.csproj.AssemblyReference.cache
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\QuanlyKTX.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\QuanlyKTX.csproj.Up2Date
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\it7hui0m2h-bj5x6la72p.gz
+C:\Users\Dung cato\Desktop\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\y56iguoil5-6zmd91ypyg.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\appsettings.Development.json
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\appsettings.json
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\QuanlyKTX.staticwebassets.endpoints.json
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\QuanlyKTX.staticwebassets.runtime.json
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\QuanlyKTX.exe
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\QuanlyKTX.deps.json
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\QuanlyKTX.runtimeconfig.json
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\QuanlyKTX.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\QuanlyKTX.pdb
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Antiforgery.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authentication.BearerToken.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authentication.Cookies.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authentication.Core.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authentication.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authentication.OAuth.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authorization.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authorization.Policy.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Components.Authorization.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Components.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Components.Endpoints.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Components.Forms.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Components.Server.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Components.Web.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Connections.Abstractions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.CookiePolicy.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Cors.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Cryptography.Internal.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.DataProtection.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.DataProtection.Extensions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Diagnostics.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Diagnostics.HealthChecks.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.HostFiltering.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Hosting.Abstractions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Hosting.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Html.Abstractions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Http.Abstractions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Http.Connections.Common.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Http.Connections.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Http.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Http.Extensions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Http.Features.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Http.Results.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.HttpLogging.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.HttpOverrides.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.HttpsPolicy.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Identity.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Localization.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Localization.Routing.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Metadata.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.Abstractions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.ApiExplorer.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.Core.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.Cors.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.Formatters.Xml.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.Localization.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.Razor.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.RazorPages.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.TagHelpers.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.OutputCaching.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.RateLimiting.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Razor.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Razor.Runtime.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.RequestDecompression.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.ResponseCaching.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.ResponseCompression.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Rewrite.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Routing.Abstractions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Routing.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.HttpSys.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.IIS.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.IISIntegration.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.Kestrel.Core.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.Kestrel.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.Kestrel.Transport.NamedPipes.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.Kestrel.Transport.Quic.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Session.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.SignalR.Common.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.SignalR.Core.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.SignalR.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.StaticAssets.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.StaticFiles.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.WebSockets.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.AspNetCore.WebUtilities.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.CSharp.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Caching.Abstractions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Caching.Memory.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.Binder.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.CommandLine.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.FileExtensions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.Ini.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.Json.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.KeyPerFile.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.UserSecrets.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.Xml.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.DependencyInjection.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Diagnostics.Abstractions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Diagnostics.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Diagnostics.HealthChecks.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Features.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.FileProviders.Abstractions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.FileProviders.Composite.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.FileProviders.Embedded.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.FileProviders.Physical.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.FileSystemGlobbing.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Hosting.Abstractions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Hosting.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Http.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Identity.Core.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Identity.Stores.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Localization.Abstractions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Localization.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.Abstractions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.Configuration.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.Console.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.Debug.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.EventLog.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.EventSource.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.TraceSource.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.ObjectPool.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Options.DataAnnotations.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Options.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.Primitives.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Extensions.WebEncoders.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.JSInterop.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Net.Http.Headers.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.VisualBasic.Core.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.VisualBasic.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Win32.Primitives.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\Microsoft.Win32.Registry.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\mscorlib.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\netstandard.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.AppContext.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Buffers.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Collections.Concurrent.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Collections.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Collections.Immutable.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Collections.NonGeneric.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Collections.Specialized.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.ComponentModel.Annotations.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.ComponentModel.DataAnnotations.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.ComponentModel.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.ComponentModel.EventBasedAsync.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.ComponentModel.Primitives.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.ComponentModel.TypeConverter.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Configuration.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Console.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Core.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Data.Common.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Data.DataSetExtensions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Data.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Diagnostics.Contracts.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Diagnostics.Debug.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Diagnostics.DiagnosticSource.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Diagnostics.EventLog.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Diagnostics.FileVersionInfo.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Diagnostics.Process.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Diagnostics.StackTrace.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Diagnostics.TextWriterTraceListener.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Diagnostics.Tools.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Diagnostics.TraceSource.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Diagnostics.Tracing.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Drawing.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Drawing.Primitives.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Dynamic.Runtime.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Formats.Asn1.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Formats.Tar.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Globalization.Calendars.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Globalization.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Globalization.Extensions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.Compression.Brotli.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.Compression.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.Compression.FileSystem.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.Compression.ZipFile.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.FileSystem.AccessControl.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.FileSystem.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.FileSystem.DriveInfo.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.FileSystem.Primitives.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.FileSystem.Watcher.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.IsolatedStorage.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.MemoryMappedFiles.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.Pipelines.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.Pipes.AccessControl.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.Pipes.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.IO.UnmanagedMemoryStream.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Linq.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Linq.Expressions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Linq.Parallel.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Linq.Queryable.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Memory.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.Http.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.Http.Json.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.HttpListener.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.Mail.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.NameResolution.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.NetworkInformation.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.Ping.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.Primitives.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.Quic.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.Requests.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.Security.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.ServicePoint.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.Sockets.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.WebClient.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.WebHeaderCollection.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.WebProxy.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.WebSockets.Client.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Net.WebSockets.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Numerics.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Numerics.Vectors.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.ObjectModel.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Reflection.DispatchProxy.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Reflection.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Reflection.Emit.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Reflection.Emit.ILGeneration.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Reflection.Emit.Lightweight.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Reflection.Extensions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Reflection.Metadata.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Reflection.Primitives.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Reflection.TypeExtensions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Resources.Reader.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Resources.ResourceManager.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Resources.Writer.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.CompilerServices.Unsafe.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.CompilerServices.VisualC.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.Extensions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.Handles.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.InteropServices.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.InteropServices.JavaScript.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.Intrinsics.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.Loader.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.Numerics.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.Serialization.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.Serialization.Formatters.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.Serialization.Json.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.Serialization.Primitives.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Runtime.Serialization.Xml.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.AccessControl.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.Claims.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.Cryptography.Algorithms.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.Cryptography.Cng.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.Cryptography.Csp.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.Cryptography.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.Cryptography.Encoding.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.Cryptography.OpenSsl.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.Cryptography.Primitives.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.Cryptography.X509Certificates.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.Cryptography.Xml.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.Principal.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.Principal.Windows.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Security.SecureString.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.ServiceModel.Web.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.ServiceProcess.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Text.Encoding.CodePages.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Text.Encoding.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Text.Encoding.Extensions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Text.Encodings.Web.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Text.Json.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Text.RegularExpressions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Threading.Channels.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Threading.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Threading.Overlapped.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Threading.RateLimiting.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Threading.Tasks.Dataflow.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Threading.Tasks.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Threading.Tasks.Extensions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Threading.Tasks.Parallel.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Threading.Thread.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Threading.ThreadPool.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Threading.Timer.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Transactions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Transactions.Local.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.ValueTuple.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Web.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Web.HttpUtility.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Windows.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Xml.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Xml.Linq.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Xml.ReaderWriter.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Xml.Serialization.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Xml.XDocument.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Xml.XmlDocument.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Xml.XmlSerializer.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Xml.XPath.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\System.Xml.XPath.XDocument.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\refs\WindowsBase.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Azure.Core.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Azure.Identity.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\elFinder.NetCore.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Humanizer.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.AspNetCore.Razor.Language.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.Build.Locator.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.CodeAnalysis.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.CodeAnalysis.CSharp.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.CodeAnalysis.Razor.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.Data.SqlClient.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.Identity.Client.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.Identity.Client.Extensions.Msal.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.SqlServer.Server.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Microsoft.Win32.SystemEvents.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\Mono.TextTemplating.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\SixLabors.ImageSharp.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\SlugGenerator.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.ClientModel.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.CodeDom.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.Composition.AttributedModel.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.Composition.Convention.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.Composition.Hosting.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.Composition.Runtime.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.Composition.TypedParts.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.Drawing.Common.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.Memory.Data.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.Runtime.Caching.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.Security.Permissions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\System.Windows.Extensions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\X.PagedList.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\X.PagedList.Mvc.Core.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\QuanlyKTX.csproj.AssemblyReference.cache
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\rpswa.dswa.cache.json
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\QuanlyKTX.GeneratedMSBuildEditorConfig.editorconfig
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\QuanlyKTX.AssemblyInfoInputs.cache
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\QuanlyKTX.AssemblyInfo.cs
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\QuanlyKTX.csproj.CoreCompileInputs.cache
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\QuanlyKTX.MvcApplicationPartsAssemblyInfo.cs
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\QuanlyKTX.MvcApplicationPartsAssemblyInfo.cache
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\QuanlyKTX.RazorAssemblyInfo.cache
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\QuanlyKTX.RazorAssemblyInfo.cs
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\rjimswa.dswa.cache.json
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\scopedcss\bundle\QuanlyKTX.styles.css
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\scopedcss\projectbundle\QuanlyKTX.bundle.scp.css
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\it7hui0m2h-bj5x6la72p.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\6g43cu0nos-b9sayid5wm.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\3swrvieudi-61n19gt1b8.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\0fif0fbjl9-xtxxf3hu2r.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\mzt7tgzb9o-bqjiyaj88i.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\v4x1e3ps97-c2jlpeoesf.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\r8vxhlfd5t-erw9l3u2r3.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\ysdpu248di-aexeepp0ev.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\q2cfb100hi-d7shbmvgxk.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\gzkwue00p3-ausgxo2sd3.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\j5vxmqip31-k8d9w2qqmf.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\zum868v1kj-cosvhxvwiu.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\ier4pcgefe-ub07r2b239.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\vdxnxwi8hc-fvhpjtyr6v.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\5enudfdj7q-b7pk76d08c.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\xjnppgbbwz-fsbi9cje9m.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\aw00k9uzad-rzd6atqjts.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\mtbu74pdk7-ee0r1s7dh0.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\2swftbrn1k-dxx9fxp4il.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\raxdutqfad-jd9uben2k1.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\1j6o64hcel-khv3u5hwcm.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\efgsj9ibra-r4e9w2rdcm.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\idt995d0ft-lcd1t2u6c8.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\3gdzrdy2z1-c2oey78nd0.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\5o9gbcgnl2-tdbxkamptv.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\it5i97gptr-j5mq2jizvt.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\1z7wdg5n57-06098lyss8.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\2d6fo3pqwz-nvvlpmu67g.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\ab8xda53ay-s35ty4nyc5.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\5l8m6hczg2-pj5nd1wqec.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\hgh04idscy-46ein0sx1k.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\ar3radmzm1-v0zj4ognzu.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\rw5l6d262z-37tfw0ft22.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\po1ydyh042-hrwsygsryq.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\u2gllt31ba-pk9g2wxc8p.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\aadgcbqzuo-ft3s53vfgj.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\qyht3sq2y7-6cfz1n2cew.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\827wolu1sf-6pdc2jztkx.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\vcikeiypgy-493y06b0oq.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\fd6m6e02nt-iovd86k7lj.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\gmxhmn3f1k-vr1egmr9el.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\i382687ghz-kbrnm935zg.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\72vjc99hpi-jj8uyg4cgr.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\f4c075fv17-y7v9cxd14o.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\3oje7aaihy-notf2xhcfb.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\zw2zwhdt7f-h1s4sie4z3.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\boh5qnci2g-63fj8s7r0e.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\okyzh6xvvf-0j3bgjxly4.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\yrzbsc7sl4-47otxtyo56.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\o3f39rtz04-4v8eqarkd7.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\qncxdn8v6d-356vix0kms.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\lma25vtoto-83jwlth58m.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\4mb4tp02dt-mrlpezrjn3.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\skmp98vvr2-lzl9nlhx6b.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\lkbxu5bxd9-ag7o75518u.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\9gsvmf66xl-x0q3zqp4vz.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\x1duj063df-0i3buxo5is.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\esb2kb4fb0-o1o13a6vjx.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\mdw5du20ht-ttgo8qnofa.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\jwtxvhqa4f-2z0ns9nrw6.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\abom17oul4-muycvpuwrr.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\xrw049wtzz-87fc7y1x7t.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\07ve6hh96h-mlv21k5csn.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\oaqyongsmm-g95nmz2i6u.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\8cxo4ewyqz-g95nmz2i6u.gz
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\staticwebassets.build.json
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\staticwebassets.build.json.cache
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\staticwebassets.development.json
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\QuanlyKTX.csproj.Up2Date
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\QuanlyKTX.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\refint\QuanlyKTX.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\QuanlyKTX.pdb
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\QuanlyKTX.genruntimeconfig.cache
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\ref\QuanlyKTX.dll
+E:\QuanlyKTX\QuanlyKTX\QuanlyKTX\obj\Debug\net9.0\compressed\y56iguoil5-dg7xrxjqtw.gz

@@ -1,0 +1,317 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\QuanlyKTX\\QuanlyKTX\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|e:\\quanlyktx\\quanlyktx\\quanlyktx\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|solutionrelative:quanlyktx\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|e:\\quanlyktx\\quanlyktx\\quanlyktx\\views\\phananh\\theodoi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|solutionrelative:quanlyktx\\views\\phananh\\theodoi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|e:\\quanlyktx\\quanlyktx\\quanlyktx\\controllers\\phananhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|solutionrelative:quanlyktx\\controllers\\phananhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|e:\\quanlyktx\\quanlyktx\\quanlyktx\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|solutionrelative:quanlyktx\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|e:\\quanlyktx\\quanlyktx\\quanlyktx\\views\\phananh\\guiphananh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|solutionrelative:quanlyktx\\views\\phananh\\guiphananh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|e:\\quanlyktx\\quanlyktx\\quanlyktx\\views\\thongbao\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|solutionrelative:quanlyktx\\views\\thongbao\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|e:\\quanlyktx\\quanlyktx\\quanlyktx\\controllers\\thongbaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|solutionrelative:quanlyktx\\controllers\\thongbaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|e:\\quanlyktx\\quanlyktx\\quanlyktx\\views\\giaodich\\hoadon.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|solutionrelative:quanlyktx\\views\\giaodich\\hoadon.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|e:\\quanlyktx\\quanlyktx\\quanlyktx\\controllers\\giaodichcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|solutionrelative:quanlyktx\\controllers\\giaodichcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|e:\\quanlyktx\\quanlyktx\\quanlyktx\\views\\phong\\dangkychuyenphong.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|solutionrelative:quanlyktx\\views\\phong\\dangkychuyenphong.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|e:\\quanlyktx\\quanlyktx\\quanlyktx\\controllers\\phongcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|solutionrelative:quanlyktx\\controllers\\phongcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|e:\\quanlyktx\\quanlyktx\\quanlyktx\\views\\phong\\dangkythue.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|solutionrelative:quanlyktx\\views\\phong\\dangkythue.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|e:\\quanlyktx\\quanlyktx\\quanlyktx\\controllers\\sinhviencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|solutionrelative:quanlyktx\\controllers\\sinhviencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|e:\\quanlyktx\\quanlyktx\\quanlyktx\\views\\sinhvien\\hoso.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|solutionrelative:quanlyktx\\views\\sinhvien\\hoso.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|e:\\quanlyktx\\quanlyktx\\quanlyktx\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|solutionrelative:quanlyktx\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|e:\\quanlyktx\\quanlyktx\\quanlyktx\\views\\home\\thongtincanhan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|solutionrelative:quanlyktx\\views\\home\\thongtincanhan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|e:\\quanlyktx\\quanlyktx\\quanlyktx\\wwwroot\\css\\index-page.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|solutionrelative:quanlyktx\\wwwroot\\css\\index-page.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|e:\\quanlyktx\\quanlyktx\\quanlyktx\\quanlyktx.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FC585928-0CB3-42CF-B4CB-5E3230EE73E6}|QuanlyKTX\\QuanlyKTX.csproj|solutionrelative:quanlyktx\\quanlyktx.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TheoDoi.cshtml",
+              "DocumentMoniker": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Views\\PhanAnh\\TheoDoi.cshtml",
+              "RelativeDocumentMoniker": "QuanlyKTX\\Views\\PhanAnh\\TheoDoi.cshtml",
+              "ToolTip": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Views\\PhanAnh\\TheoDoi.cshtml",
+              "RelativeToolTip": "QuanlyKTX\\Views\\PhanAnh\\TheoDoi.cshtml",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAuwH8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-24T14:52:18.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GiaoDichController.cs",
+              "DocumentMoniker": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Controllers\\GiaoDichController.cs",
+              "RelativeDocumentMoniker": "QuanlyKTX\\Controllers\\GiaoDichController.cs",
+              "ToolTip": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Controllers\\GiaoDichController.cs",
+              "RelativeToolTip": "QuanlyKTX\\Controllers\\GiaoDichController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T10:03:59.057Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SinhVienController.cs",
+              "DocumentMoniker": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Controllers\\SinhVienController.cs",
+              "RelativeDocumentMoniker": "QuanlyKTX\\Controllers\\SinhVienController.cs",
+              "ToolTip": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Controllers\\SinhVienController.cs",
+              "RelativeToolTip": "QuanlyKTX\\Controllers\\SinhVienController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T14:42:17.97Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "HoSo.cshtml",
+              "DocumentMoniker": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Views\\SinhVien\\HoSo.cshtml",
+              "RelativeDocumentMoniker": "QuanlyKTX\\Views\\SinhVien\\HoSo.cshtml",
+              "ToolTip": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Views\\SinhVien\\HoSo.cshtml",
+              "RelativeToolTip": "QuanlyKTX\\Views\\SinhVien\\HoSo.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJ8AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-09T14:35:38.367Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ThongTinCaNhan.cshtml",
+              "DocumentMoniker": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Views\\Home\\ThongTinCaNhan.cshtml",
+              "RelativeDocumentMoniker": "QuanlyKTX\\Views\\Home\\ThongTinCaNhan.cshtml",
+              "ToolTip": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Views\\Home\\ThongTinCaNhan.cshtml",
+              "RelativeToolTip": "QuanlyKTX\\Views\\Home\\ThongTinCaNhan.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-09T14:14:16.833Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "QuanlyKTX\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "QuanlyKTX\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAwwD8AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-09T09:23:26.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "style.css",
+              "DocumentMoniker": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\wwwroot\\css\\style.css",
+              "RelativeDocumentMoniker": "QuanlyKTX\\wwwroot\\css\\style.css",
+              "ToolTip": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\wwwroot\\css\\style.css",
+              "RelativeToolTip": "QuanlyKTX\\wwwroot\\css\\style.css",
+              "ViewState": "AgIAAIsKAAAAAAAAAAAmwJoKAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-04-09T14:00:19.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PhanAnhController.cs",
+              "DocumentMoniker": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Controllers\\PhanAnhController.cs",
+              "RelativeDocumentMoniker": "QuanlyKTX\\Controllers\\PhanAnhController.cs",
+              "ToolTip": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Controllers\\PhanAnhController.cs",
+              "RelativeToolTip": "QuanlyKTX\\Controllers\\PhanAnhController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAuwCcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T14:13:20.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HoaDon.cshtml",
+              "DocumentMoniker": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Views\\GiaoDich\\HoaDon.cshtml",
+              "RelativeDocumentMoniker": "QuanlyKTX\\Views\\GiaoDich\\HoaDon.cshtml",
+              "ToolTip": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Views\\GiaoDich\\HoaDon.cshtml",
+              "RelativeToolTip": "QuanlyKTX\\Views\\GiaoDich\\HoaDon.cshtml",
+              "ViewState": "AgIAAMYAAAAAAAAAAAAwwN0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-16T10:07:47.66Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GuiPhanAnh.cshtml",
+              "DocumentMoniker": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Views\\PhanAnh\\GuiPhanAnh.cshtml",
+              "RelativeDocumentMoniker": "QuanlyKTX\\Views\\PhanAnh\\GuiPhanAnh.cshtml",
+              "ToolTip": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Views\\PhanAnh\\GuiPhanAnh.cshtml",
+              "RelativeToolTip": "QuanlyKTX\\Views\\PhanAnh\\GuiPhanAnh.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-24T14:17:40.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Views\\ThongBao\\Index.cshtml",
+              "RelativeDocumentMoniker": "QuanlyKTX\\Views\\ThongBao\\Index.cshtml",
+              "ToolTip": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Views\\ThongBao\\Index.cshtml",
+              "RelativeToolTip": "QuanlyKTX\\Views\\ThongBao\\Index.cshtml",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAuwIwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-16T10:18:03.215Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ThongBaoController.cs",
+              "DocumentMoniker": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Controllers\\ThongBaoController.cs",
+              "RelativeDocumentMoniker": "QuanlyKTX\\Controllers\\ThongBaoController.cs",
+              "ToolTip": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Controllers\\ThongBaoController.cs",
+              "RelativeToolTip": "QuanlyKTX\\Controllers\\ThongBaoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T10:15:56.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "index-page.css",
+              "DocumentMoniker": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\wwwroot\\css\\index-page.css",
+              "RelativeDocumentMoniker": "QuanlyKTX\\wwwroot\\css\\index-page.css",
+              "ToolTip": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\wwwroot\\css\\index-page.css",
+              "RelativeToolTip": "QuanlyKTX\\wwwroot\\css\\index-page.css",
+              "ViewState": "AgIAAN4BAAAAAAAAAAAqwOwBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-04-09T14:03:22.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DangKyChuyenPhong.cshtml",
+              "DocumentMoniker": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Views\\Phong\\DangKyChuyenPhong.cshtml",
+              "RelativeDocumentMoniker": "QuanlyKTX\\Views\\Phong\\DangKyChuyenPhong.cshtml",
+              "ToolTip": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Views\\Phong\\DangKyChuyenPhong.cshtml",
+              "RelativeToolTip": "QuanlyKTX\\Views\\Phong\\DangKyChuyenPhong.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-16T09:27:12.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PhongController.cs",
+              "DocumentMoniker": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Controllers\\PhongController.cs",
+              "RelativeDocumentMoniker": "QuanlyKTX\\Controllers\\PhongController.cs",
+              "ToolTip": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Controllers\\PhongController.cs",
+              "RelativeToolTip": "QuanlyKTX\\Controllers\\PhongController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwDYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T03:39:51.881Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DangKyThue.cshtml",
+              "DocumentMoniker": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Views\\Phong\\DangKyThue.cshtml",
+              "RelativeDocumentMoniker": "QuanlyKTX\\Views\\Phong\\DangKyThue.cshtml",
+              "ToolTip": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Views\\Phong\\DangKyThue.cshtml",
+              "RelativeToolTip": "QuanlyKTX\\Views\\Phong\\DangKyThue.cshtml",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAuwJMAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-11T03:34:55.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "QuanlyKTX\\Views\\Home\\Index.cshtml",
+              "ToolTip": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "QuanlyKTX\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAAABQBAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-09T10:07:19.474Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "QuanlyKTX.csproj",
+              "DocumentMoniker": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX.csproj",
+              "RelativeDocumentMoniker": "QuanlyKTX\\QuanlyKTX.csproj",
+              "ToolTip": "E:\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX.csproj",
+              "RelativeToolTip": "QuanlyKTX\\QuanlyKTX.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-09T09:40:56.087Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

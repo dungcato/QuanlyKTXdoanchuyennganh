@@ -1,0 +1,184 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Hồ sơ cá nhân";
+
+    // [BACKEND TƯƠNG LAI]
+    // var sinhVien = Model.SinhVien;
+}
+
+@section Styles {
+    <!-- Link CSS riêng của trang Profile -->
+    <link rel="stylesheet" href="~/css/profile-page.css" />
+}
+
+<div class="container-fluid p-0">
+
+    <!-- ==========================================
+         PHẦN 1: ẢNH BÌA & AVATAR
+         ========================================== -->
+    <div class="profile-header-card fade-in-up">
+        <div class="profile-cover"></div>
+        <div class="profile-avatar-wrapper">
+            <!-- [BACKEND] Chèn link ảnh thật của sinh viên vào src -->
+            <img src="https://ui-avatars.com/api/?name=Lê+Anh+Dũng&background=1e3c72&color=fff&size=200&bold=true" alt="Avatar">
+            <div class="edit-avatar-btn" title="Cập nhật ảnh đại diện">
+                <i data-lucide="camera" style="width: 18px; height: 18px;"></i>
+            </div>
+        </div>
+        <div class="profile-name-section">
+            <!-- [BACKEND] @@Model.HoTen -->
+            <h2>Lê Anh Dũng</h2>
+            <p>
+                <!-- [BACKEND] @@Model.NganhHoc -->
+                Sinh viên khoa Công nghệ Thông tin
+                <span class="status-badge status-active" style="margin-left: 10px;">
+                    <i data-lucide="check-circle-2" style="width: 14px; height: 14px;"></i> Đang lưu trú
+                </span>
+            </p>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         PHẦN 2: THÔNG TIN CHI TIẾT (CHIA 2 CỘT)
+         ========================================== -->
+    <div class="profile-layout fade-in-up delay-1">
+
+        <!-- CỘT TRÁI: BẢNG TÓM TẮT & THAO TÁC -->
+        <div class="profile-sidebar">
+            <div class="info-card">
+                <div class="info-card-header">
+                    <div class="header-icon-box"><i data-lucide="shield"></i></div>
+                    <h3>Tài khoản</h3>
+                </div>
+
+                <div style="margin-bottom: 25px;">
+                    <div class="data-label"><i data-lucide="fingerprint" style="width: 16px;"></i> Mã Sinh Viên</div>
+                    <!-- [BACKEND] @@Model.MaSV -->
+                    <div class="data-value" style="margin-top: 5px; color: #3b82f6;">235748020110069</div>
+                </div>
+
+                <div style="margin-bottom: 25px;">
+                    <div class="data-label"><i data-lucide="credit-card" style="width: 16px;"></i> Căn cước công dân</div>
+                    <!-- [BACKEND] @@Model.CCCD -->
+                    <div class="data-value" style="margin-top: 5px;">040203123456</div>
+                </div>
+
+                <!-- Nút thao tác -->
+                <button class="btn-primary-custom">
+                    <i data-lucide="pencil-line" style="width: 18px;"></i> Cập nhật thông tin
+                </button>
+                <button class="btn-outline-custom">
+                    <i data-lucide="key-round" style="width: 18px;"></i> Đổi mật khẩu
+                </button>
+            </div>
+        </div>
+
+        <!-- CỘT PHẢI: THÔNG TIN CHI TIẾT -->
+        <div class="profile-main-content">
+
+            <!-- THẺ 1: THÔNG TIN CƠ BẢN -->
+            <div class="info-card">
+                <div class="info-card-header">
+                    <div class="header-icon-box" style="background: #fef2f2; color: #ef4444;"><i data-lucide="user"></i></div>
+                    <h3>Thông tin cơ bản</h3>
+                </div>
+
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="data-label">Ngày sinh</span>
+                        <!-- [BACKEND] @@Model.NgaySinh.ToString("dd/MM/yyyy") -->
+                        <span class="data-value">15/08/2004</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="data-label">Giới tính</span>
+                        <!-- [BACKEND] @@Model.GioiTinh -->
+                        <span class="data-value">Nam</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="data-label">Lớp sinh hoạt</span>
+                        <!-- [BACKEND] @@Model.Lop -->
+                        <span class="data-value">64K CNTT1</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="data-label">Khóa học</span>
+                        <!-- [BACKEND] @@Model.KhoaHoc -->
+                        <span class="data-value">K64 (2023 - 2027)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- THẺ 2: THÔNG TIN LIÊN HỆ -->
+            <div class="info-card">
+                <div class="info-card-header">
+                    <div class="header-icon-box" style="background: #fefce8; color: #eab308;"><i data-lucide="contact"></i></div>
+                    <h3>Thông tin liên lạc</h3>
+                </div>
+
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="data-label">Số điện thoại</span>
+                        <!-- [BACKEND] @@Model.SDT -->
+                        <span class="data-value">0987 654 321</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="data-label">Email trường cấp</span>
+                        <!-- [BACKEND] @@Model.Email -->
+                        <span class="data-value">235748020110069@student.vinhuni.edu.vn</span>
+                    </div>
+                    <div class="data-item" style="grid-column: 1 / -1;">
+                        <!-- Dòng này chiếm cả 2 cột -->
+                        <span class="data-label">Địa chỉ thường trú</span>
+                        <!-- [BACKEND] @@Model.DiaChi -->
+                        <span class="data-value">Phường Bến Thủy, Thành phố Vinh, Nghệ An</span>
+                    </div>
+                    <div class="data-item" style="grid-column: 1 / -1;">
+                        <span class="data-label">Liên hệ khẩn cấp (Phụ huynh)</span>
+                        <!-- [BACKEND] @@Model.SDTPhuHuynh -->
+                        <span class="data-value">Ông Lê Anh A - 0912 345 678</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- THẺ 3: THÔNG TIN LƯU TRÚ KTX -->
+            <div class="info-card fade-in-up delay-2">
+                <div class="info-card-header">
+                    <div class="header-icon-box" style="background: #ecfdf5; color: #10b981;"><i data-lucide="building"></i></div>
+                    <h3>Chi tiết Lưu trú KTX</h3>
+                </div>
+
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="data-label">Khu vực</span>
+                        <!-- [BACKEND] @@Model.KhuNha -->
+                        <span class="data-value">Khu A (KTX Nam)</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="data-label">Phòng / Giường</span>
+                        <!-- [BACKEND] @@Model.Phong - Giường @@Model.Giuong -->
+                        <span class="data-value">Phòng 402 - Giường số 03</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="data-label">Ngày bắt đầu hợp đồng</span>
+                        <!-- [BACKEND] @@Model.NgayBatDauHopDong -->
+                        <span class="data-value">05/09/2023</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="data-label">Ngày kết thúc hợp đồng</span>
+                        <!-- [BACKEND] @@Model.NgayKetThucHopDong -->
+                        <span class="data-value">30/06/2024</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Khởi tạo lại icon phòng khi load trang
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+    </script>
+}

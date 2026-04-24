@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Cổng KTX Đại học Vinh</title>
+
+    <script src="https://unpkg.com/lucide/dist/umd/lucide.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="~/css/style.css" />
+
+    @RenderSection("Styles", required: false)
+</head>
+
+<body>
+    <div class="app-container">
+        <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>CỔNG SINH VIÊN</h2>
+                <p>KTX Thông Minh ĐH Vinh</p>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/Home/Index" class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "Home" ? "active" : "")">
+                        <i data-lucide="home"></i> Trang chủ
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/SinhVien/HoSo" class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "SinhVien" ? "active" : "")">
+                        <i data-lucide="user"></i> Hồ sơ cá nhân
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/Phong/DangKyThue" class="nav-link @(ViewContext.RouteData.Values["Action"]?.ToString() == "DangKyThue" ? "active" : "")">
+                        <i data-lucide="key"></i> Đăng ký thuê phòng
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/Phong/DangKyChuyenPhong" class="nav-link @(ViewContext.RouteData.Values["Action"]?.ToString() == "XinChuyen" ? "active" : "")">
+                        <i data-lucide="arrow-right-left"></i> Xin chuyển phòng
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/GiaoDich/HoaDon" class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "GiaoDich" ? "active" : "")">
+                        <i data-lucide="file-text"></i> Quản lý hóa đơn
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/ThongBao/Index" class="nav-link @(ViewContext.RouteData.Values["Action"]?.ToString() == "ThongBa o" ? "active" : "")">
+                        <i data-lucide="bell"></i> Bảng thông báo
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/PhanAnh/GuiPhanAnh" class="nav-link @(ViewContext.RouteData.Values["Action"]?.ToString() == "GuiPhanAnh" ? "active" : "")">
+                        <i data-lucide="message-square"></i> Gửi phản ánh
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/PhanAnh/TheoDoi" class="nav-link @(ViewContext.RouteData.Values["Action"]?.ToString() == "TheoDoiPhanAnh" ? "active" : "")">
+                        <i data-lucide="search"></i> Theo dõi phản ánh
+                    </a>
+                </li>
+                
+                <li class="nav-item" style="margin-top: 30px; border-top: 1px solid rgba(255,255,255,0.1);">
+                    <a href="/Auth/DangXuat" class="nav-link text-danger">
+                        <i data-lucide="log-out"></i> Đăng xuất
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="top-header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menu-toggle">
+                        <i data-lucide="menu"></i>
+                    </button>
+                    <div class="search-bar">
+                        <i data-lucide="search" style="width: 18px; height: 18px; color: #64748b;"></i>
+                        <input type="text" placeholder="Tìm kiếm thông tin...">
+                    </div>
+                </div>
+
+                <div class="header-right">
+                    <div class="notification-bell">
+                        <i data-lucide="bell" style="width: 22px; height: 22px; color: #475569;"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="user-profile">
+                        <div class="user-info">
+                            <span class="user-name">Lê Anh Dũng</span>
+                            <span class="user-role">Sinh viên K64</span>
+                        </div>
+                        <img src="https://ui-avatars.com/api/?name=Lê+Anh+Dũng&background=1e3c72&color=fff&bold=true" alt="Avatar">
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                @RenderBody()
+            </div>
+
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4><i data-lucide="building-2" style="width: 20px; height: 20px;"></i> Ban Quản Lý KTX</h4>
+                        <p><i data-lucide="map-pin" style="width: 16px; height: 16px;"></i> 182 Lê Duẩn, TP. Vinh, Nghệ An</p>
+                        <p><i data-lucide="phone" style="width: 16px; height: 16px;"></i> Hotline: 0123 456 789</p>
+                        <p><i data-lucide="mail" style="width: 16px; height: 16px;"></i> bqlktx@vinhuni.edu.vn</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4><i data-lucide="link" style="width: 20px; height: 20px;"></i> Liên kết nhanh</h4>
+                        <a href="#"><i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i> Cổng thông tin Đại học Vinh</a>
+                        <a href="#"><i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i> Quy chế & Nội quy KTX</a>
+                        <a href="#"><i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i> Trung tâm hỗ trợ sinh viên</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4><i data-lucide="clock" style="width: 20px; height: 20px;"></i> Giờ làm việc</h4>
+                        <p><strong>Hành chính:</strong> Thứ 2 - Thứ 6 (07:30 - 17:00)</p>
+                        <p><strong>Trực KTX:</strong> 24/7 (Có nhân viên tại sảnh)</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    &copy; 2026 Bản quyền thuộc về Nhóm 2 - Đồ án Quản lý KTX Thông Minh - Đại học Vinh
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+
+            const menuToggle = document.getElementById("menu-toggle");
+            const sidebar = document.getElementById("sidebar");
+            const overlay = document.getElementById("sidebar-overlay");
+
+            if (menuToggle && sidebar && overlay) {
+                menuToggle.addEventListener("click", () => {
+                    sidebar.classList.toggle("active");
+                    overlay.classList.toggle("active");
+                });
+
+                overlay.addEventListener("click", () => {
+                    sidebar.classList.remove("active");
+                    overlay.classList.remove("active");
+                });
+            }
+        });
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

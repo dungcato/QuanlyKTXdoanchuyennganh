@@ -1,0 +1,131 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Gửi Phản Ánh";
+}
+
+<div class="container-fluid p-0">
+
+    <section class="page-header dashboard-fade-in" style="background: white; border-radius: 20px; padding: 30px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); display: flex; align-items: center; gap: 20px;">
+        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #ff9a8b 0%, #ff6a88 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white;">
+            <i data-lucide="alert-octagon" style="width: 32px; height: 32px;"></i>
+        </div>
+        <div>
+            <h1 style="font-size: 2em; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 5px; font-weight: 700;">Gửi Phản Ánh</h1>
+            <p style="color: #64748b; margin: 0;">Mô tả sự cố bạn đang gặp phải, BQL sẽ hỗ trợ sớm nhất.</p>
+        </div>
+    </section>
+
+    <section class="quick-select-container dashboard-fade-in delay-1">
+        <h3><i data-lucide="zap" style="color: #eab308;"></i> Vấn đề thường gặp?</h3>
+        <div class="quick-tags">
+            <button type="button" class="quick-tag"><i data-lucide="lightbulb-off" style="width: 16px;"></i> Hỏng bóng đèn</button>
+            <button type="button" class="quick-tag"><i data-lucide="shower-head" style="width: 16px;"></i> Vòi nước rò rỉ</button>
+            <button type="button" class="quick-tag"><i data-lucide="wifi-off" style="width: 16px;"></i> Wifi yếu / Mất mạng</button>
+            <button type="button" class="quick-tag"><i data-lucide="plug-zap" style="width: 16px;"></i> Ổ điện chập chờn</button>
+            <button type="button" class="quick-tag"><i data-lucide="wind" style="width: 16px;"></i> Quạt/Điều hòa hỏng</button>
+        </div>
+    </section>
+
+    <section class="form-card dashboard-fade-in delay-2">
+        <form action="/PhanAnh/XuLyPhanAnh" method="POST" enctype="multipart/form-data">
+            <div class="form-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
+
+                <div class="form-group">
+                    <label class="form-label" style="font-size: 14px; font-weight: 600; color: #1e293b; margin-bottom: 8px;">Tiêu đề</label>
+                    <div class="input-with-icon">
+                        <i data-lucide="type"></i>
+                        <input type="text" class="form-input" id="titleInput" name="TieuDe" placeholder="Ví dụ: Hỏng bóng đèn bàn học" required />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" style="font-size: 14px; font-weight: 600; color: #1e293b; margin-bottom: 8px;">Phân loại sự cố</label>
+                    <div class="input-with-icon">
+                        <i data-lucide="list-checks"></i>
+                        <select class="form-input form-select" name="LoaiSuCo" required>
+                            <option value="">-- Chọn loại sự cố --</option>
+                            <option value="Điện">Hỏng hóc về Điện</option>
+                            <option value="Nước">Hỏng hóc về Nước</option>
+                            <option value="Thiết bị">Hỏng thiết bị (Giường, tủ, bàn...)</option>
+                            <option value="Vệ sinh">Vấn đề Vệ sinh chung</option>
+                            <option value="An ninh">Vấn đề An ninh</option>
+                            <option value="Khác">Khác</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group" style="grid-column: 1 / -1;">
+                    <label class="form-label" style="font-size: 14px; font-weight: 600; color: #1e293b; margin-bottom: 8px;">Mô tả chi tiết</label>
+                    <textarea class="form-textarea" name="NoiDung" placeholder="Mô tả rõ ràng nhất có thể về sự cố... (Vị trí, thời điểm, tình trạng...)" required style="min-height: 120px;"></textarea>
+                </div>
+
+                <div class="form-group" style="grid-column: 1 / -1;">
+                    <label class="form-label" style="font-size: 14px; font-weight: 600; color: #1e293b; margin-bottom: 8px;">Đính kèm hình ảnh (Nếu có)</label>
+                    <div class="upload-box">
+                        <input type="file" name="HinhAnh" accept="image/png, image/jpeg" id="fileUpload" />
+                        <div class="upload-icon"><i data-lucide="upload-cloud" style="width: 30px; height: 30px;"></i></div>
+                        <p id="fileNameDisplay">Kéo thả ảnh vào đây, hoặc <strong>nhấn để chọn ảnh</strong></p>
+                        <span>Chỉ hỗ trợ PNG, JPG (Tối đa 5MB)</span>
+                    </div>
+                </div>
+
+                <div style="grid-column: 1 / -1; display: flex; justify-content: flex-end; margin-top: 10px;">
+                    <button type="submit" class="btn-primary-custom" style="width: auto; padding: 12px 30px;">
+                        <i data-lucide="send" style="width: 18px;"></i> Gửi Phản Ánh
+                    </button>
+                </div>
+            </div>
+        </form>
+    </section>
+</div>
+
+<div class="modal-pa @(TempData["ShowSuccessModal"] != null ? "active" : "")" id="successModal">
+    <div class="modal-content-pa">
+        <div class="modal-header-pa">
+            <h3>Thành Công!</h3>
+            <button type="button" class="modal-close-pa" onclick="document.getElementById('successModal').classList.remove('active')"><i data-lucide="x"></i></button>
+        </div>
+        <div class="modal-body-pa">
+            <i data-lucide="check-circle-2" style="color: #10b981; width: 80px; height: 80px; margin-bottom: 10px;"></i>
+            <h4>Đã tiếp nhận yêu cầu</h4>
+            <p>Phản ánh của bạn đã được gửi đến Ban Quản lý. Bạn có thể theo dõi trạng thái trong mục "Theo dõi Phản ánh".</p>
+        </div>
+        <div class="modal-footer-pa">
+            <button type="button" class="btn-primary-custom" style="width: 100%;" onclick="document.getElementById('successModal').classList.remove('active')">Đã hiểu</button>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Re-render icon
+            if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+
+            // Logic bấm vào Quick Tags tự động điền vào Tiêu Đề
+            const quickTags = document.querySelectorAll(".quick-tag");
+            const titleInput = document.getElementById("titleInput");
+
+            quickTags.forEach((tag) => {
+                tag.addEventListener("click", function () {
+                    quickTags.forEach((t) => t.classList.remove("active"));
+                    this.classList.add("active");
+                    // Lấy text của nút bấm (loại bỏ khoảng trắng thừa) gán vào input
+                    titleInput.value = this.innerText.trim();
+                });
+            });
+
+            // Logic hiển thị tên file khi chọn ảnh
+            const fileUpload = document.getElementById('fileUpload');
+            const fileNameDisplay = document.getElementById('fileNameDisplay');
+
+            fileUpload.addEventListener('change', function(e) {
+                if(e.target.files.length > 0) {
+                    fileNameDisplay.innerHTML = `<span style="color: #4f46e5; font-weight: 700;">Đã chọn ảnh: ${e.target.files[0].name}</span>`;
+                } else {
+                    fileNameDisplay.innerHTML = `Kéo thả ảnh vào đây, hoặc <strong>nhấn để chọn ảnh</strong>`;
+                }
+            });
+        });
+    </script>
+}

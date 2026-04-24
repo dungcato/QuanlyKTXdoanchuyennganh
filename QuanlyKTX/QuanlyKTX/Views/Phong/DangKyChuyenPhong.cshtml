@@ -1,0 +1,126 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Chuyển phòng";
+}
+
+<div class="container-fluid p-0">
+
+    <!-- Top Bar & Breadcrumbs -->
+    <div class="top-bar dashboard-fade-in">
+        <div>
+            
+            <h1 class="page-title">Đăng Ký Chuyển Phòng</h1>
+        </div>
+    </div>
+
+    <!-- FORM SUBMIT -->
+    <form action="/Phong/XuLyChuyenPhong" method="POST" class="dashboard-fade-in delay-1">
+        <div class="grid-layout">
+
+            <!-- CỘT TRÁI: ĐIỀN THÔNG TIN -->
+            <div class="left-col">
+
+                <div class="notice-box">
+                    <div class="notice-icon"><i data-lucide="info"></i></div>
+                    <div class="notice-content">
+                        <h5>Lưu ý trước khi đăng ký</h5>
+                        <p>Yêu cầu chuyển phòng sẽ được xét duyệt trong 3-5 ngày làm việc. Phí chuyển đổi (50.000đ) sẽ được cộng vào hóa đơn tháng tới. Vui lòng đảm bảo đã thanh toán hết công nợ cũ.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title"><i data-lucide="target"></i> Nguyện vọng chuyển đổi</h3>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label class="label">Khu vực mong muốn <span class="req">*</span></label>
+                            <select class="select-control" name="KhuVucMongMuon" required>
+                                <option value="">-- Chọn khu vực --</option>
+                                <option value="Khu A">Khu A - KTX Nam (Gần sân bóng)</option>
+                                <option value="Khu B">Khu B - KTX Nam (Yên tĩnh)</option>
+                                <option value="Khu C">Khu C - KTX Nữ (Trung tâm)</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label class="label">Loại phòng <span class="req">*</span></label>
+                            <select class="select-control" name="LoaiPhongMongMuon" required>
+                                <option value="">-- Chọn loại phòng --</option>
+                                <option value="Phòng 8 người">Phòng 8 người (500.000đ/tháng)</option>
+                                <option value="Phòng 6 người">Phòng 6 người (650.000đ/tháng)</option>
+                                <option value="Phòng 4 người">Phòng 4 người (1.200.000đ/tháng)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row full">
+                        <div class="input-group">
+                            <label class="label">Lý do chuyển phòng <span class="req">*</span></label>
+                            <textarea class="textarea-control" name="LyDoChuyen" placeholder="Ví dụ: Phòng hiện tại ồn ào, muốn xin ở ghép cùng bạn Nguyễn Văn B (MSSV: 235...) hiện đang ở phòng B2-305..." required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-row full">
+                        <div class="input-group">
+                            <label class="label">Phòng cụ thể (Không bắt buộc)</label>
+                            <input type="text" class="input-control" name="PhongCuThe" placeholder="Nhập mã phòng nếu muốn ở ghép (VD: B2-305)">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terms" required>
+                        <div class="checkbox-text">
+                            <label for="terms" style="cursor:pointer; display:block; margin-bottom:4px; font-weight:600; color:#1e293b;">Xác nhận cam kết</label>
+                            Tôi cam kết đã thanh toán đủ tiền điện/nước và sẽ bàn giao phòng cũ nguyên vẹn. Tôi đồng ý với quy định chuyển đổi của nhà trường.
+                        </div>
+                    </div>
+
+                    <div class="form-actions" style="margin-top: 25px; display: flex; gap: 15px; justify-content: flex-end;">
+                        <button type="button" class="btn btn-secondary" style="padding: 10px 20px; border-radius: 6px; border: 1px solid #cbd5e1; background: white;" onclick="window.history.back()">Hủy bỏ</button>
+                        <button type="submit" class="btn btn-primary" style="padding: 10px 20px; border-radius: 6px; border: none; background: #4f46e5; color: white; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                            <i data-lucide="send" style="width: 16px;"></i> Gửi yêu cầu
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CỘT PHẢI: THÔNG TIN HIỆN TẠI -->
+            <div class="right-col dashboard-fade-in delay-2">
+                <div class="card info-card">
+                    <h4 style="margin-bottom: 20px; font-size: 15px; display: flex; align-items: center; gap: 8px;">
+                        <i data-lucide="home" style="width: 16px; color: #4f46e5;"></i> Thông tin hiện tại
+                    </h4>
+
+                    <div class="info-item">
+                        <div class="info-label">Họ và tên</div>
+                        <div class="info-value">Lê Anh Dũng</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Mã sinh viên</div>
+                        <div class="info-value">235748020110069</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Phòng hiện tại</div>
+                        <div class="info-value" style="color: #4f46e5; font-size: 16px;">Nhà B1 - Phòng 201</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Hạn hợp đồng</div>
+                        <div class="info-value">30/06/2025</div>
+                    </div>
+                    <div class="info-item" style="border: none;">
+                        <div class="info-label">Trạng thái tài chính</div>
+                        <div style="background: #ecfdf5; color: #059669; border: 1px solid #a7f3d0; display: inline-flex; align-items: center; padding: 4px 10px; border-radius: 99px; font-size: 12px; font-weight: 600; margin-top: 5px;">
+                            <i data-lucide="check-circle-2" style="width: 12px; margin-right: 4px;"></i> Đủ điều kiện
+                        </div>
+                        <p style="font-size: 11px; color: #64748b; margin-top: 6px;">Đã thanh toán hết hóa đơn tháng trước.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>

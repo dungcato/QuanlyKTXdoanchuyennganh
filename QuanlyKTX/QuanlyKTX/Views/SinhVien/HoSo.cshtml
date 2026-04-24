@@ -1,0 +1,160 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Hồ sơ cá nhân";
+}
+
+<div class="container-fluid p-0">
+
+    <form action="/SinhVien/LuuHoSo" method="POST">
+
+        <div class="profile-header-card dashboard-fade-in">
+            <div class="profile-cover"></div>
+            <div class="profile-avatar-wrapper">
+                <img src="https://ui-avatars.com/api/?name=Lê+Anh+Dũng&background=1e3c72&color=fff&size=200&bold=true" alt="Avatar">
+                <div class="edit-avatar-btn" title="Cập nhật ảnh đại diện">
+                    <i data-lucide="camera" style="width: 18px; height: 18px;"></i>
+                </div>
+            </div>
+            <div class="profile-name-section">
+                <h2>Lê Anh Dũng</h2>
+                <p>
+                    Khoa Công nghệ Thông tin
+                    <span class="status-badge" style="background: #dcfce7; color: #16a34a; padding: 4px 12px; border-radius: 12px; margin-left: 8px; font-weight: 600; font-size: 13px;">
+                        <i data-lucide="check-circle-2" style="width: 14px; height: 14px; vertical-align: middle;"></i> Đang lưu trú
+                    </span>
+                </p>
+            </div>
+        </div>
+
+        <div class="profile-layout dashboard-fade-in delay-1">
+
+            <div class="profile-sidebar">
+                <div class="info-card">
+                    <div class="info-card-header">
+                        <div class="header-icon-box"><i data-lucide="shield"></i></div>
+                        <h3>Bảo mật & Định danh</h3>
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label class="form-label"><i data-lucide="fingerprint" style="width: 16px;"></i> Mã Sinh Viên (MSSV)</label>
+                        <input type="text" class="form-input" name="MSSV" value="235748020110069" readonly style="color: #3b82f6; font-weight: 700;">
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 25px;">
+                        <label class="form-label"><i data-lucide="credit-card" style="width: 16px;"></i> Căn cước công dân (CCCD)</label>
+                        <input type="text" class="form-input" name="CCCD" value="040203123456" readonly>
+                        <small style="color: #94a3b8; font-size: 12px; margin-top: 4px;">* Liên hệ Ban quản lý nếu cần đổi CCCD</small>
+                    </div>
+
+                    <button type="submit" class="btn-primary-custom">
+                        <i data-lucide="save" style="width: 18px;"></i> Lưu thay đổi
+                    </button>
+                    <button type="button" class="btn-outline-custom" onclick="window.location.href='/Auth/DoiMatKhau'">
+                        <i data-lucide="key-round" style="width: 18px;"></i> Đổi mật khẩu
+                    </button>
+                </div>
+
+                <div class="info-card dashboard-fade-in delay-2">
+                    <div class="info-card-header" style="margin-bottom: 15px; padding-bottom: 10px;">
+                        <div class="header-icon-box" style="background: #f3e8ff; color: #a855f7;"><i data-lucide="scan-face"></i></div>
+                        <h3>Dữ liệu FaceID</h3>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 15px; background: #fafafa; padding: 15px; border-radius: 10px; border: 1px dashed #cbd5e1;">
+                        <div style="background: #dcfce7; color: #16a34a; padding: 10px; border-radius: 50%;"><i data-lucide="check"></i></div>
+                        <div>
+                            <p style="margin: 0; font-weight: 600; color: #1e293b; font-size: 14px;">Đã đăng ký khuôn mặt</p>
+                            <p style="margin: 0; font-size: 12px; color: #64748b;">Hệ thống Camera AI đã ghi nhận</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-main-content">
+
+                <div class="info-card">
+                    <div class="info-card-header">
+                        <div class="header-icon-box" style="background: #fef2f2; color: #ef4444;"><i data-lucide="user"></i></div>
+                        <h3>Thông tin cá nhân</h3>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Họ và Tên</label>
+                            <input type="text" class="form-input" name="HoTen" value="Lê Anh Dũng" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Ngày sinh</label>
+                            <input type="date" class="form-input" name="NgaySinh" value="2004-08-15">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Giới tính</label>
+                            <select class="form-input" name="GioiTinh">
+                                <option value="Nam" selected>Nam</option>
+                                <option value="Nữ">Nữ</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Lớp sinh hoạt</label>
+                            <input type="text" class="form-input" name="Lop" value="64K CNTT1">
+                        </div>
+                        <div class="form-group" style="grid-column: 1 / -1;">
+                            <label class="form-label">Khoa</label>
+                            <input type="text" class="form-input" name="Khoa" value="Công nghệ Thông tin">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-card-header">
+                        <div class="header-icon-box" style="background: #fefce8; color: #eab308;"><i data-lucide="contact"></i></div>
+                        <h3>Liên hệ & Quê quán</h3>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Số điện thoại cá nhân (SDT)</label>
+                            <input type="tel" class="form-input" name="SDT" value="0987654321">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email trường cấp</label>
+                            <input type="email" class="form-input" name="Email" value="235748020110069@student.vinhuni.edu.vn">
+                        </div>
+                        <div class="form-group" style="grid-column: 1 / -1;">
+                            <label class="form-label">Quê quán</label>
+                            <input type="text" class="form-input" name="QueQuan" value="Thành phố Vinh, Nghệ An">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-card-header">
+                        <div class="header-icon-box" style="background: #e0e7ff; color: #4f46e5;"><i data-lucide="users"></i></div>
+                        <h3>Liên hệ khẩn cấp (Người thân)</h3>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group" style="grid-column: 1 / -1;">
+                            <label class="form-label">Họ tên người thân</label>
+                            <input type="text" class="form-input" name="HoTenNguoiThan" value="Lê Anh A">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Số điện thoại người thân</label>
+                            <input type="tel" class="form-input" name="SDTNguoiThan" value="0912345678">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Mối quan hệ</label>
+                            <select class="form-input" name="MoiQuanHe">
+                                <option value="Bố" selected>Bố</option>
+                                <option value="Mẹ">Mẹ</option>
+                                <option value="Anh">Anh trai</option>
+                                <option value="Chị">Chị gái</option>
+                                <option value="Khác">Khác</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </form>
+</div>

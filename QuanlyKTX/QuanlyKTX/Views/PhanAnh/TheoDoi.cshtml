@@ -1,0 +1,128 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Thay bằng tên Layout mày đang dùng
+    ViewData["Title"] = "Theo dõi Phản Ánh";
+}
+
+<div class="container-fluid p-0">
+    <section class="page-header dashboard-fade-in" style="background: white; border-radius: 20px; padding: 30px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); display: flex; align-items: center; gap: 20px;">
+        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #2196f3 0%, #0d47a1 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white;">
+            <i data-lucide="eye" style="width: 32px; height: 32px;"></i>
+        </div>
+        <div>
+            <h1 style="font-size: 2em; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 5px; font-weight: 700;">Theo dõi Phản Ánh</h1>
+            <p style="color: #64748b; margin: 0;">Kiểm tra trạng thái các yêu cầu đã gửi của bạn.</p>
+        </div>
+    </section>
+
+    <section class="stats-filter-grid dashboard-fade-in delay-1">
+        <div class="stat-filter-card all active" data-filter="all">
+            <div class="stat-filter-icon"><i data-lucide="list"></i></div>
+            <div class="stat-filter-label">Tất cả</div>
+            <div class="stat-filter-value">3</div>
+        </div>
+        <div class="stat-filter-card pending" data-filter="pending">
+            <div class="stat-filter-icon"><i data-lucide="loader-2"></i></div>
+            <div class="stat-filter-label">Chờ tiếp nhận</div>
+            <div class="stat-filter-value">1</div>
+        </div>
+        <div class="stat-filter-card processing" data-filter="processing">
+            <div class="stat-filter-icon"><i data-lucide="wrench"></i></div>
+            <div class="stat-filter-label">Đang xử lý</div>
+            <div class="stat-filter-value">1</div>
+        </div>
+        <div class="stat-filter-card completed" data-filter="completed">
+            <div class="stat-filter-icon"><i data-lucide="check-check"></i></div>
+            <div class="stat-filter-label">Đã hoàn thành</div>
+            <div class="stat-filter-value">1</div>
+        </div>
+    </section>
+
+    <section class="history-container-pa dashboard-fade-in delay-2">
+        <div class="history-header-pa">
+            <h3><i data-lucide="history" style="color: #4f46e5;"></i> Lịch sử Phản ánh</h3>
+        </div>
+
+        <div class="history-item-pa pending item-record">
+            <div class="history-item-main-pa">
+                <div class="history-icon-pa"><i data-lucide="loader-2"></i></div>
+                <div class="history-info-pa">
+                    <div class="history-title-pa">Hỏng vòi nước nhà vệ sinh</div>
+                    <div class="history-meta-pa">Gửi lúc: 10:00 - 15/11/2026 | <strong>Loại: Hỏng hóc về Nước</strong></div>
+                </div>
+                <div class="history-status-pa pending">Chờ tiếp nhận</div>
+            </div>
+            <div class="history-stepper-pa">
+                <div class="step-pa step-1-pa active"><div class="step-icon-pa"><i data-lucide="send" style="width:16px;"></i></div><div class="step-label-pa">Đã gửi</div></div>
+                <div class="step-pa step-2-pa"><div class="step-icon-pa"><i data-lucide="inbox" style="width:16px;"></i></div><div class="step-label-pa">Đã tiếp nhận</div></div>
+                <div class="step-pa step-3-pa"><div class="step-icon-pa"><i data-lucide="wrench" style="width:16px;"></i></div><div class="step-label-pa">Đang xử lý</div></div>
+                <div class="step-pa step-4-pa"><div class="step-icon-pa"><i data-lucide="check" style="width:16px;"></i></div><div class="step-label-pa">Hoàn thành</div></div>
+            </div>
+        </div>
+
+        <div class="history-item-pa processing item-record">
+            <div class="history-item-main-pa">
+                <div class="history-icon-pa"><i data-lucide="wrench"></i></div>
+                <div class="history-info-pa">
+                    <div class="history-title-pa">Gãy chân bàn học</div>
+                    <div class="history-meta-pa">Gửi lúc: 08:30 - 14/11/2026 | <strong>Loại: Hỏng thiết bị</strong></div>
+                </div>
+                <div class="history-status-pa processing">Đang xử lý</div>
+            </div>
+            <div class="history-stepper-pa">
+                <div class="step-pa step-1-pa active"><div class="step-icon-pa"><i data-lucide="send" style="width:16px;"></i></div><div class="step-label-pa">Đã gửi</div></div>
+                <div class="step-pa step-2-pa active"><div class="step-icon-pa"><i data-lucide="inbox" style="width:16px;"></i></div><div class="step-label-pa">Đã tiếp nhận</div></div>
+                <div class="step-pa step-3-pa active"><div class="step-icon-pa"><i data-lucide="wrench" style="width:16px;"></i></div><div class="step-label-pa">Đang xử lý</div></div>
+                <div class="step-pa step-4-pa"><div class="step-icon-pa"><i data-lucide="check" style="width:16px;"></i></div><div class="step-label-pa">Hoàn thành</div></div>
+            </div>
+        </div>
+
+        <div class="history-item-pa completed item-record">
+            <div class="history-item-main-pa">
+                <div class="history-icon-pa"><i data-lucide="check-check"></i></div>
+                <div class="history-info-pa">
+                    <div class="history-title-pa">Mất kết nối Wifi tầng 2</div>
+                    <div class="history-meta-pa">Gửi lúc: 15:00 - 10/11/2026 | <strong>Loại: Khác</strong></div>
+                </div>
+                <div class="history-status-pa completed">Đã hoàn thành</div>
+            </div>
+            <div class="history-stepper-pa">
+                <div class="step-pa step-1-pa active"><div class="step-icon-pa"><i data-lucide="send" style="width:16px;"></i></div><div class="step-label-pa">Đã gửi</div></div>
+                <div class="step-pa step-2-pa active"><div class="step-icon-pa"><i data-lucide="inbox" style="width:16px;"></i></div><div class="step-label-pa">Đã tiếp nhận</div></div>
+                <div class="step-pa step-3-pa active"><div class="step-icon-pa"><i data-lucide="wrench" style="width:16px;"></i></div><div class="step-label-pa">Đang xử lý</div></div>
+                <div class="step-pa step-4-pa active"><div class="step-icon-pa"><i data-lucide="check" style="width:16px;"></i></div><div class="step-label-pa">Hoàn thành</div></div>
+            </div>
+        </div>
+    </section>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+
+            // Xử lý Filter Card
+            const filterCards = document.querySelectorAll(".stat-filter-card");
+            const historyItems = document.querySelectorAll(".item-record");
+
+            filterCards.forEach((card) => {
+                card.addEventListener("click", function () {
+                    // Xóa active khỏi tất cả
+                    filterCards.forEach((c) => c.classList.remove("active"));
+                    // Thêm active cho thẻ vừa bấm
+                    this.classList.add("active");
+
+                    const filterValue = this.getAttribute("data-filter");
+
+                    // Lọc hiển thị
+                    historyItems.forEach(item => {
+                        if (filterValue === "all" || item.classList.contains(filterValue)) {
+                            item.style.display = "block";
+                        } else {
+                            item.style.display = "none";
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+}

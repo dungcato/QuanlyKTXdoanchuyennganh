@@ -1,0 +1,492 @@
+﻿/* =========================================================
+   CSS TRANG CHỦ SINH VIÊN (Đã tách riêng)
+   ========================================================= */
+
+.dashboard-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.delay-1 {
+    animation-delay: 0.1s;
+}
+
+.delay-2 {
+    animation-delay: 0.2s;
+}
+
+.delay-3 {
+    animation-delay: 0.3s;
+}
+
+/* Các hiệu ứng chuyển động (Animations) */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ring {
+    0% {
+        transform: rotate(0);
+    }
+
+    10% {
+        transform: rotate(15deg);
+    }
+
+    20% {
+        transform: rotate(-10deg);
+    }
+
+    30% {
+        transform: rotate(5deg);
+    }
+
+    40% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+.icon-ring:hover {
+    animation: ring 1s ease-in-out infinite;
+}
+
+@keyframes pulse-icon {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.icon-pulse-hover:hover .lucide {
+    animation: pulse-icon 1s infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotate(15deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(10deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(15deg);
+    }
+}
+
+.bg-icon-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* --- Thẻ Thống Kê (Stat Card) --- */
+.stat-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid #f1f5f9;
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+    .stat-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        border-color: #e2e8f0;
+    }
+
+/* --- Vòng tròn chứa Icon --- */
+.circle-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.circle-icon-lg {
+    width: 64px;
+    height: 64px;
+}
+
+.circle-icon-md {
+    width: 45px;
+    height: 45px;
+}
+
+.circle-icon-sm {
+    width: 36px;
+    height: 36px;
+}
+
+/* --- Thẻ Dịch Vụ Tiện Ích --- */
+.service-card {
+    background: #ffffff;
+    border: 1px solid #f1f5f9;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        border-color: #cbd5e1;
+        background: #f8fafc;
+    }
+
+        .service-card:hover .circle-icon {
+            transform: scale(1.1);
+        }
+
+/* --- Thẻ Lịch sử / Thông báo --- */
+.list-item {
+    transition: all 0.2s ease;
+    border-radius: 12px;
+    padding: 16px !important;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+    .list-item:hover {
+        background-color: #f8fafc;
+        transform: translateX(5px);
+        border-left: 3px solid #3b82f6;
+    }
+
+.status-badge {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* --- Grid Bố cục chia đều --- */
+.grid-4-cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.grid-3-cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.grid-2-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* Reponsive cho điện thoại */
+@media (max-width: 992px) {
+    .grid-2-cols {
+        grid-template-columns: 1fr;
+    }
+}
+/* =========================================================
+   CSS TRANG HỒ SƠ CÁ NHÂN (PROFILE)
+   ========================================================= */
+
+/* Hiệu ứng xuất hiện mượt mà */
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.delay-1 {
+    animation-delay: 0.1s;
+}
+
+.delay-2 {
+    animation-delay: 0.2s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Khu vực Ảnh bìa & Avatar --- */
+.profile-header-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    overflow: hidden;
+    margin-bottom: 30px;
+    border: 1px solid #f1f5f9;
+}
+
+.profile-cover {
+    height: 180px;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    position: relative;
+}
+
+    .profile-cover::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(255,255,255,0.05) 0%, transparent 50%);
+    }
+
+.profile-avatar-wrapper {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    margin: -70px auto 15px auto;
+    border-radius: 50%;
+    padding: 5px;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    z-index: 2;
+}
+
+    .profile-avatar-wrapper img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+.edit-avatar-btn {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: #3b82f6;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+    .edit-avatar-btn:hover {
+        background: #2563eb;
+        transform: scale(1.1);
+    }
+
+.profile-name-section {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+    .profile-name-section h2 {
+        color: #1e293b;
+        font-weight: 700;
+        font-size: 26px;
+        margin-bottom: 5px;
+    }
+
+    .profile-name-section p {
+        color: #64748b;
+        font-size: 15px;
+        margin: 0;
+    }
+
+/* --- Bố cục 2 cột cho thông tin chi tiết --- */
+.profile-layout {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    gap: 30px;
+}
+
+/* --- Thẻ Card thông tin chung --- */
+.info-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    border: 1px solid #f1f5f9;
+    margin-bottom: 30px;
+}
+
+.info-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+    .info-card-header h3 {
+        margin: 0;
+        color: #1e293b;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+.header-icon-box {
+    background: #eff6ff;
+    color: #3b82f6;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Lưới hiển thị Data --- */
+.data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.data-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.data-label {
+    font-size: 13px;
+    color: #64748b;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.data-value {
+    font-size: 15px;
+    color: #0f172a;
+    font-weight: 600;
+    background: #f8fafc;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+}
+
+/* --- Nút bấm --- */
+.btn-primary-custom {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+    .btn-primary-custom:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 15px rgba(59, 130, 246, 0.3);
+        color: white;
+    }
+
+.btn-outline-custom {
+    background: white;
+    color: #334155;
+    border: 1px solid #cbd5e1;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+    .btn-outline-custom:hover {
+        background: #f1f5f9;
+        border-color: #94a3b8;
+    }
+
+/* Trạng thái (Badge) */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.status-active {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .profile-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .data-grid {
+        grid-template-columns: 1fr;
+    }
+}
