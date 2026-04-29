@@ -1,126 +1,154 @@
-﻿@{
+﻿@model IEnumerable<QuanlyKTX.Models.PhanAnh>
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "Chuyển phòng";
 }
 
 <div class="container-fluid p-0">
-
-    <!-- Top Bar & Breadcrumbs -->
-    <div class="top-bar dashboard-fade-in">
-        <div>
-            
-            <h1 class="page-title">Đăng Ký Chuyển Phòng</h1>
-        </div>
+    <div class="top-bar dashboard-fade-in" style="margin-bottom: 25px;">
+        <h1 class="page-title" style="font-size: 1.8rem; font-weight: 700; color: #1e293b;">Đăng Ký Chuyển Phòng</h1>
     </div>
 
-    <!-- FORM SUBMIT -->
+    @if (TempData["ThongBao"] != null)
+    {
+        <div class="alert @(TempData["ThongBao"].ToString().Contains("Lỗi") ? "alert-danger" : "alert-success") dashboard-fade-in" style="border-radius: 12px; margin-bottom: 25px; padding: 15px;">
+            <i data-lucide="@(TempData["ThongBao"].ToString().Contains("Lỗi") ? "alert-circle" : "check-circle")" style="vertical-align: middle; margin-right: 8px;"></i>
+            @TempData["ThongBao"]
+        </div>
+    }
+
     <form action="/Phong/XuLyChuyenPhong" method="POST" class="dashboard-fade-in delay-1">
-        <div class="grid-layout">
+        <div class="grid-layout" style="display: grid; grid-template-columns: 1fr 350px; gap: 30px; margin-bottom: 40px;">
 
-            <!-- CỘT TRÁI: ĐIỀN THÔNG TIN -->
             <div class="left-col">
-
-                <div class="notice-box">
-                    <div class="notice-icon"><i data-lucide="info"></i></div>
-                    <div class="notice-content">
-                        <h5>Lưu ý trước khi đăng ký</h5>
-                        <p>Yêu cầu chuyển phòng sẽ được xét duyệt trong 3-5 ngày làm việc. Phí chuyển đổi (50.000đ) sẽ được cộng vào hóa đơn tháng tới. Vui lòng đảm bảo đã thanh toán hết công nợ cũ.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <h3 class="card-title"><i data-lucide="target"></i> Nguyện vọng chuyển đổi</h3>
+                <div class="card" style="background: white; border-radius: 20px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+                    <div class="notice-box" style="background: #eff6ff; padding: 20px; border-radius: 12px; margin-bottom: 25px; display: flex; gap: 15px; border-left: 4px solid #3b82f6;">
+                        <i data-lucide="info" style="color: #3b82f6;"></i>
+                        <div>
+                            <h5 style="margin: 0; color: #1e3a8a; font-weight: 700;">Lưu ý trước khi đăng ký</h5>
+                            <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #1e40af;">Yêu cầu sẽ được xét duyệt trong 3-5 ngày. Vui lòng đảm bảo đã dọn dẹp phòng cũ sạch sẽ trước khi bàn giao.</p>
+                        </div>
                     </div>
 
-                    <div class="form-row">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 20px; color: #334155;"><i data-lucide="target" style="width: 18px; margin-right: 8px;"></i> Nguyện vọng chuyển đổi</h3>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
                         <div class="input-group">
-                            <label class="label">Khu vực mong muốn <span class="req">*</span></label>
-                            <select class="select-control" name="KhuVucMongMuon" required>
-                                <option value="">-- Chọn khu vực --</option>
-                                <option value="Khu A">Khu A - KTX Nam (Gần sân bóng)</option>
-                                <option value="Khu B">Khu B - KTX Nam (Yên tĩnh)</option>
-                                <option value="Khu C">Khu C - KTX Nữ (Trung tâm)</option>
+                            <label style="display: block; font-weight: 600; margin-bottom: 8px;">Khu vực mong muốn *</label>
+                            <select name="KhuVucMongMuon" required style="width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: 10px;">
+                                <option value="Khu A">Khu A - Nam</option>
+                                <option value="Khu B">Khu B - Nam</option>
+                                <option value="Khu C">Khu C - Nữ</option>
                             </select>
                         </div>
-
                         <div class="input-group">
-                            <label class="label">Loại phòng <span class="req">*</span></label>
-                            <select class="select-control" name="LoaiPhongMongMuon" required>
-                                <option value="">-- Chọn loại phòng --</option>
-                                <option value="Phòng 8 người">Phòng 8 người (500.000đ/tháng)</option>
-                                <option value="Phòng 6 người">Phòng 6 người (650.000đ/tháng)</option>
-                                <option value="Phòng 4 người">Phòng 4 người (1.200.000đ/tháng)</option>
+                            <label style="display: block; font-weight: 600; margin-bottom: 8px;">Loại phòng *</label>
+                            <select name="LoaiPhongMongMuon" required style="width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: 10px;">
+                                <option value="Phòng 4 người">Phòng 4 người</option>
+                                <option value="Phòng 6 người">Phòng 6 người</option>
+                                <option value="Phòng 8 người">Phòng 8 người</option>
                             </select>
                         </div>
                     </div>
 
-                    <div class="form-row full">
-                        <div class="input-group">
-                            <label class="label">Lý do chuyển phòng <span class="req">*</span></label>
-                            <textarea class="textarea-control" name="LyDoChuyen" placeholder="Ví dụ: Phòng hiện tại ồn ào, muốn xin ở ghép cùng bạn Nguyễn Văn B (MSSV: 235...) hiện đang ở phòng B2-305..." required></textarea>
-                        </div>
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; font-weight: 600; margin-bottom: 8px;">Phòng cụ thể (Nếu có)</label>
+                        <input type="text" name="PhongCuThe" placeholder="VD: B1-202" style="width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: 10px;">
                     </div>
 
-                    <div class="form-row full">
-                        <div class="input-group">
-                            <label class="label">Phòng cụ thể (Không bắt buộc)</label>
-                            <input type="text" class="input-control" name="PhongCuThe" placeholder="Nhập mã phòng nếu muốn ở ghép (VD: B2-305)">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="terms" required>
-                        <div class="checkbox-text">
-                            <label for="terms" style="cursor:pointer; display:block; margin-bottom:4px; font-weight:600; color:#1e293b;">Xác nhận cam kết</label>
-                            Tôi cam kết đã thanh toán đủ tiền điện/nước và sẽ bàn giao phòng cũ nguyên vẹn. Tôi đồng ý với quy định chuyển đổi của nhà trường.
-                        </div>
+                    <div style="margin-bottom: 25px;">
+                        <label style="display: block; font-weight: 600; margin-bottom: 8px;">Lý do chuyển phòng *</label>
+                        <textarea name="LyDoChuyen" required style="width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: 10px; min-height: 100px;"></textarea>
                     </div>
 
-                    <div class="form-actions" style="margin-top: 25px; display: flex; gap: 15px; justify-content: flex-end;">
-                        <button type="button" class="btn btn-secondary" style="padding: 10px 20px; border-radius: 6px; border: 1px solid #cbd5e1; background: white;" onclick="window.history.back()">Hủy bỏ</button>
-                        <button type="submit" class="btn btn-primary" style="padding: 10px 20px; border-radius: 6px; border: none; background: #4f46e5; color: white; cursor: pointer; display: flex; align-items: center; gap: 8px;">
-                            <i data-lucide="send" style="width: 16px;"></i> Gửi yêu cầu
-                        </button>
+                    <div style="display: flex; justify-content: flex-end; gap: 10px;">
+                        <button type="button" class="btn" style="padding: 10px 25px; border-radius: 10px; background: #f1f5f9;" onclick="window.history.back()">Hủy bỏ</button>
+                        <button type="submit" class="btn" style="padding: 10px 25px; border-radius: 10px; background: #4f46e5; color: white;">Gửi yêu cầu</button>
                     </div>
                 </div>
             </div>
 
-            <!-- CỘT PHẢI: THÔNG TIN HIỆN TẠI -->
-            <div class="right-col dashboard-fade-in delay-2">
-                <div class="card info-card">
-                    <h4 style="margin-bottom: 20px; font-size: 15px; display: flex; align-items: center; gap: 8px;">
-                        <i data-lucide="home" style="width: 16px; color: #4f46e5;"></i> Thông tin hiện tại
-                    </h4>
-
-                    <div class="info-item">
-                        <div class="info-label">Họ và tên</div>
-                        <div class="info-value">Lê Anh Dũng</div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-label">Mã sinh viên</div>
-                        <div class="info-value">235748020110069</div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-label">Phòng hiện tại</div>
-                        <div class="info-value" style="color: #4f46e5; font-size: 16px;">Nhà B1 - Phòng 201</div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-label">Hạn hợp đồng</div>
-                        <div class="info-value">30/06/2025</div>
-                    </div>
-                    <div class="info-item" style="border: none;">
-                        <div class="info-label">Trạng thái tài chính</div>
-                        <div style="background: #ecfdf5; color: #059669; border: 1px solid #a7f3d0; display: inline-flex; align-items: center; padding: 4px 10px; border-radius: 99px; font-size: 12px; font-weight: 600; margin-top: 5px;">
-                            <i data-lucide="check-circle-2" style="width: 12px; margin-right: 4px;"></i> Đủ điều kiện
+            <div class="right-col">
+                <div class="card" style="background: white; border-radius: 20px; padding: 25px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+                    <h4 style="margin-top: 0; font-size: 1rem; color: #64748b; margin-bottom: 20px;">THÔNG TIN HIỆN TẠI</h4>
+                    <div style="display: flex; flex-direction: column; gap: 15px;">
+                        <div>
+                            <span style="font-size: 0.8rem; color: #94a3b8; display: block;">Họ và tên</span>
+                            <span style="font-weight: 600; color: #1e293b;">Lê Anh Dũng</span>
                         </div>
-                        <p style="font-size: 11px; color: #64748b; margin-top: 6px;">Đã thanh toán hết hóa đơn tháng trước.</p>
+                        <div>
+                            <span style="font-size: 0.8rem; color: #94a3b8; display: block;">Phòng đang ở</span>
+                            <span style="font-weight: 600; color: #4f46e5;">Nhà B1 - Phòng 201</span>
+                        </div>
+                        <div style="padding-top: 15px; border-top: 1px solid #f1f5f9;">
+                            <span style="background: #dcfce7; color: #16a34a; padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">
+                                <i data-lucide="shield-check" style="width: 12px; margin-right: 4px;"></i> ĐỦ ĐIỀU KIỆN
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </form>
+
+    <div class="card dashboard-fade-in delay-2" style="background: white; border-radius: 20px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+        <h3 style="font-size: 1.2rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+            <i data-lucide="clipboard-list" style="color: #4f46e5;"></i> Lịch sử yêu cầu chuyển phòng
+        </h3>
+
+        <div class="table-responsive">
+            <table class="table" style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="border-bottom: 2px solid #f1f5f9; text-align: left; color: #64748b; font-size: 0.9rem;">
+                        <th style="padding: 15px;">Ngày gửi</th>
+                        <th style="padding: 15px;">Nội dung nguyện vọng</th>
+                        <th style="padding: 15px;">Trạng thái</th>
+                        <th style="padding: 15px;">Phản hồi từ BQL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Any())
+                    {
+                        foreach (var item in Model.Where(p => p.LoaiSuCo == "Chuyển phòng"))
+                        {
+                            <tr style="border-bottom: 1px solid #f1f5f9;">
+                                <td style="padding: 15px; font-size: 0.9rem;">@item.NgayGui?.ToString("dd/MM/yyyy")</td>
+                                <td style="padding: 15px;">
+                                    <div style="font-weight: 600; font-size: 0.9rem;">@item.TieuDe</div>
+                                    <div style="font-size: 0.8rem; color: #64748b;">@item.NoiDung</div>
+                                </td>
+                                <td style="padding: 15px;">
+                                    @{
+                                        string badgeClass = item.TrangThai == "Đã hoàn thành" ? "background: #dcfce7; color: #16a34a;" :
+                                        item.TrangThai == "Đang xử lý" ? "background: #fef9c3; color: #a16207;" :
+                                        "background: #f1f5f9; color: #64748b;";
+                                    }
+                                    <span style="padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; @badgeClass">
+                                        @item.TrangThai
+                                    </span>
+                                </td>
+                                <td style="padding: 15px; font-size: 0.85rem; color: #475569;">
+                                    @(string.IsNullOrEmpty(item.KetQuaXuLy) ? "Đang chờ xem xét..." : item.KetQuaXuLy)
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="4" style="padding: 30px; text-align: center; color: #94a3b8;">Bạn chưa gửi yêu cầu chuyển phòng nào.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+        });
+    </script>
+}

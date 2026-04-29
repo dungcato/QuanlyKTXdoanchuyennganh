@@ -10,13 +10,18 @@
         <p>Vui lòng điền đầy đủ và chính xác tất cả thông tin dưới đây</p>
     </div>
 
+    @if (TempData["ThongBao"] != null)
+    {
+        <div class="alert @(TempData["ThongBao"].ToString().Contains("Lỗi") ? "alert-danger" : "alert-success") dashboard-fade-in">
+            @TempData["ThongBao"]
+        </div>
+    }
+
     <div class="info-alert dashboard-fade-in delay-1">
-        <h4><i data-lucide="info" style="width: 20px; height: 20px;"></i> Lưu ý quan trọng trước khi đăng ký</h4>
+        <h4><i data-lucide="info" style="width: 20px; height: 20px;"></i> Lưu ý quan trọng</h4>
         <ul>
-            <li>Đăng ký phòng KTX chỉ được thực hiện trong thời gian mở đăng ký (01/08 - 31/08 hàng năm).</li>
-            <li>Sinh viên cần chuẩn bị đầy đủ giấy tờ: CMND/CCCD, Giấy xác nhận sinh viên, Ảnh 3x4 khi đến nhận phòng.</li>
+            <li>Sinh viên cần chuẩn bị đầy đủ giấy tờ: CMND/CCCD, Giấy xác nhận sinh viên khi đến nhận phòng.</li>
             <li>Sau khi gửi đơn, vui lòng chờ phê duyệt từ Ban quản lý (1-3 ngày làm việc).</li>
-            <li>Sinh viên có thể theo dõi trạng thái đơn đăng ký tại mục "Quản lý Hóa đơn".</li>
         </ul>
     </div>
 
@@ -27,11 +32,12 @@
             <div class="form-grid">
                 <div class="form-group">
                     <label>Họ và tên <span class="required">*</span></label>
-                    <input type="text" class="form-input" name="HoTen" placeholder="Nguyễn Văn A" value="Lê Anh Dũng" required />
+                    <input type="text" class="form-input" name="HoTen" value="Lê Anh Dũng" required />
                 </div>
                 <div class="form-group">
                     <label>Mã số sinh viên <span class="required">*</span></label>
-                    <input type="text" class="form-input" name="MSSV" placeholder="20210123" value="235748020110069" readonly style="background: #f1f5f9;" />
+                    @* name="MSSV" phải viết hoa y hệt tham số trong Controller *@
+                    <input type="text" class="form-input" name="MSSV" value="23574801" readonly style="background: #f1f5f9;" />
                 </div>
                 <div class="form-group">
                     <label>Ngày sinh <span class="required">*</span></label>
@@ -40,60 +46,9 @@
                 <div class="form-group">
                     <label>Giới tính <span class="required">*</span></label>
                     <select class="form-input" name="GioiTinh" required>
-                        <option value="">-- Chọn giới tính --</option>
                         <option value="Nam" selected>Nam</option>
                         <option value="Nữ">Nữ</option>
                     </select>
-                </div>
-                <div class="form-group">
-                    <label>Số điện thoại <span class="required">*</span></label>
-                    <input type="tel" class="form-input" name="SDT" value="0987654321" required />
-                </div>
-                <div class="form-group">
-                    <label>Email <span class="required">*</span></label>
-                    <input type="email" class="form-input" name="Email" value="235748020110069@student.vinhuni.edu.vn" required />
-                </div>
-                <div class="form-group">
-                    <label>CMND/CCCD <span class="required">*</span></label>
-                    <input type="text" class="form-input" name="CCCD" value="040203123456" required />
-                </div>
-                <div class="form-group">
-                    <label>Khoa <span class="required">*</span></label>
-                    <select class="form-input" name="Khoa" required>
-                        <option value="">-- Chọn khoa --</option>
-                        <option value="CNTT" selected>Công nghệ thông tin</option>
-                        <option value="KinhTe">Kinh tế</option>
-                        <option value="SuPham">Sư phạm</option>
-                        <option value="NgoaiNgu">Ngoại ngữ</option>
-                    </select>
-                </div>
-                <div class="form-group" style="grid-column: 1 / -1;">
-                    <label>Địa chỉ thường trú <span class="required">*</span></label>
-                    <input type="text" class="form-input" name="QueQuan" value="Phường Bến Thủy, TP. Vinh, Nghệ An" required />
-                </div>
-            </div>
-        </div>
-
-        <div class="form-section">
-            <h2 class="form-section-title">📞 Thông tin người liên hệ khẩn cấp</h2>
-            <div class="form-grid">
-                <div class="form-group">
-                    <label>Họ tên người liên hệ <span class="required">*</span></label>
-                    <input type="text" class="form-input" name="HoTenNguoiThan" placeholder="Họ tên phụ huynh" required />
-                </div>
-                <div class="form-group">
-                    <label>Mối quan hệ <span class="required">*</span></label>
-                    <select class="form-input" name="MoiQuanHe" required>
-                        <option value="">-- Chọn mối quan hệ --</option>
-                        <option value="Cha">Cha</option>
-                        <option value="Mẹ">Mẹ</option>
-                        <option value="AnhChiEm">Anh/Chị/Em</option>
-                        <option value="Khac">Khác</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Số điện thoại liên hệ <span class="required">*</span></label>
-                    <input type="tel" class="form-input" name="SDTNguoiThan" placeholder="0912345678" required />
                 </div>
             </div>
         </div>
@@ -103,6 +58,7 @@
             <div class="form-grid">
                 <div class="form-group">
                     <label>Loại phòng <span class="required">*</span></label>
+                    @* value="1", "2"... này sẽ map vào LoaiPhongId trong Controller *@
                     <select class="form-input" name="LoaiPhongId" required>
                         <option value="">-- Chọn loại phòng --</option>
                         <option value="1">Phòng 2 người - 1,200,000đ/tháng</option>
@@ -111,38 +67,38 @@
                         <option value="4">Phòng 8 người - 500,000đ/tháng</option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <label>Khu vực ưu tiên <span class="required">*</span></label>
-                    <select class="form-input" name="ToaNhaId" required>
-                        <option value="">-- Chọn khu vực --</option>
-                        <option value="1">Khu A - KTX Nam</option>
-                        <option value="2">Khu B - KTX Nam</option>
-                        <option value="3">Khu C - KTX Nữ</option>
-                        <option value="4">Khu D - KTX Nữ</option>
-                    </select>
-                </div>
+
                 <div class="form-group">
                     <label>Thời gian bắt đầu thuê <span class="required">*</span></label>
-                    <input type="date" class="form-input" name="NgayBatDau" required />
+                    @* name="NgayBatDau" sẽ gửi kiểu string, Controller nhận là DateTime sẽ tự convert *@
+                    <input type="date" class="form-input" name="NgayBatDau" value="@DateTime.Now.ToString("yyyy-MM-dd")" required />
                 </div>
+
                 <div class="form-group">
                     <label>Thời hạn hợp đồng <span class="required">*</span></label>
+                    @* name="ThoiHanThang" nhận giá trị số nguyên *@
                     <select class="form-input" name="ThoiHanThang" required>
-                        <option value="">-- Chọn thời hạn --</option>
                         <option value="3">3 tháng</option>
-                        <option value="6">6 tháng</option>
-                        <option value="9">9 tháng (1 năm học)</option>
+                        <option value="6" selected>6 tháng</option>
                         <option value="12">12 tháng</option>
                     </select>
                 </div>
             </div>
         </div>
 
-        <div class="form-actions">
-            <button type="button" class="btn btn-secondary" onclick="window.history.back()">Hủy bỏ</button>
-            <button type="submit" class="btn btn-primary">
-                <i data-lucide="send" style="width: 18px;"></i> Đăng ký thuê phòng
+        <div class="form-actions" style="margin-top: 30px; display: flex; gap: 15px; justify-content: flex-end;">
+            <button type="button" class="btn-outline-custom" onclick="window.history.back()" style="padding: 10px 25px; border-radius: 10px;">Hủy bỏ</button>
+            <button type="submit" class="btn-primary-custom" style="padding: 10px 30px; background: #1e3c72; color: white; border-radius: 10px; border: none; font-weight: 600;">
+                <i data-lucide="send" style="width: 18px; vertical-align: middle;"></i> Gửi đơn đăng ký
             </button>
         </div>
     </form>
 </div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+        });
+    </script>
+}

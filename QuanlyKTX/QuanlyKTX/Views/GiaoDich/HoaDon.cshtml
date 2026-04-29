@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<QuanlyKTX.Models.HoaDon>
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "Quản lý Hóa đơn";
 }
@@ -10,213 +11,122 @@
             <p>Kiểm tra, theo dõi và thanh toán hóa đơn hàng tháng của bạn.</p>
         </div>
         <div class="quick-actions-header">
-            <button class="btn-header-action btn-history-action">
-                <span>📜</span> Lịch sử
-            </button>
-            <button class="btn-header-action btn-export">
-                <span>📤</span> Xuất PDF
-            </button>
+            <button class="btn-header-action btn-history-action"><span>📜</span> Lịch sử</button>
+            <button class="btn-header-action btn-export"><span>📤</span> Xuất PDF</button>
         </div>
     </section>
 
-    <section class="stats-grid-hd dashboard-fade-in delay-1">
-        <div class="stat-card-hd pending">
-            <div class="stat-icon-hd">❗</div>
-            <div class="stat-label-hd">Hóa đơn chờ</div>
-            <h3 class="stat-value-hd">1,250,000đ</h3>
-            <div class="stat-detail-hd">1 hóa đơn tháng 11</div>
-        </div>
-        <div class="stat-card-hd paid">
-            <div class="stat-icon-hd">✔</div>
-            <div class="stat-label-hd">Đã thanh toán</div>
-            <h3 class="stat-value-hd">12,500,000đ</h3>
-            <div class="stat-detail-hd">Tổng 10 hóa đơn</div>
-        </div>
-        <div class="stat-card-hd total">
-            <div class="stat-icon-hd">⚡</div>
-            <div class="stat-label-hd">Điện tiêu thụ</div>
-            <h3 class="stat-value-hd">150 kWh</h3>
-            <div class="stat-detail-hd">Tháng 11/2026</div>
-        </div>
-        <div class="stat-card-hd room">
-            <div class="stat-icon-hd">💧</div>
-            <div class="stat-label-hd">Nước tiêu thụ</div>
-            <h3 class="stat-value-hd">20 m³</h3>
-            <div class="stat-detail-hd">Tháng 11/2026</div>
-        </div>
-    </section>
+    @if (TempData["ThongBao"] != null)
+    {
+        <div class="alert alert-info dashboard-fade-in">@TempData["ThongBao"]</div>
+    }
 
     <section class="tabs-container-hd dashboard-fade-in delay-2">
-
-        <h3 class="section-title-hd">Hóa đơn Chưa thanh toán (1)</h3>
+        <h3 class="section-title-hd">Hóa đơn Chưa thanh toán</h3>
         <div class="invoice-cards-grid">
-            <div class="invoice-card unpaid">
-                <div class="invoice-card-header">
-                    <div>
-                        <h3 class="invoice-card-title">🧾 Hóa đơn Tháng 11/2026</h3>
-                        <p class="invoice-month">Phòng B1-201</p>
+            @foreach (var item in Model.Where(h => h.TrangThai == "Chưa thanh toán"))
+            {
+                <div class="invoice-card unpaid">
+                    <div class="invoice-card-header">
+                        <div>
+                            <h3 class="invoice-card-title">🧾 Hóa đơn Tháng @item.Thang/@item.Nam</h3>
+                            <p class="invoice-month">Mã HĐ: @item.MaHoaDon</p>
+                        </div>
+                        <span class="status-badge-hd pending">@item.TrangThai</span>
                     </div>
-                    <span class="status-badge-hd pending">Chưa thanh toán</span>
-                </div>
-                <div class="invoice-details">
-                    <div class="invoice-row">
-                        <span class="invoice-label">Tiền phòng</span>
-                        <span class="invoice-value">800,000đ</span>
+                    <div class="invoice-details">
+                        <div class="invoice-row">
+                            <span class="invoice-label">Tiền phòng</span>
+                            <span class="invoice-value">@item.TienPhong?.ToString("N0")đ</span>
+                        </div>
+                        <div class="invoice-row">
+                            <span class="invoice-label">Tiền điện</span>
+                            <span class="invoice-value">@item.TienDien?.ToString("N0")đ</span>
+                        </div>
+                        <div class="invoice-row">
+                            <span class="invoice-label">Tiền nước</span>
+                            <span class="invoice-value">@item.TienNuoc?.ToString("N0")đ</span>
+                        </div>
                     </div>
-                    <div class="invoice-row">
-                        <span class="invoice-label">Tiền điện (150 kWh)</span>
-                        <span class="invoice-value">300,000đ</span>
+                    <div class="invoice-total">
+                        <span class="invoice-total-label">Tổng cộng</span>
+                        <span class="invoice-total-value">@item.TongTien?.ToString("N0")đ</span>
                     </div>
-                    <div class="invoice-row">
-                        <span class="invoice-label">Tiền nước (20 m³)</span>
-                        <span class="invoice-value">100,000đ</span>
+                    <div class="invoice-actions">
+                        <button class="btn-action-hd btn-view-hd"><span>📄</span> Chi tiết</button>
+                        <button class="btn-action-hd btn-pay-hd"
+                                onclick="openPaymentModal('@item.MaHoaDon', '@item.TongTien?.ToString("N0")')">
+                            <span>💳</span> Thanh toán Ngay
+                        </button>
                     </div>
-                    <div class="invoice-row">
-                        <span class="invoice-label">Phí dịch vụ (Wifi, Vệ sinh)</span>
-                        <span class="invoice-value">50,000đ</span>
-                    </div>
                 </div>
-                <div class="invoice-deadline">
-                    <span>⏰</span> <strong>Hạn thanh toán: 25/11/2026</strong>
-                </div>
-                <div class="invoice-total">
-                    <span class="invoice-total-label">Tổng cộng</span>
-                    <span class="invoice-total-value">1,250,000đ</span>
-                </div>
-                <div class="invoice-actions">
-                    <button class="btn-action-hd btn-view-hd"><span>📄</span> Xem Chi tiết</button>
-                    <button class="btn-action-hd btn-pay-hd" data-modal-target="paymentModal"><span>💳</span> Thanh toán Ngay</button>
-                </div>
-            </div>
+            }
         </div>
 
-        <h3 class="section-title-hd">Lịch sử Thanh toán</h3>
-        <div>
-            <div class="payment-history-hd" style="margin-top: 25px; box-shadow: none; padding: 0;">
+        <h3 class="section-title-hd" style="margin-top:40px;">Lịch sử Thanh toán</h3>
+        <div class="payment-history-hd">
+            @foreach (var item in Model.Where(h => h.TrangThai == "Đã thanh toán"))
+            {
                 <div class="history-item-hd">
-                    <div class="history-icon-hd">✔</div>
+                    <div class="history-icon-hd" style="background: #dcfce7; color: #16a34a;">✔</div>
                     <div style="flex: 1;">
-                        <div class="history-title-hd">Thanh toán hóa đơn tháng 10/2026</div>
-                        <div class="history-date-hd">15/10/2026 - Thanh toán qua MoMo</div>
+                        <div class="history-title-hd">Tháng @item.Thang/@item.Nam - @item.MaHoaDon</div>
+                        <div class="history-date-hd">Trạng thái: @item.TrangThai</div>
                     </div>
-                    <div class="history-amount-hd">1,200,000đ</div>
+                    <div class="history-amount-hd">@item.TongTien?.ToString("N0")đ</div>
                 </div>
-                <div class="history-item-hd">
-                    <div class="history-icon-hd">✔</div>
-                    <div style="flex: 1;">
-                        <div class="history-title-hd">Thanh toán hóa đơn tháng 09/2026</div>
-                        <div class="history-date-hd">14/09/2026 - Thanh toán qua VCB</div>
-                    </div>
-                    <div class="history-amount-hd">1,150,000đ</div>
-                </div>
-            </div>
+            }
         </div>
-
-        <h3 class="section-title-hd">Biểu đồ Tiêu thụ</h3>
-        <div>
-            <div class="chart-section-hd" style="margin-top: 25px; box-shadow: none; padding: 0;">
-                <div class="chart-header-hd">
-                    <h3>📊 Biểu đồ Tiêu thụ 6 tháng gần nhất</h3>
-                    <select class="chart-filter-hd">
-                        <option value="all">Tất cả</option>
-                        <option value="dien">Chỉ xem Điện</option>
-                        <option value="nuoc">Chỉ xem Nước</option>
-                    </select>
-                </div>
-                <div class="chart-bars-hd">
-                    <div class="chart-bar-hd">
-                        <div class="bar-label-hd">Tháng 11</div>
-                        <div class="bar-track-hd">
-                            <div class="bar-fill-hd" style="width: 80%">400,000đ</div>
-                        </div>
-                    </div>
-                    <div class="chart-bar-hd">
-                        <div class="bar-label-hd">Tháng 10</div>
-                        <div class="bar-track-hd">
-                            <div class="bar-fill-hd" style="width: 70%">350,000đ</div>
-                        </div>
-                    </div>
-                    <div class="chart-bar-hd">
-                        <div class="bar-label-hd">Tháng 09</div>
-                        <div class="bar-track-hd">
-                            <div class="bar-fill-hd" style="width: 65%">300,000đ</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </section>
 </div>
 
 <div class="modal-qr" id="paymentModal">
     <div class="modal-content-qr">
         <div class="modal-header-qr">
-            <h3>Thanh toán Hóa đơn</h3>
-            <button class="modal-close-qr" data-modal-close="paymentModal">&times;</button>
+            <h3>Xác nhận Thanh toán</h3>
+            <button class="modal-close-qr" onclick="closeModal()">&times;</button>
         </div>
         <div class="modal-body-qr">
             <div class="qr-payment-section">
                 <div class="qr-code-container">
-                    <div class="bank-logo-hd">VCB</div>
-                    <div style="margin: 15px 0;">
-                        <div class="account-name-hd">TRUNG TAM NOI TRU DH VINH</div>
-                        <div class="account-number-hd">1028 888 888</div>
-                        <div class="bank-name-hd">Vietcombank - CN Nghệ An</div>
-                    </div>
-                    <div class="qr-code-image-hd">[VietQR Code Hiển thị ở đây]</div>
-                    <div class="payment-logos">
-                        <span class="payment-logo">MoMo</span>
-                        <span class="payment-logo">ZaloPay</span>
-                        <span class="payment-logo">ViettelPay</span>
+                    <div class="bank-logo-hd">VNPAY</div>
+                    <p style="margin: 10px 0;">Hóa đơn: <strong id="modalMaHD"></strong></p>
+                    <p>Số tiền: <strong id="modalSoTien" style="color: #e11d48; font-size: 1.2rem;"></strong></p>
+                    <div class="qr-code-image-hd" style="background: #f8fafc; border: 1px dashed #cbd5e1; padding: 20px;">
+                        <i data-lucide="qr-code" style="width: 100px; height: 100px; color: #64748b;"></i>
+                        <p style="font-size: 0.8rem; margin-top: 10px;">Quét mã hoặc nhấn nút bên dưới để chuyển tới cổng VNPAY</p>
                     </div>
                 </div>
             </div>
-            <div class="payment-instructions">
-                <h4>💡 Hướng dẫn Thanh toán</h4>
-                <ol>
-                    <li>Mở ứng dụng Ngân hàng hoặc Ví điện tử của bạn.</li>
-                    <li>Chọn tính năng "Quét mã QR" (VietQR).</li>
-                    <li>Nội dung chuyển khoản sẽ được tự động điền.</li>
-                    <li><strong>Nội dung bắt buộc:</strong> <code style="background: #f1f5f9; padding: 2px 6px; border-radius: 4px;">KTX [Mã SV] [Hóa đơn T11]</code></li>
-                    <li>Kiểm tra lại thông tin và xác nhận thanh toán.</li>
-                </ol>
-            </div>
         </div>
-        <div class="modal-footer-qr">
-            <button class="btn-modal-hd secondary" data-modal-close="paymentModal">Hủy</button>
-            <button class="btn-modal-hd primary">Đã thanh toán</button>
+        <div class="modal-footer-qr" style="display: flex; justify-content: space-between; padding: 20px;">
+            <button class="btn-modal-hd secondary" onclick="closeModal()">Quay lại</button>
+
+            <form asp-action="ThanhToanVnPay" asp-controller="GiaoDich" method="post">
+                <input type="hidden" name="maHoaDon" id="hiddenMaHD" />
+                <button type="submit" class="btn-modal-hd primary" style="background: #4f46e5; color: white;">
+                    🚀 Mở Cổng VNPAY TEST
+                </button>
+            </form>
         </div>
     </div>
 </div>
 
 @section Scripts {
     <script>
+        function openPaymentModal(maHD, soTien) {
+            document.getElementById("modalMaHD").innerText = maHD;
+            document.getElementById("modalSoTien").innerText = soTien + "đ";
+            document.getElementById("hiddenMaHD").value = maHD;
+            document.getElementById("paymentModal").classList.add("active");
+        }
+
+        function closeModal() {
+            document.getElementById("paymentModal").classList.remove("active");
+        }
+
         document.addEventListener("DOMContentLoaded", function () {
-            // Xử lý bật Modal QR (Giữ nguyên logic HTML của mày)
-            const openModalButtons = document.querySelectorAll("[data-modal-target]");
-            const closeModalButtons = document.querySelectorAll("[data-modal-close]");
-
-            openModalButtons.forEach((button) => {
-                button.addEventListener("click", function () {
-                    const modal = document.getElementById(this.dataset.modalTarget);
-                    if (modal) { modal.classList.add("active"); }
-                });
-            });
-
-            closeModalButtons.forEach((button) => {
-                button.addEventListener("click", function () {
-                    const modal = document.getElementById(this.dataset.modalClose);
-                    if (modal) { modal.classList.remove("active"); }
-                });
-            });
-
-            // Đóng modal khi click ra ngoài vùng xám
-            document.querySelectorAll(".modal-qr").forEach((modal) => {
-                modal.addEventListener("click", function (e) {
-                    if (e.target === this) { this.classList.remove("active"); }
-                });
-            });
+            if (typeof lucide !== 'undefined') { lucide.createIcons(); }
         });
     </script>
 }

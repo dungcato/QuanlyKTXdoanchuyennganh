@@ -1,13 +1,12 @@
-﻿@{
-    Layout = "~/Views/Shared/_Layout.cshtml"; // Hoặc _StudentLayout.cshtml tùy mày đang dùng tên gì
+﻿@model IEnumerable<QuanlyKTX.Models.ThongBao>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "Thông báo";
 }
 
 <div class="container-fluid p-0">
     <section class="page-header-tb dashboard-fade-in">
-        <div class="page-header-icon-tb">
-            <i data-lucide="bell" style="width: 32px; height: 32px;"></i>
-        </div>
+        <div class="page-header-icon-tb"><i data-lucide="bell"></i></div>
         <div class="page-header-content-tb">
             <h1>Thông Báo Của Bạn</h1>
             <p>Tất cả cập nhật quan trọng từ Ban Quản lý KTX.</p>
@@ -18,22 +17,22 @@
         <div class="stat-filter-card all active">
             <div class="stat-filter-icon"><i data-lucide="list"></i></div>
             <div class="stat-filter-label">Tất cả</div>
-            <div class="stat-filter-value">5</div>
+            <div class="stat-filter-value">@ViewBag.Total</div>
         </div>
         <div class="stat-filter-card unread">
             <div class="stat-filter-icon"><i data-lucide="bell-dot"></i></div>
             <div class="stat-filter-label">Chưa đọc</div>
-            <div class="stat-filter-value">2</div>
+            <div class="stat-filter-value">@ViewBag.UnreadCount</div>
         </div>
         <div class="stat-filter-card finance">
             <div class="stat-filter-icon"><i data-lucide="receipt"></i></div>
             <div class="stat-filter-label">Tài chính</div>
-            <div class="stat-filter-value">2</div>
+            <div class="stat-filter-value">@ViewBag.FinanceCount</div>
         </div>
         <div class="stat-filter-card event">
             <div class="stat-filter-icon"><i data-lucide="megaphone"></i></div>
             <div class="stat-filter-label">Sự kiện & Bảo trì</div>
-            <div class="stat-filter-value">3</div>
+            <div class="stat-filter-value">@ViewBag.EventCount</div>
         </div>
     </section>
 
@@ -42,100 +41,53 @@
             <h3><i data-lucide="inbox" style="width: 20px; color: #4f46e5;"></i> Hộp thư Thông báo</h3>
         </div>
 
-        <div class="notification-item finance unread">
-            <div class="notification-icon"><i data-lucide="receipt"></i></div>
-            <div class="notification-info">
-                <div class="notification-title">THÔNG BÁO ĐÓNG TIỀN KTX THÁNG 12/2026</div>
-                <div class="notification-meta">
-                    <strong>Loại: Tài chính</strong> | Gửi lúc: 10:30 - 15/11/2026
-                </div>
+        @if (!Model.Any())
+        {
+            <div style="padding: 40px; text-align: center; color: #94a3b8;">
+                <i data-lucide="mail-open" style="width: 48px; height: 48px; margin-bottom: 10px;"></i>
+                <p>Bạn không có thông báo nào mới.</p>
             </div>
-            <div class="unread-dot-wrapper"><div class="unread-dot"></div></div>
-        </div>
+        }
+        else
+        {
+            @foreach (var item in Model)
+            {
+                // Xác định class để lọc bằng JS
+                string categoryClass = "";
+                string iconName = "bell";
 
-        <div class="notification-item maintenance unread">
-            <div class="notification-icon"><i data-lucide="wrench"></i></div>
-            <div class="notification-info">
-                <div class="notification-title">Bảo trì hệ thống thang máy Tòa B1 (Ngày 18/11)</div>
-                <div class="notification-meta">
-                    <strong>Loại: Bảo trì</strong> | Gửi lúc: 08:00 - 14/11/2026
-                </div>
-            </div>
-            <div class="unread-dot-wrapper"><div class="unread-dot"></div></div>
-        </div>
+                if (item.LoaiThongBao == "Tài chính") { categoryClass = "finance"; iconName = "receipt"; }
+                else if (item.LoaiThongBao == "Bảo trì") { categoryClass = "maintenance"; iconName = "wrench"; }
+                else { categoryClass = "event"; iconName = "megaphone"; }
 
-        <div class="notification-item event">
-            <div class="notification-icon"><i data-lucide="megaphone"></i></div>
-            <div class="notification-info">
-                <div class="notification-title">Sự kiện Chào Tân Sinh Viên 2026 tại Hội trường A</div>
-                <div class="notification-meta">
-                    <strong>Loại: Sự kiện</strong> | Gửi lúc: 17:00 - 12/11/2026
-                </div>
-            </div>
-            <div class="unread-dot-wrapper"></div>
-        </div>
+                // Giả lập trạng thái unread nếu mới gửi trong 1 ngày
+                string unreadClass = (item.NgayGui >= DateTime.Now.AddDays(-1)) ? "unread" : "";
 
-        <div class="notification-item finance">
-            <div class="notification-icon"><i data-lucide="receipt"></i></div>
-            <div class="notification-info">
-                <div class="notification-title">Đã xác nhận thanh toán hóa đơn KTX Tháng 11/2026</div>
-                <div class="notification-meta">
-                    <strong>Loại: Tài chính</strong> | Gửi lúc: 11:00 - 10/11/2026
+                <div class="notification-item @categoryClass @unreadClass">
+                    <div class="notification-icon"><i data-lucide="@iconName"></i></div>
+                    <div class="notification-info">
+                        <div class="notification-title">@item.TieuDe</div>
+                        <div class="notification-description" style="font-size: 14px; color: #475569; margin: 5px 0;">
+                            @item.NoiDung
+                        </div>
+                        <div class="notification-meta">
+                            <strong>Loại: @item.LoaiThongBao</strong> | Gửi bởi: @item.NguoiGui | Lúc: @item.NgayGui?.ToString("HH:mm - dd/MM/yyyy")
+                        </div>
+                        @if (!string.IsNullOrEmpty(item.FileDinhKem))
+                        {
+                            <a href="@item.FileDinhKem" class="attachment-link" style="font-size: 12px; color: #3b82f6; text-decoration: none; display: block; margin-top: 5px;">
+                                <i data-lucide="paperclip" style="width: 12px; vertical-align: middle;"></i> Xem file đính kèm
+                            </a>
+                        }
+                    </div>
+                    <div class="unread-dot-wrapper">
+                        @if (unreadClass == "unread")
+                        {
+                            <div class="unread-dot"></div>
+                        }
+                    </div>
                 </div>
-            </div>
-            <div class="unread-dot-wrapper"></div>
-        </div>
-
-        <div class="notification-item event">
-            <div class="notification-icon"><i data-lucide="gift"></i></div>
-            <div class="notification-info">
-                <div class="notification-title">Phát động cuộc thi ảnh "Nét đẹp Sinh viên KTX"</div>
-                <div class="notification-meta">
-                    <strong>Loại: Sự kiện</strong> | Gửi lúc: 09:00 - 05/11/2026
-                </div>
-            </div>
-            <div class="unread-dot-wrapper"></div>
-        </div>
+            }
+        }
     </section>
 </div>
-
-@section Scripts {
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Re-render icon
-            if (typeof lucide !== 'undefined') { lucide.createIcons(); }
-
-            // Logic lọc thông báo
-            const filterCards = document.querySelectorAll(".stat-filter-card");
-            const notificationItems = document.querySelectorAll(".notification-item");
-
-            filterCards.forEach((card) => {
-                card.addEventListener("click", function () {
-                    // Xóa trạng thái active của tất cả các nút
-                    filterCards.forEach((c) => c.classList.remove("active"));
-                    // Bật trạng thái active cho nút vừa click
-                    this.classList.add("active");
-
-                    // Xác định đang chọn bộ lọc nào
-                    let filterType = "all";
-                    if (this.classList.contains("unread")) filterType = "unread";
-                    if (this.classList.contains("finance")) filterType = "finance";
-                    if (this.classList.contains("event")) filterType = "event";
-
-                    // Lặp qua từng item để ẩn/hiện
-                    notificationItems.forEach((item) => {
-                        if (filterType === "all") {
-                            item.style.display = "flex";
-                        } else if (filterType === "unread") {
-                            item.style.display = item.classList.contains("unread") ? "flex" : "none";
-                        } else if (filterType === "finance") {
-                            item.style.display = item.classList.contains("finance") ? "flex" : "none";
-                        } else if (filterType === "event") {
-                            item.style.display = (item.classList.contains("event") || item.classList.contains("maintenance")) ? "flex" : "none";
-                        }
-                    });
-                });
-            });
-        });
-    </script>
-}
