@@ -1,0 +1,435 @@
+﻿@model QuanlyKTX.Models.HoaDon
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Chi tiết & Cập nhật Hóa Đơn";
+}
+
+<style>
+    .invoice-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .header-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    .btn-back {
+        background: white;
+        border: 1px solid #cbd5e1;
+        color: #64748b;
+        padding: 10px 18px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: 0.2s;
+    }
+
+    .btn-print {
+        background: #f1f5f9;
+        color: #475569;
+        border: 1px solid #cbd5e1;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: 0.2s;
+    }
+
+    .status-banner {
+        padding: 15px 25px;
+        border-radius: 12px;
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 600;
+    }
+
+    .banner-chuatra {
+        background: #fee2e2;
+        color: #b91c1c;
+        border: 1px solid #fecaca;
+    }
+
+    .banner-datra {
+        background: #dcfce7;
+        color: #15803d;
+        border: 1px solid #bbf7d0;
+    }
+
+    .banner-quahan {
+        background: #ffedd5;
+        color: #c2410c;
+        border: 1px solid #fed7aa;
+    }
+
+    .grid-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .card-panel {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+        padding: 30px;
+        border: 1px solid #f1f5f9;
+    }
+
+    .panel-title {
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: #1e293b;
+        margin-top: 0;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-bottom: 2px solid #f1f5f9;
+        padding-bottom: 12px;
+    }
+
+    .form-group {
+        margin-bottom: 18px;
+    }
+
+        .form-group label {
+            font-weight: 600;
+            color: #475569;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+    .form-input {
+        width: 100%;
+        padding: 12px 15px;
+        border-radius: 8px;
+        border: 1px solid #cbd5e1;
+        background: #fff;
+        transition: 0.2s;
+    }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
+        }
+
+        .form-input.readonly {
+            background: #f8fafc;
+            color: #64748b;
+            font-weight: 600;
+            cursor: not-allowed;
+            border-color: #e2e8f0;
+        }
+
+    .receipt-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+        border-bottom: 1px dashed #e2e8f0;
+    }
+
+        .receipt-row.total {
+            border-bottom: none;
+            border-top: 2px dashed #cbd5e1;
+            padding-top: 20px;
+            margin-top: 10px;
+        }
+
+    .money-input {
+        text-align: right;
+        font-family: monospace;
+        font-size: 1.1rem;
+        color: #0f172a;
+        font-weight: 700;
+        width: 160px;
+    }
+
+    @@media print {
+        body * {
+            visibility: hidden;
+        }
+
+        .print-section, .print-section * {
+            visibility: visible;
+        }
+
+        .print-section {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            box-shadow: none;
+            border: none;
+        }
+
+        .no-print {
+            display: none !important;
+        }
+    }
+</style>
+
+<div class="invoice-container">
+
+    <div class="header-actions no-print">
+        <a href="/Admin/HoaDon/Index" class="btn-back"><i data-lucide="arrow-left" style="width: 18px;"></i> Danh sách Hóa đơn</a>
+        <div style="display: flex; gap: 15px; align-items: center;">
+            <h2 style="font-size: 1.5rem; font-weight: 800; color: #1e293b; margin: 0;">Mã HĐ: <span style="color: #6366f1;">@Model?.MaHoaDon</span></h2>
+            <button type="button" class="btn-print" onclick="window.print()"><i data-lucide="printer" style="width: 18px;"></i> In Biên Lai</button>
+        </div>
+    </div>
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="status-banner banner-chuatra no-print"><i data-lucide="alert-triangle"></i> @TempData["Error"]</div>
+    }
+
+    <!-- THÔNG BÁO TRẠNG THÁI HIỆN TẠI -->
+    @if (Model?.TrangThai == "Đã thanh toán")
+    {
+        <div class="status-banner banner-datra no-print">
+            <span style="display:flex; align-items:center; gap:8px;"><i data-lucide="check-circle"></i> Hóa đơn đã thanh toán hoàn tất.</span>
+            <span>Ngày thu: @(Model.NgayThanhToan?.ToString("dd/MM/yyyy HH:mm"))</span>
+        </div>
+    }
+    else if (Model?.TrangThai == "Quá hạn")
+    {
+        <div class="status-banner banner-quahan no-print">
+            <span style="display:flex; align-items:center; gap:8px;"><i data-lucide="clock"></i> Hóa đơn đã quá hạn thanh toán! Yêu cầu thu hồi gấp.</span>
+            <span>Hạn chót: @(Model.HanThanhToan.HasValue ? Model.HanThanhToan.Value.ToString("dd/MM/yyyy") : "")</span>
+        </div>
+    }
+    else
+    {
+        <div class="status-banner banner-chuatra no-print">
+            <span style="display:flex; align-items:center; gap:8px;"><i data-lucide="alert-circle"></i> Hóa đơn chưa thanh toán. Cập nhật trạng thái khi đã thu tiền.</span>
+            <span>Hạn chót: @(Model?.HanThanhToan.HasValue == true ? Model.HanThanhToan.Value.ToString("dd/MM/yyyy") : "")</span>
+        </div>
+    }
+
+    <form action="/Admin/HoaDon/Edit" method="post" class="print-section">
+        <input type="hidden" name="HoaDonId" value="@Model?.HoaDonId" />
+        <input type="hidden" name="MaHoaDon" value="@Model?.MaHoaDon" />
+
+        <div class="grid-layout">
+
+            <!-- CỘT 1: THÔNG TIN HÀNH CHÍNH & TRẠNG THÁI -->
+            <div class="card-panel">
+                <h3 class="panel-title"><i data-lucide="file-text" style="color: #6366f1;"></i> Thông Tin Biểu Mẫu</h3>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="form-group">
+                        <label>Phòng</label>
+                        <select name="PhongId" id="selectPhongEdit" class="form-input" required>
+                            @if (ViewBag.PhongList != null)
+                            {
+                                foreach (var item in ViewBag.PhongList as List<QuanlyKTX.Models.Phong>)
+                                {
+                                    <option value="@item.PhongId" selected="@(Model?.PhongId == item.PhongId)">Phòng @item.PhongId</option>
+                                }
+                            }
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Sinh viên đại diện</label>
+                        <select name="Mssv" id="selectSvEdit" class="form-input">
+                            <option value="">-- Để trống --</option>
+                            @if (ViewBag.SinhVienList != null)
+                            {
+                                foreach (var item in ViewBag.SinhVienList as List<QuanlyKTX.Models.SinhVien>)
+                                {
+                                    <!-- Gắn data-phong ngầm -->
+                                    <option value="@item.Mssv" data-phong="@item.PhongDangOid" selected="@(Model?.Mssv == item.Mssv)">@item.HoTen</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="form-group">
+                        <label>Kỳ Thu (Tháng)</label>
+                        <input type="number" name="Thang" value="@Model?.Thang" class="form-input" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Năm</label>
+                        <input type="number" name="Nam" value="@Model?.Nam" class="form-input" required />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Hạn Thanh Toán (Deadline)</label>
+                    <input type="date" name="HanThanhToan" value="@(Model?.HanThanhToan.HasValue == true ? Model.HanThanhToan.Value.ToString("yyyy-MM-dd") : "")" class="form-input" />
+                </div>
+
+                <h3 class="panel-title" style="margin-top: 35px;"><i data-lucide="wallet" style="color: #10b981;"></i> Trạng Thái Thu Tiền</h3>
+
+                <div class="form-group">
+                    <label>Tình trạng Hóa đơn</label>
+                    <select name="TrangThai" id="selectTrangThai" class="form-input" style="font-weight: 700; color: #0f172a;">
+                        <option value="Chưa thanh toán" selected="@(Model?.TrangThai == "Chưa thanh toán")">Chưa thanh toán</option>
+                        <option value="Đã thanh toán" selected="@(Model?.TrangThai == "Đã thanh toán")">Đã thanh toán</option>
+                        <option value="Quá hạn" selected="@(Model?.TrangThai == "Quá hạn")">Quá hạn</option>
+                    </select>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="form-group">
+                        <label>Phương thức TT</label>
+                        <select name="PhuongThucTt" class="form-input">
+                            <option value="">-- Chọn --</option>
+                            <option value="Tiền mặt" selected="@(Model?.PhuongThucTt == "Tiền mặt")">Tiền mặt</option>
+                            <option value="Chuyển khoản" selected="@(Model?.PhuongThucTt == "Chuyển khoản")">Chuyển khoản NH</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Ngày thanh toán</label>
+                        <input type="text" value="@(Model?.NgayThanhToan?.ToString("dd/MM/yyyy HH:mm") ?? "Chưa thu tiền")" class="form-input readonly" readonly />
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-top: 10px;">
+                    <label>Ghi chú thêm</label>
+                    <textarea name="GhiChu" class="form-input" rows="2" placeholder="Ví dụ: Thu tiền mặt tại quầy...">@Model?.GhiChu</textarea>
+                </div>
+            </div>
+
+            <!-- CỘT 2: CHI TIẾT BIÊN LAI (BILLING) -->
+            <div class="card-panel" style="background: #f8fafc; border: 1px solid #e2e8f0;">
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <h2 style="font-size: 1.8rem; font-weight: 900; color: #0f172a; margin: 0; text-transform: uppercase; letter-spacing: 1px;">Biên Lai Thu Tiền</h2>
+                    <p style="color: #64748b; margin-top: 5px; font-weight: 600;">Kỳ tháng @Model?.Thang / @Model?.Nam - Phòng @Model?.PhongId</p>
+                </div>
+
+                <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: inset 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #e2e8f0;">
+
+                    <div class="receipt-row">
+                        <span style="font-weight: 600; color: #475569;">1. Tiền Phòng / Giường</span>
+                        <div style="display:flex; align-items:center; gap: 5px;">
+                            <input type="number" step="1000" name="TienPhong" value="@Model?.TienPhong" class="form-input money-input calc-field" />
+                            <span style="color:#94a3b8; font-weight:bold;">đ</span>
+                        </div>
+                    </div>
+
+                    <div class="receipt-row">
+                        <span style="font-weight: 600; color: #475569;">2. Tiền Điện tiêu thụ</span>
+                        <div style="display:flex; align-items:center; gap: 5px;">
+                            <input type="number" step="1000" name="TienDien" value="@Model?.TienDien" class="form-input money-input calc-field" />
+                            <span style="color:#94a3b8; font-weight:bold;">đ</span>
+                        </div>
+                    </div>
+
+                    <div class="receipt-row">
+                        <span style="font-weight: 600; color: #475569;">3. Tiền Nước sinh hoạt</span>
+                        <div style="display:flex; align-items:center; gap: 5px;">
+                            <input type="number" step="1000" name="TienNuoc" value="@Model?.TienNuoc" class="form-input money-input calc-field" />
+                            <span style="color:#94a3b8; font-weight:bold;">đ</span>
+                        </div>
+                    </div>
+
+                    <div class="receipt-row" style="border-bottom: none;">
+                        <span style="font-weight: 600; color: #475569;">4. Phí Dịch vụ (Vệ sinh, Wifi)</span>
+                        <div style="display:flex; align-items:center; gap: 5px;">
+                            <input type="number" step="1000" name="PhiDichVu" value="@Model?.PhiDichVu" class="form-input money-input calc-field" />
+                            <span style="color:#94a3b8; font-weight:bold;">đ</span>
+                        </div>
+                    </div>
+
+                    <div class="receipt-row total">
+                        <span style="font-size: 1.2rem; font-weight: 900; color: #1e293b; text-transform: uppercase;">Tổng Phải Thu</span>
+                        <div id="hienThiTongTien" style="font-size: 2rem; font-weight: 900; color: #ef4444; text-shadow: 1px 1px 0px rgba(239,68,68,0.2);">
+                            @(Model?.TongTien?.ToString("N0") ?? "0") đ
+                        </div>
+                    </div>
+                </div>
+
+                <div class="no-print" style="margin-top: 30px; text-align: center;">
+                    <button type="submit" style="background: #4f46e5; color: white; padding: 15px 0; width: 100%; font-size: 1.1rem; border: none; border-radius: 12px; font-weight: 800; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; box-shadow: 0 10px 20px rgba(79, 70, 229, 0.25); transition: 0.3s;">
+                        <i data-lucide="save"></i> LƯU BIÊN LAI HÓA ĐƠN
+                    </button>
+                    <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 15px;">* Mọi thay đổi tài chính sẽ được lưu vết trên hệ thống.</p>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+        if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- 1. LOGIC LỌC SINH VIÊN THEO PHÒNG (TRANG CHỈNH SỬA) ---
+            const phongSelect = document.getElementById('selectPhongEdit');
+            const svSelect = document.getElementById('selectSvEdit');
+            const allSvOptions = Array.from(svSelect.querySelectorAll('option:not([value=""])'));
+
+            function locSinhVienTheoPhong() {
+                const phongId = phongSelect.value;
+                const currentMssv = svSelect.value;
+
+                svSelect.innerHTML = '<option value="">-- Để trống --</option>';
+
+                allSvOptions.forEach(opt => {
+                    if (opt.getAttribute('data-phong') === phongId) {
+                        svSelect.appendChild(opt.cloneNode(true));
+                    }
+                });
+
+                if (currentMssv && Array.from(svSelect.options).some(o => o.value === currentMssv)) {
+                    svSelect.value = currentMssv;
+                }
+            }
+
+            phongSelect.addEventListener('change', locSinhVienTheoPhong);
+            locSinhVienTheoPhong(); // Chạy lúc khởi tạo trang
+
+            // --- 2. ĐỔI MÀU TRẠNG THÁI ---
+            const selectTrangThai = document.getElementById('selectTrangThai');
+            function updateStatusColor() {
+                const val = selectTrangThai.value;
+                if(val === 'Đã thanh toán') {
+                    selectTrangThai.style.backgroundColor = '#dcfce7'; selectTrangThai.style.color = '#15803d'; selectTrangThai.style.borderColor = '#16a34a';
+                } else if(val === 'Quá hạn') {
+                    selectTrangThai.style.backgroundColor = '#ffedd5'; selectTrangThai.style.color = '#c2410c'; selectTrangThai.style.borderColor = '#ea580c';
+                } else {
+                    selectTrangThai.style.backgroundColor = '#fff'; selectTrangThai.style.color = '#0f172a'; selectTrangThai.style.borderColor = '#cbd5e1';
+                }
+            }
+            selectTrangThai.addEventListener('change', updateStatusColor);
+            updateStatusColor();
+
+            // --- 3. AUTO SUM (TỔNG TIỀN) ---
+            const moneyInputs = document.querySelectorAll('.calc-field');
+            const txtTongTien = document.getElementById('hienThiTongTien');
+            const formatVND = (money) => new Intl.NumberFormat('vi-VN').format(money) + ' đ';
+
+            function tinhTongTien() {
+                let total = 0;
+                moneyInputs.forEach(input => {
+                    let val = parseFloat(input.value);
+                    if (!isNaN(val)) total += val;
+                });
+                txtTongTien.innerText = formatVND(total);
+            }
+
+            moneyInputs.forEach(input => { input.addEventListener('input', tinhTongTien); });
+        });
+    </script>
+}

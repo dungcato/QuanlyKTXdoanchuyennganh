@@ -1,0 +1,703 @@
+﻿@model IEnumerable<QuanlyKTX.Models.Khach>
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Đăng ký & Quản lý Khách ra vào";
+}
+
+<style>
+    /* BỐ CỤC CHUNG */
+    .page-header {
+        margin-bottom: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #1e293b;
+        margin: 0 0 5px 0;
+    }
+
+    .page-subtitle {
+        color: #64748b;
+        font-size: 0.95rem;
+        margin: 0;
+    }
+
+    .info-card {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        padding: 25px;
+        margin-bottom: 25px;
+        border: 1px solid #f1f5f9;
+    }
+
+    .info-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #f1f5f9;
+        padding-bottom: 12px;
+    }
+
+    .info-header-title {
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: #4f46e5;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    /* CSS FORM ĐĂNG KÝ */
+    .form-grid-faceid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 30px;
+    }
+
+    .form-section {
+        background: #f8fafc;
+        padding: 20px;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+    }
+
+    .form-section-title {
+        font-weight: 700;
+        color: #334155;
+        margin: 0 0 15px 0;
+        padding-bottom: 10px;
+        border-bottom: 1px dashed #cbd5e1;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .form-group-admin {
+        margin-bottom: 15px;
+        position: relative;
+    }
+
+        .form-group-admin label {
+            font-weight: 600;
+            color: #475569;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .form-group-admin .input-wrapper {
+            position: relative;
+        }
+
+            .form-group-admin .input-wrapper i {
+                position: absolute;
+                left: 12px;
+                top: 12px;
+                color: #94a3b8;
+                width: 18px;
+            }
+
+        .form-group-admin input, .form-group-admin select {
+            width: 100%;
+            padding: 10px 15px 10px 40px;
+            border-radius: 8px;
+            border: 1px solid #cbd5e1;
+            font-family: inherit;
+            transition: 0.2s;
+        }
+
+            .form-group-admin input:focus, .form-group-admin select:focus {
+                outline: none;
+                border-color: #6366f1;
+                box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
+            }
+
+        .form-group-admin.no-icon input {
+            padding-left: 15px;
+        }
+
+    /* KHU VỰC CAMERA FACE ID & ELFINDER */
+    .camera-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    #camera_viewport {
+        width: 100%;
+        max-width: 320px;
+        height: 240px;
+        background: #0f172a;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 3px solid #e2e8f0;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+
+        #camera_viewport video {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover;
+        }
+
+    #snapshot_result {
+        width: 100%;
+        max-width: 320px;
+        height: 240px;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 3px solid #10b981;
+        display: none;
+    }
+
+        #snapshot_result img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    .btn-camera-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .btn-cam {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        transition: 0.2s;
+    }
+
+        .btn-cam.capture {
+            background: #3b82f6;
+            color: white;
+        }
+
+            .btn-cam.capture:hover {
+                background: #2563eb;
+            }
+
+        .btn-cam.retake {
+            background: #fef2f2;
+            color: #ef4444;
+            display: none;
+        }
+
+            .btn-cam.retake:hover {
+                background: #fca5a5;
+                color: white;
+            }
+
+        .btn-cam.elfinder {
+            background: #10b981;
+            color: white;
+        }
+
+            .btn-cam.elfinder:hover {
+                background: #059669;
+            }
+
+    .upload-divider {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #cbd5e1;
+        line-height: 0.1em;
+        margin: 20px 0;
+    }
+
+        .upload-divider span {
+            background: #fff;
+            padding: 0 10px;
+            color: #64748b;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+    /* CSS BẢNG DỮ LIỆU */
+    .table-container {
+        overflow-x: auto;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+    }
+
+    .admin-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .admin-table th {
+            background: #f8fafc;
+            color: #64748b;
+            font-weight: 600;
+            padding: 15px;
+            text-align: left;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .admin-table td {
+            padding: 15px;
+            border-bottom: 1px solid #f1f5f9;
+            vertical-align: middle;
+        }
+
+    .status-badge {
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+        .status-badge.active {
+            background: #dcfce7;
+            color: #16a34a;
+        }
+
+        .status-badge.expired {
+            background: #f1f5f9;
+            color: #64748b;
+        }
+
+    .btn-act {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+        transition: 0.2s;
+        margin-right: 5px;
+    }
+
+    .btn-checkout {
+        background: #fffbeb;
+        color: #d97706;
+    }
+
+        .btn-checkout:hover {
+            background: #fef3c7;
+            color: #b45309;
+        }
+
+    .btn-del {
+        background: #fef2f2;
+        color: #ef4444;
+    }
+
+        .btn-del:hover {
+            background: #fca5a5;
+            color: white;
+        }
+</style>
+
+<div class="page-header">
+    <div>
+        <h2 class="page-title">Quản lý Khách ra vào</h2>
+        <p class="page-subtitle">Đăng ký thông tin và thu thập dữ liệu Face ID cho khách thăm KTX.</p>
+    </div>
+</div>
+
+<!-- ==========================================
+     HIỂN THỊ THÔNG BÁO TỪ CONTROLLER
+     ========================================== -->
+@if (TempData["Success"] != null)
+{
+    <div style="padding: 15px; margin-bottom: 20px; background: #dcfce7; color: #16a34a; border-radius: 8px; font-weight: 600; display: flex; align-items: center; gap: 8px;">
+        <i data-lucide="check-circle" style="width: 20px;"></i> @TempData["Success"]
+    </div>
+}
+@if (TempData["Error"] != null)
+{
+    <div style="padding: 15px; margin-bottom: 20px; background: #fee2e2; color: #dc2626; border-radius: 8px; font-weight: 600; display: flex; align-items: center; gap: 8px;">
+        <i data-lucide="alert-circle" style="width: 20px;"></i> @TempData["Error"]
+    </div>
+}
+
+<!-- ==========================================
+     KHỐI 1: FORM ĐĂNG KÝ VÀ QUÉT FACE ID
+     ========================================== -->
+<div class="info-card">
+    <div class="info-header" style="margin-bottom: 25px;">
+        <div class="info-header-title">
+            <i data-lucide="user-plus" style="width: 22px;"></i> Thủ tục Đăng ký Khách mới
+        </div>
+    </div>
+
+    <!-- enctype="multipart/form-data" Bắt buộc phải có để upload ảnh -->
+    <form action="/Admin/Khach/DangKyKhach" method="POST" enctype="multipart/form-data" class="form-grid-faceid">
+
+        <!-- CỘT TRÁI: THÔNG TIN HÀNH CHÍNH -->
+        <div class="form-section">
+            <h4 class="form-section-title"><i data-lucide="file-text" style="width: 18px; color: #4f46e5;"></i> Thông tin Hành chính</h4>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                <div class="form-group-admin">
+                    <label>Họ tên Khách <span style="color: red;">*</span></label>
+                    <div class="input-wrapper">
+                        <i data-lucide="user"></i>
+                        <input type="text" name="hoTen" placeholder="VD: Nguyễn Văn Khách" required />
+                    </div>
+                </div>
+
+                <div class="form-group-admin">
+                    <label>Số CMND/CCCD <span style="color: red;">*</span></label>
+                    <div class="input-wrapper">
+                        <i data-lucide="credit-card"></i>
+                        <input type="text" name="cccd" placeholder="VD: 038099..." required />
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                <div class="form-group-admin">
+                    <label>Số điện thoại</label>
+                    <div class="input-wrapper">
+                        <i data-lucide="phone"></i>
+                        <input type="tel" name="sdt" placeholder="09xxxx..." />
+                    </div>
+                </div>
+
+                <div class="form-group-admin">
+                    <label>Sinh viên / Phòng bảo lãnh <span style="color: red;">*</span></label>
+                    <div class="input-wrapper">
+                        <i data-lucide="shield"></i>
+                        <input type="text" name="nguoiBaoLanh" placeholder="Nhập MSSV hoặc Tên phòng..." required />
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                <div class="form-group-admin">
+                    <label>Thời gian vào (Thực tế) <span style="color: red;">*</span></label>
+                    <div class="input-wrapper">
+                        <i data-lucide="clock"></i>
+                        <input type="text" value="@DateTime.Now.ToString("dd/MM/yyyy HH:mm")" readonly style="background: #e2e8f0; cursor: not-allowed;" />
+                    </div>
+                </div>
+
+                <div class="form-group-admin">
+                    <label>Dự kiến trả thẻ (Giờ ra)</label>
+                    <div class="input-wrapper">
+                        <i data-lucide="calendar-clock"></i>
+                        <!-- input type datetime-local trả về đúng định dạng DateTime -->
+                        <input type="datetime-local" name="thoiGianRa" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group-admin no-icon" style="margin-bottom: 0;">
+                <label>Lý do vào KTX</label>
+                <input type="text" name="lyDo" placeholder="VD: Thăm người nhà, Sửa chữa thiết bị..." />
+            </div>
+        </div>
+
+        <!-- CỘT PHẢI: QUÉT KHUÔN MẶT / TẢI ẢNH -->
+        <div class="form-section" style="display: flex; flex-direction: column; align-items: center; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+            <h4 class="form-section-title" style="width: 100%;"><i data-lucide="scan-face" style="width: 18px; color: #10b981;"></i> Dữ liệu Nhận diện (Camera)</h4>
+
+            <div class="camera-container">
+                <!-- Khung hiển thị Camera trực tiếp -->
+                <div id="camera_viewport">
+                    <span id="cam_status">Đang tải Camera...</span>
+                </div>
+
+                <!-- Khung hiển thị Ảnh sau khi chọn/chụp -->
+                <div id="snapshot_result"></div>
+
+                <!-- 2 Ô Input ẩn để chứa dữ liệu Ảnh gửi về Controller -->
+                <input type="hidden" name="faceImageData" id="faceImageData" />
+                <input type="hidden" name="anhElfinder" id="anhElfinder" />
+
+                <!-- Các nút điều khiển Hình Ảnh -->
+                <div class="btn-camera-group">
+                    <button type="button" class="btn-cam capture" onclick="takeSnapshot()">
+                        <i data-lucide="camera"></i> Chụp ảnh bằng Webcam
+                    </button>
+
+                    <button type="button" class="btn-cam elfinder" id="btnSelectImageFromElfinder">
+                        <i data-lucide="image"></i> Mở kho ảnh (ElFinder)
+                    </button>
+
+                    <button type="button" class="btn-cam retake" onclick="resetCamera()">
+                        <i data-lucide="rotate-ccw"></i> Xóa ảnh, thao tác lại
+                    </button>
+                </div>
+            </div>
+
+            <div class="upload-divider"><span>HOẶC TẢI TỪ MÁY TÍNH</span></div>
+
+            <div class="form-group-admin no-icon" style="width: 100%;">
+                <input type="file" name="uploadedImage" accept="image/*" style="padding: 8px; width: 100%; border: 1px dashed #cbd5e1;" onchange="previewUploadedImage(this)" />
+            </div>
+        </div>
+
+        <!-- Nút Xác nhận gửi Form -->
+        <div style="grid-column: 1 / -1; display: flex; justify-content: flex-end; padding-top: 20px; border-top: 1px solid #e2e8f0;">
+            <button type="submit" style="background: #4f46e5; color: white; border: none; padding: 12px 35px; border-radius: 8px; font-weight: 700; font-size: 1.05rem; cursor: pointer; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);">
+                <i data-lucide="check-circle" style="width: 20px;"></i> Xác nhận Đăng ký & Cấp thẻ
+            </button>
+        </div>
+    </form>
+</div>
+
+<!-- ==========================================
+     KHỐI 2: DANH SÁCH LỊCH SỬ KHÁCH
+     ========================================== -->
+<div class="info-card">
+    <div class="info-header">
+        <div class="info-header-title">
+            <i data-lucide="list-checks" style="width: 20px; color: #f59e0b;"></i>
+            Danh sách Lịch sử Khách
+        </div>
+    </div>
+
+    <!-- Form tra cứu -->
+    <form action="/Admin/Khach/Index" method="get" style="display: flex; gap: 15px; margin-bottom: 20px; align-items: center;">
+        <input type="text" name="searchTen" value="@Context.Request.Query["searchTen"]" placeholder="Nhập tên khách hoặc CCCD..." style="flex: 1; padding: 10px 15px; border-radius: 8px; border: 1px solid #cbd5e1; outline: none;" />
+        <input type="text" name="searchPhong" value="@Context.Request.Query["searchPhong"]" placeholder="Nhập phòng hoặc MSSV bảo lãnh..." style="flex: 1; padding: 10px 15px; border-radius: 8px; border: 1px solid #cbd5e1; outline: none;" />
+        <button type="submit" style="background: #3b82f6; color: white; border: none; padding: 10px 25px; border-radius: 8px; font-weight: 600; cursor: pointer;"><i data-lucide="search" style="width: 18px; vertical-align: middle;"></i> Lọc</button>
+        <a href="/Admin/Khach/Index" style="background: #f1f5f9; color: #64748b; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600;">Làm mới</a>
+    </form>
+
+    <div class="table-container">
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>Khách thăm</th>
+                    <th>Nhận diện (Face ID)</th>
+                    <th>Phòng bảo lãnh</th>
+                    <th>Lý do</th>
+                    <th>Thời gian lưu trú</th>
+                    <th>Trạng thái</th>
+                    <th style="text-align: center;">Tác vụ</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null && Model.Any())
+                {
+                    foreach (var item in Model)
+                    {
+                        // Trích xuất link ảnh từ cột GhiChu
+                        string imgUrl = "https://placehold.co/100x100?text=No+Image";
+                        if (!string.IsNullOrEmpty(item.GhiChu) && item.GhiChu.StartsWith("[FACE_ID]:"))
+                        {
+                            imgUrl = item.GhiChu.Replace("[FACE_ID]:", "");
+                        }
+
+                        <tr>
+                            <td>
+                                <div style="font-weight: 700; color: #1e293b;">@item.HoTen</div>
+                                <div style="font-size: 0.8rem; color: #64748b;">CCCD: @item.Cccd</div>
+                            </td>
+                            <td>
+                                <img src="@imgUrl" style="width: 45px; height: 45px; border-radius: 8px; object-fit: cover; border: 1px solid #cbd5e1;" alt="FaceID" />
+                            </td>
+                            <td>
+                                <div style="font-weight: 700; color: #3b82f6;">P. @item.PhongThamId</div>
+                                <div style="font-size: 0.8rem; color: #64748b;">SV: @(item.MssvBaoLanhNavigation?.HoTen ?? item.MssvBaoLanh)</div>
+                            </td>
+                            <td>@item.LyDo</td>
+                            <td style="font-size: 0.85rem; color: #475569;">
+                                <div><b>Vào:</b> @(item.ThoiGianVaoThucTe?.ToString("dd/MM HH:mm"))</div>
+                                @if (item.ThoiGianRaThucTe != null)
+                                {
+                                    <div><b>Ra:</b> @(item.ThoiGianRaThucTe?.ToString("dd/MM HH:mm"))</div>
+                                }
+                            </td>
+                            <td>
+                                @if (item.TrangThai == "Đang trong KTX")
+                                {
+                                    <span class="status-badge active">Đang trong KTX</span>
+                                }
+                                else
+                                {
+                                    <span class="status-badge expired">Đã Checkout</span>
+                                }
+                            </td>
+                            <td style="text-align: center; white-space: nowrap;">
+                                @if (item.TrangThai == "Đang trong KTX")
+                                {
+                                    <!-- Nút Checkout -->
+                                    <form action="/Admin/Khach/CheckOutKhach/@item.KhachId" method="post" style="display:inline;" onsubmit="return confirm('Xác nhận khách @item.HoTen đã trả thẻ và rời khỏi KTX?');">
+                                        <button type="submit" class="btn-act btn-checkout" title="Check-out Khách"><i data-lucide="log-out" style="width: 18px;"></i></button>
+                                    </form>
+                                }
+
+                                <!-- Nút Xóa lịch sử -->
+                                <form action="/Admin/Khach/Delete/@item.KhachId" method="post" style="display:inline;" onsubmit="return confirm('Bạn có chắc chắn muốn xóa hồ sơ khách này?');">
+                                    <button type="submit" class="btn-act btn-del" title="Xóa hồ sơ"><i data-lucide="trash-2" style="width: 18px;"></i></button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr><td colspan="7" style="text-align: center; padding: 40px; color: #94a3b8; font-weight: 500;">Không có dữ liệu khách thăm phù hợp.</td></tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    <!-- THƯ VIỆN ELFINDER & WEBCAM -->
+    <script src="~/admin/lib/snote/jquery.min.js"></script>
+    <script src="~/admin/lib/jqueryui/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="~/admin/lib/jqueryui/themes/base/theme.css" />
+    <link rel="stylesheet" href="~/admin/lib/jqueryui/themes/base/jquery-ui.css" />
+
+    <script src="~/admin/lib/elFinder/js/elfinder.min.js"></script>
+    <link rel="stylesheet" href="~/admin/lib/elFinder/css/elfinder.full.css" />
+    <link rel="stylesheet" href="~/admin/lib/elFinder/css/theme.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+
+    <script>
+        if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+
+        // ==========================================
+        // 1. CẤU HÌNH WEBCAM
+        // ==========================================
+        document.addEventListener("DOMContentLoaded", function() {
+            Webcam.set({
+                width: 320,
+                height: 240,
+                image_format: 'jpeg',
+                jpeg_quality: 90,
+                flip_horiz: true
+            });
+
+            Webcam.attach('#camera_viewport');
+            Webcam.on('load', function() {
+                document.getElementById('cam_status').style.display = 'none';
+            });
+        });
+
+        // Hàm Bấm Chụp Ảnh (Webcam)
+        function takeSnapshot() {
+            Webcam.snap(function(data_uri) {
+                document.getElementById('snapshot_result').innerHTML = '<img src="'+data_uri+'"/>';
+
+                document.getElementById('camera_viewport').style.display = 'none';
+                document.getElementById('snapshot_result').style.display = 'block';
+
+                // Đổi nút
+                document.querySelector('.btn-cam.capture').style.display = 'none';
+                document.querySelector('.btn-cam.elfinder').style.display = 'none';
+                document.querySelector('.btn-cam.retake').style.display = 'flex';
+
+                // Gán dữ liệu
+                document.getElementById('faceImageData').value = data_uri;
+                document.getElementById('anhElfinder').value = ''; // Reset elfinder
+            });
+        }
+
+        // ==========================================
+        // 2. MỞ KHO ẢNH ELFINDER
+        // ==========================================
+        $(document).ready(function() {
+            $("#btnSelectImageFromElfinder").on("click", function() {
+                $('<div/>').dialogelfinder({
+                    baseUrl: "/admin/lib/elFinder/",
+                    url: '/Admin/el-finder-file-system/connector',
+                    lang: 'vi',
+                    width: 840,
+                    height: 450,
+                    destroyOnClose: true,
+                    getFileCallback: function (files) {
+                        // Hiển thị ảnh vừa chọn
+                        $('#snapshot_result').html('<img src="' + files.url + '"/>');
+                        $('#camera_viewport').hide();
+                        $('#snapshot_result').show();
+
+                        // Đổi nút
+                        $('.btn-cam.capture').hide();
+                        $('.btn-cam.elfinder').hide();
+                        $('.btn-cam.retake').css('display', 'flex');
+
+                        // Gán link ảnh vào input gửi lên Controller
+                        $('#anhElfinder').val(files.url);
+                        $('#faceImageData').val(''); // Reset webcam
+                        Webcam.reset(); // Tắt webcam cho đỡ tốn tài nguyên
+                    },
+                    commandsOptions: { getfile: { oncomplete: 'close', folders: false } },
+                    onlyMimes: ["image"]
+                }).dialogelfinder('instance');
+            });
+        });
+
+        // ==========================================
+        // 3. TẢI ẢNH TỪ MÁY TÍNH
+        // ==========================================
+        function previewUploadedImage(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('snapshot_result').innerHTML = '<img src="'+e.target.result+'"/>';
+                    document.getElementById('camera_viewport').style.display = 'none';
+                    document.getElementById('snapshot_result').style.display = 'block';
+
+                    document.querySelector('.btn-cam.capture').style.display = 'none';
+                    document.querySelector('.btn-cam.elfinder').style.display = 'none';
+                    document.querySelector('.btn-cam.retake').style.display = 'flex';
+
+                    // Reset các nguồn ảnh khác
+                    document.getElementById('faceImageData').value = '';
+                    document.getElementById('anhElfinder').value = '';
+                    Webcam.reset();
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        // ==========================================
+        // 4. HỦY ẢNH ĐỂ CHỌN LẠI TỪ ĐẦU
+        // ==========================================
+        function resetCamera() {
+            document.getElementById('camera_viewport').style.display = 'flex';
+            document.getElementById('snapshot_result').style.display = 'none';
+
+            document.querySelector('.btn-cam.capture').style.display = 'flex';
+            document.querySelector('.btn-cam.elfinder').style.display = 'flex';
+            document.querySelector('.btn-cam.retake').style.display = 'none';
+
+            // Dọn sạch mọi thẻ input và file upload
+            document.getElementById('faceImageData').value = '';
+            document.getElementById('anhElfinder').value = '';
+            document.querySelector('input[type="file"]').value = '';
+
+            // Bật lại Webcam
+            Webcam.attach('#camera_viewport');
+            document.getElementById('cam_status').style.display = 'block';
+        }
+    </script>
+}

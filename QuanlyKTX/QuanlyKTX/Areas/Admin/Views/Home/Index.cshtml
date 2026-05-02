@@ -1,0 +1,160 @@
+﻿@model IEnumerable<QuanlyKTX.Models.HopDong>
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Tổng quan Quản trị";
+}
+
+<section class="page-header-admin">
+    <div class="page-header-icon">
+        <i data-lucide="layout-dashboard"></i>
+    </div>
+    <div class="page-header-content">
+        <h1>Tổng quan Quản trị</h1>
+        <p>Báo cáo nhanh tình hình Ký túc xá hôm nay.</p>
+    </div>
+</section>
+
+<section class="stats-filter-grid">
+    <div class="stat-filter-card occupancy">
+        <div class="stat-filter-icon"><i data-lucide="user-check"></i></div>
+        <div class="stat-filter-label">Tỷ lệ Lấp đầy</div>
+        <div class="stat-filter-value">@ViewBag.TongSinhVien / @ViewBag.SucChuaToiDa</div>
+        <div class="stat-filter-detail">Đạt @(ViewBag.SucChuaToiDa > 0 ? (ViewBag.TongSinhVien * 100 / ViewBag.SucChuaToiDa) : 0)% công suất</div>
+    </div>
+
+    <div class="stat-filter-card pending">
+        <div class="stat-filter-icon"><i data-lucide="loader-2"></i></div>
+        <div class="stat-filter-label">Phản ánh Chờ xử lý</div>
+        <div class="stat-filter-value">@ViewBag.PhanAnhCho</div>
+        <div class="stat-filter-detail">Cần kiểm tra ngay</div>
+    </div>
+
+    <div class="stat-filter-card empty">
+        <div class="stat-filter-icon"><i data-lucide="door-open"></i></div>
+        <div class="stat-filter-label">Phòng Còn chỗ</div>
+        <div class="stat-filter-value">@ViewBag.PhongTrong</div>
+        <div class="stat-filter-detail">Sẵn sàng tiếp nhận SV mới</div>
+    </div>
+
+    <div class="stat-filter-card alert">
+        <div class="stat-filter-icon"><i data-lucide="shield-alert"></i></div>
+        <div class="stat-filter-label">Cảnh báo An ninh</div>
+        <div class="stat-filter-value">@ViewBag.CanhBaoAnNinh</div>
+        <div class="stat-filter-detail">Sự cố từ Camera AI</div>
+    </div>
+</section>
+
+<div class="dashboard-main-grid" style="display: grid; grid-template-columns: 2fr 1fr; gap: 25px; margin-top: 25px;">
+
+    <!-- KHỐI BIỂU ĐỒ BÊN TRÁI -->
+    <div class="info-card">
+        <div class="info-header">
+            <div class="info-header-title">
+                <i data-lucide="bar-chart-3"></i>
+                <span>Tình trạng lưu trú theo Tòa</span>
+            </div>
+        </div>
+        <!-- Vùng chứa Biểu đồ -->
+        <div style="height: 320px; width: 100%; position: relative;">
+            <canvas id="occupancyChart"></canvas>
+        </div>
+    </div>
+
+    <!-- KHỐI HOẠT ĐỘNG MỚI BÊN PHẢI -->
+    <div class="info-card">
+        <div class="info-header">
+            <div class="info-header-title">
+                <i data-lucide="history"></i>
+                <span>Sinh viên Mới Đăng ký</span>
+            </div>
+        </div>
+        <div class="activity-list">
+            @if (Model != null && Model.Any())
+            {
+                foreach (var item in Model)
+                {
+                    <div class="activity-item">
+                        <img class="activity-avatar" src="https://ui-avatars.com/api/?name=@(item.MssvNavigation?.HoTen ?? "SV")&background=random" alt="Avatar" />
+                        <div class="activity-info">
+                            <p>@(item.MssvNavigation?.HoTen ?? "Chưa gán tên") <span class="badge-mini new">MỚI</span></p>
+                            <span>Đăng ký P.@item.PhongId</span>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p style="text-align: center; color: #94a3b8; padding: 20px;">Chưa có hoạt động mới.</p>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <!-- Thêm thư viện Chart.js siêu mượt -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Lấy dữ liệu mảng từ Backend C# đẩy xuống thông qua ViewBag
+            const labels = @Html.Raw(Json.Serialize(ViewBag.ChartLabels ?? new List<string>()));
+            const dataValues = @Html.Raw(Json.Serialize(ViewBag.ChartData ?? new List<int>()));
+
+            // Render Biểu đồ Cột (Bar Chart)
+            const ctx = document.getElementById('occupancyChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Số sinh viên đang ở',
+                        data: dataValues,
+                        backgroundColor: [
+                            'rgba(59, 130, 246, 0.85)', // Xanh dương
+                            'rgba(16, 185, 129, 0.85)', // Xanh lá
+                            'rgba(245, 158, 11, 0.85)', // Vàng cam
+                            'rgba(139, 92, 246, 0.85)', // Tím
+                            'rgba(239, 68, 68, 0.85)'   // Đỏ
+                        ],
+                        borderWidth: 0,
+                        borderRadius: 6, // Bo góc các cột cho đẹp
+                        barPercentage: 0.6 // Độ rộng của cột
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }, // Ẩn chú thích vì chỉ có 1 cột
+                        tooltip: {
+                            backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                            padding: 12,
+                            titleFont: { size: 14 },
+                            bodyFont: { size: 14 }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                precision: 0, // Chỉ hiển thị số nguyên (không có lẻ 0.5 người)
+                                font: { size: 13 }
+                            },
+                            grid: { borderDash: [5, 5] } // Kẻ chỉ đứt lưới nền
+                        },
+                        x: {
+                            ticks: { font: { size: 13, weight: 'bold' } },
+                            grid: { display: false } // Ẩn đường kẻ dọc
+                        }
+                    },
+                    animation: {
+                        duration: 1500,
+                        easing: 'easeOutQuart' // Hiệu ứng trồi lên siêu mượt
+                    }
+                }
+            });
+        });
+    </script>
+}

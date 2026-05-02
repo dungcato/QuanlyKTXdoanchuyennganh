@@ -1,0 +1,641 @@
+﻿@model IEnumerable<QuanlyKTX.Models.ThongBao>
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Gửi Thông báo";
+}
+
+<style>
+    .page-header {
+        margin-bottom: 25px;
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #1e293b;
+        margin: 0 0 5px 0;
+    }
+
+    .page-subtitle {
+        color: #64748b;
+        font-size: 0.95rem;
+        margin: 0;
+    }
+
+    .info-card {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        padding: 25px;
+        margin-bottom: 25px;
+        border: 1px solid #f1f5f9;
+    }
+
+    .info-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #f1f5f9;
+        padding-bottom: 12px;
+    }
+
+    .info-header-title {
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: #4f46e5;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    .form-group-admin {
+        margin-bottom: 15px;
+        position: relative;
+    }
+
+        .form-group-admin label {
+            font-weight: 600;
+            color: #475569;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .form-group-admin input, .form-group-admin select, .form-group-admin textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid #cbd5e1;
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: 0.2s;
+        }
+
+            .form-group-admin input:focus, .form-group-admin select:focus, .form-group-admin textarea:focus {
+                outline: none;
+                border-color: #6366f1;
+                box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
+            }
+
+        .form-group-admin textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+    /* Lịch sử hoạt động */
+    .activity-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .activity-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 15px;
+        border-radius: 12px;
+        border: 1px solid #f1f5f9;
+        background: #fff;
+        transition: 0.2s;
+    }
+
+        .activity-item:hover {
+            border-color: #cbd5e1;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+        }
+
+    .activity-icon {
+        width: 45px;
+        height: 45px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+        .activity-icon.finance {
+            background: #dcfce7;
+            color: #16a34a;
+        }
+
+        .activity-icon.maintenance {
+            background: #fef3c7;
+            color: #d97706;
+        }
+
+        .activity-icon.event {
+            background: #ffedd5;
+            color: #ea580c;
+        }
+
+        .activity-icon.general {
+            background: #e0e7ff;
+            color: #4f46e5;
+        }
+
+    .activity-info {
+        flex: 1;
+    }
+
+        .activity-info p {
+            margin: 0 0 5px 0;
+            font-weight: 700;
+            color: #1e293b;
+            font-size: 1.05rem;
+        }
+
+        .activity-info span {
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+
+    .activity-target {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #3b82f6;
+        background: #eff6ff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        white-space: nowrap;
+        height: fit-content;
+    }
+
+    .btn-submit {
+        background: #4f46e5;
+        color: white;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 8px;
+        font-weight: 700;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);
+        transition: 0.2s;
+    }
+
+        .btn-submit:hover {
+            background: #4338ca;
+        }
+
+    .btn-del-sm {
+        background: none;
+        border: none;
+        color: #94a3b8;
+        cursor: pointer;
+        padding: 5px;
+        transition: 0.2s;
+        margin-left: 10px;
+    }
+
+        .btn-del-sm:hover {
+            color: #ef4444;
+        }
+
+    /* Style cho nút Xem chi tiết */
+    .btn-view-sm {
+        background: none;
+        border: none;
+        color: #3b82f6;
+        cursor: pointer;
+        padding: 5px;
+        transition: 0.2s;
+        margin-left: 10px;
+    }
+
+        .btn-view-sm:hover {
+            color: #2563eb;
+            transform: scale(1.1);
+        }
+</style>
+
+<!-- TIÊU ĐỀ TRANG -->
+<div class="page-header">
+    <h2 class="page-title">Quản lý Thông báo</h2>
+    <p class="page-subtitle">Hệ thống gửi thông báo đồng loạt đến Sinh viên qua cổng thông tin KTX.</p>
+</div>
+
+@if (TempData["Success"] != null)
+{
+    <div style="padding: 15px; margin-bottom: 20px; background: #dcfce7; color: #16a34a; border-radius: 8px; font-weight: 600; display: flex; align-items: center; gap: 8px;">
+        <i data-lucide="check-circle" style="width: 20px;"></i> @TempData["Success"]
+    </div>
+}
+@if (TempData["Error"] != null)
+{
+    <div style="padding: 15px; margin-bottom: 20px; background: #fee2e2; color: #dc2626; border-radius: 8px; font-weight: 600; display: flex; align-items: center; gap: 8px;">
+        <i data-lucide="alert-circle" style="width: 20px;"></i> @TempData["Error"]
+    </div>
+}
+
+<!-- KHỐI 1: FORM SOẠN THẢO THÔNG BÁO -->
+<div class="info-card">
+    <div class="info-header">
+        <div class="info-header-title">
+            <i data-lucide="edit-3" style="width: 22px;"></i> Soạn Thông báo Mới
+        </div>
+    </div>
+
+    <!-- CHÚ Ý: Các name attribute phải trùng khớp với Properties trong ThongBao.cs -->
+    <form action="/Admin/ThongBao/GuiThongBao" method="POST" class="form-grid">
+
+        <div class="form-group-admin" style="grid-column: 1 / -1;">
+            <label>Tiêu đề Thông báo <span style="color: red;">*</span></label>
+            <input type="text" name="TieuDe" placeholder="Ví dụ: Thông báo thu tiền điện nước KTX tháng 12/2026..." required />
+        </div>
+
+        <div class="form-group-admin" style="grid-column: 1 / -1;">
+            <label>Nội dung chi tiết <span style="color: red;">*</span></label>
+            <textarea name="NoiDung" placeholder="Nhập nội dung chi tiết cần thông báo đến sinh viên..." required></textarea>
+        </div>
+
+        <!-- KHU VỰC THÊM ẢNH ĐÍNH KÈM (Bật/Tắt & Nhiều Ảnh) -->
+        <div class="form-group-admin" style="grid-column: 1 / -1;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <label style="margin: 0;">Ảnh đính kèm (Tùy chọn - Có thể chọn nhiều ảnh)</label>
+                <!-- Nút Tắt/Bật -->
+                <button type="button" id="btnToggleUpload" style="background: #e0e7ff; color: #4f46e5; border: none; padding: 8px 15px; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px; font-size: 0.85rem; transition: 0.2s;">
+                    <i data-lucide="image-plus" style="width: 16px;"></i> <span>Bật khung thêm ảnh</span>
+                </button>
+            </div>
+
+            <!-- Khung chứa ảnh (Mặc định ẩn đi) -->
+            <div id="imageUploadSection" style="display: none; background: #f8fafc; padding: 20px; border-radius: 12px; border: 1px dashed #cbd5e1; flex-direction: column; gap: 15px; transition: 0.3s;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                    <span style="font-size: 0.9rem; color: #64748b;">Mẹo: Đè phím <b>Ctrl</b> hoặc <b>Shift</b> để chọn nhiều ảnh cùng lúc trong kho.</span>
+                    <button type="button" id="btnSelectImage" style="background: #10b981; color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; box-shadow: 0 2px 6px rgba(16, 185, 129, 0.2);">
+                        <i data-lucide="upload-cloud" style="width: 18px;"></i> Mở Kho Ảnh
+                    </button>
+                </div>
+
+                <!-- Ô Input ẩn để chứa danh sách link ảnh (ngăn cách bằng dấu phẩy) -->
+                <input type="hidden" id="file_input" name="FileDinhKem" value="" />
+
+                <!-- Khung hiển thị các ảnh thu nhỏ -->
+                <div id="previewContainer" style="display: flex; flex-wrap: wrap; gap: 15px; background: white; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; min-height: 100px; align-items: center;">
+                    <!-- Ảnh sẽ được load bằng Javascript vào đây -->
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group-admin">
+            <label>Gửi tới Đối tượng</label>
+            <select name="DoiTuongNhan" id="doiTuongSelect">
+                <option value="Tất cả Sinh viên">Tất cả Sinh viên</option>
+                <option value="Tòa nhà">Một Tòa nhà cụ thể</option>
+                <option value="Phòng">Một Phòng cụ thể</option>
+                <option value="Cá nhân">Một Cá nhân (theo MSSV)</option>
+            </select>
+        </div>
+
+        <div class="form-group-admin">
+            <label>Chi tiết đối tượng nhận</label>
+            <input type="text" name="ChiTietDoiTuong" id="chiTietInput" placeholder="Ví dụ: Tòa A1, Phòng 101, hoặc 2112001..." />
+            <small style="color: #94a3b8; font-size: 0.8rem; margin-top: 5px; display: block;">* Bỏ trống nếu chọn Tất cả Sinh viên.</small>
+        </div>
+
+        <div class="form-group-admin">
+            <label>Phân loại thông báo</label>
+            <select name="LoaiThongBao">
+                <option value="Thông báo chung">Thông báo chung (Nội quy, nhắc nhở...)</option>
+                <option value="Tài chính">Tài chính (Hóa đơn, nợ phí...)</option>
+                <option value="Bảo trì">Bảo trì (Sửa chữa điện nước...)</option>
+                <option value="Sự kiện">Sự kiện (Hoạt động phong trào...)</option>
+            </select>
+        </div>
+
+        <div style="grid-column: 1 / -1; display: flex; justify-content: flex-end; margin-top: 10px; border-top: 1px solid #f1f5f9; padding-top: 20px;">
+            <button type="submit" class="btn-submit">
+                <i data-lucide="send" style="width: 18px;"></i> Phát hành Thông báo
+            </button>
+        </div>
+    </form>
+</div>
+
+<!-- KHỐI 2: LỊCH SỬ THÔNG BÁO ĐÃ GỬI -->
+<div class="info-card">
+    <div class="info-header">
+        <div class="info-header-title">
+            <i data-lucide="history" style="width: 22px;"></i> Lịch sử Thông báo Đã gửi
+        </div>
+        <span style="background: #eef2ff; color: #4f46e5; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 700;">Tổng: @Model.Count() bản tin</span>
+    </div>
+
+    <div class="activity-list">
+        @if (Model.Any())
+        {
+            foreach (var item in Model)
+            {
+                // Xác định CSS Icon dựa trên Loại Thông Báo
+                string iconClass = "general";
+                string iconName = "alert-circle";
+
+                if (item.LoaiThongBao == "Tài chính") { iconClass = "finance"; iconName = "receipt"; }
+                else if (item.LoaiThongBao == "Bảo trì") { iconClass = "maintenance"; iconName = "wrench"; }
+                else if (item.LoaiThongBao == "Sự kiện") { iconClass = "event"; iconName = "megaphone"; }
+
+                <div class="activity-item">
+                    <div class="activity-icon @iconClass">
+                        <i data-lucide="@iconName"></i>
+                    </div>
+                    <div class="activity-info">
+                        <p>@item.TieuDe</p>
+                        <span>
+                            Gửi ngày @(item.NgayGui?.ToString("dd/MM/yyyy HH:mm"))
+                            &nbsp;&bull;&nbsp;
+                            Phân loại: @item.LoaiThongBao
+                        </span>
+
+                        <!-- NẾU CÓ ẢNH ĐÍNH KÈM THÌ HIỆN BỘ SƯU TẬP ẢNH -->
+                        @if (!string.IsNullOrEmpty(item.FileDinhKem))
+                        {
+                            // Cắt chuỗi thành mảng các URL ảnh
+                            var urls = item.FileDinhKem.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+                            <div style="margin-top: 15px;">
+                                <p style="font-size: 0.8rem; color: #64748b; margin: 0 0 8px 0; font-weight: 600;">@urls.Length ảnh đính kèm:</p>
+                                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                                    @foreach (var url in urls)
+                                    {
+                                        <a href="@url" target="_blank" title="Bấm để xem ảnh phóng to" style="width: 60px; height: 60px; border-radius: 8px; overflow: hidden; border: 2px solid #e2e8f0; display: inline-block; transition: 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" onmouseover="this.style.borderColor='#6366f1'" onmouseout="this.style.borderColor='#e2e8f0'">
+                                            <img src="@url" style="width: 100%; height: 100%; object-fit: cover;" />
+                                        </a>
+                                    }
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+                    <div style="display: flex; align-items: center;">
+                        <div class="activity-target">
+                            @if (item.DoiTuongNhan == "Tất cả Sinh viên")
+                            {
+                                <i data-lucide="users" style="width: 14px;"></i> <span>Tất cả Sinh viên</span>
+                            }
+                            else if (item.DoiTuongNhan == "Tòa nhà")
+                            {
+                                <i data-lucide="building" style="width: 14px;"></i> <span>Tòa @item.ChiTietDoiTuong</span>
+                            }
+                            else if (item.DoiTuongNhan == "Phòng")
+                            {
+                                <i data-lucide="door-open" style="width: 14px;"></i> <span>Phòng @item.ChiTietDoiTuong</span>
+                            }
+                            else
+                            {
+                                <i data-lucide="user" style="width: 14px;"></i> <span>SV: @item.ChiTietDoiTuong</span>
+                            }
+                        </div>
+
+                        <!-- NÚT XEM CHI TIẾT (Kích hoạt Modal) -->
+                        <button type="button" class="btn-view-sm btn-view-detail" title="Xem chi tiết nội dung"
+                                data-id="@item.ThongBaoId"
+                                data-title="@item.TieuDe"
+                                data-date="@(item.NgayGui?.ToString("dd/MM/yyyy HH:mm"))"
+                                data-sender="@item.NguoiGui"
+                                data-type="@item.LoaiThongBao"
+                                data-target="@item.DoiTuongNhan @(!string.IsNullOrEmpty(item.ChiTietDoiTuong) ? " - " + item.ChiTietDoiTuong : "")"
+                                data-images="@item.FileDinhKem">
+                            <i data-lucide="eye" style="width: 18px;"></i>
+                        </button>
+
+                        <!-- Hidden div chứa nội dung gốc để không bị lỗi Format -->
+                        <div id="content-@item.ThongBaoId" style="display: none;">@item.NoiDung</div>
+
+                        <form action="/Admin/ThongBao/Delete/@item.ThongBaoId" method="post" onsubmit="return confirm('Thu hồi và xóa thông báo này?');">
+                            <button type="submit" class="btn-del-sm" title="Xóa thông báo"><i data-lucide="trash-2" style="width: 18px;"></i></button>
+                        </form>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <div style="text-align: center; padding: 40px; color: #94a3b8; background: #f8fafc; border-radius: 12px; border: 1px dashed #cbd5e1;">
+                Chưa có thông báo nào được phát hành.
+            </div>
+        }
+    </div>
+</div>
+
+<!-- ==========================================
+     CỬA SỔ MODAL HIỂN THỊ CHI TIẾT THÔNG BÁO
+     ========================================== -->
+<div id="thongBaoModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(15, 23, 42, 0.7); z-index: 99999; align-items: center; justify-content: center; backdrop-filter: blur(3px);">
+    <div style="background: white; width: 650px; max-width: 90%; max-height: 90vh; border-radius: 16px; display: flex; flex-direction: column; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); overflow: hidden;">
+
+        <!-- Header -->
+        <div style="padding: 20px 25px; border-bottom: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; background: #f8fafc;">
+            <h3 style="margin: 0; font-size: 1.1rem; font-weight: 800; color: #1e293b; display: flex; align-items: center; gap: 8px;">
+                <i data-lucide="file-text" style="color: #4f46e5;"></i> Chi tiết Bản tin Thông báo
+            </h3>
+            <button onclick="closeModal()" style="background: #e2e8f0; border: none; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; color: #64748b; transition: 0.2s;">
+                <i data-lucide="x" style="width: 18px;"></i>
+            </button>
+        </div>
+
+        <!-- Body -->
+        <div style="padding: 25px; overflow-y: auto;">
+            <h2 id="modalTitle" style="margin: 0 0 15px 0; font-size: 1.4rem; color: #1e293b; line-height: 1.4;"></h2>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 25px; font-size: 0.85rem; color: #64748b; background: #f1f5f9; padding: 15px; border-radius: 8px; border: 1px dashed #cbd5e1;">
+                <div style="display: flex; align-items: center; gap: 5px; width: 45%;"><i data-lucide="calendar" style="width: 14px;"></i> <b style="color: #475569;">Ngày gửi:</b> <span id="modalDate"></span></div>
+                <div style="display: flex; align-items: center; gap: 5px; width: 45%;"><i data-lucide="user" style="width: 14px;"></i> <b style="color: #475569;">Người gửi:</b> <span id="modalSender"></span></div>
+                <div style="display: flex; align-items: center; gap: 5px; width: 45%;"><i data-lucide="tag" style="width: 14px;"></i> <b style="color: #475569;">Phân loại:</b> <span id="modalType"></span></div>
+                <div style="display: flex; align-items: center; gap: 5px; width: 45%;"><i data-lucide="users" style="width: 14px;"></i> <b style="color: #475569;">Đối tượng nhận:</b> <span id="modalTarget"></span></div>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <h4 style="margin: 0 0 10px 0; font-size: 0.95rem; color: #475569; text-transform: uppercase;">Nội dung chi tiết:</h4>
+                <div id="modalContent" style="color: #1e293b; line-height: 1.6; font-size: 1rem; white-space: pre-wrap; background: #fffbeb; padding: 20px; border-radius: 8px; border-left: 4px solid #f59e0b;"></div>
+            </div>
+
+            <div id="modalImagesContainer" style="display: none; margin-top: 25px; border-top: 1px solid #e2e8f0; padding-top: 20px;">
+                <h4 style="margin: 0 0 10px 0; font-size: 0.95rem; color: #475569; text-transform: uppercase;">Tệp / Ảnh đính kèm:</h4>
+                <div id="modalImages" style="display: flex; flex-wrap: wrap; gap: 10px;"></div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div style="padding: 15px 25px; border-top: 1px solid #e2e8f0; background: #f8fafc; text-align: right;">
+            <button onclick="closeModal()" style="background: #4f46e5; color: white; border: none; padding: 10px 30px; border-radius: 8px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 10px rgba(79, 70, 229, 0.2);">Đóng cửa sổ</button>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <!-- THÊM THƯ VIỆN ELFINDER CHO PHẦN CHỌN ẢNH -->
+    <script src="~/admin/lib/snote/jquery.min.js"></script>
+    <script src="~/admin/lib/jqueryui/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="~/admin/lib/jqueryui/themes/base/theme.css" />
+    <link rel="stylesheet" href="~/admin/lib/jqueryui/themes/base/jquery-ui.css" />
+
+    <script src="~/admin/lib/elFinder/js/elfinder.min.js"></script>
+    <link rel="stylesheet" href="~/admin/lib/elFinder/css/elfinder.full.css" />
+    <link rel="stylesheet" href="~/admin/lib/elFinder/css/theme.min.css" />
+
+    <script>
+        if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+
+        // ==========================================
+        // 1. LOGIC XEM CHI TIẾT THÔNG BÁO (MODAL)
+        // ==========================================
+        $('.btn-view-detail').click(function() {
+            let btn = $(this);
+            $('#modalTitle').text(btn.data('title'));
+            $('#modalDate').text(btn.data('date'));
+            $('#modalSender').text(btn.data('sender') || 'Ban Quản Lý KTX');
+            $('#modalType').text(btn.data('type'));
+            $('#modalTarget').text(btn.data('target'));
+
+            let id = btn.data('id');
+            // Lấy nội dung chữ từ trong thẻ div ẩn và hiển thị ra
+            $('#modalContent').text($('#content-' + id).text());
+
+            let images = btn.data('images');
+            if(images) {
+                let urls = images.split(',');
+                $('#modalImages').empty();
+                urls.forEach(url => {
+                    if(url.trim()) {
+                        $('#modalImages').append(`
+                            <a href="${url}" target="_blank" style="width: 100px; height: 100px; border-radius: 8px; overflow: hidden; border: 2px solid #e2e8f0; display: inline-block; box-shadow: 0 2px 4px rgba(0,0,0,0.05); transition: 0.2s;" onmouseover="this.style.borderColor='#6366f1'" onmouseout="this.style.borderColor='#e2e8f0'">
+                                <img src="${url}" style="width: 100%; height: 100%; object-fit: cover;" />
+                            </a>
+                        `);
+                    }
+                });
+                $('#modalImagesContainer').show();
+            } else {
+                $('#modalImagesContainer').hide();
+            }
+
+            $('#thongBaoModal').css('display', 'flex').hide().fadeIn(200);
+        });
+
+        // Hàm Đóng Modal
+        window.closeModal = function() {
+            $('#thongBaoModal').fadeOut(200);
+        }
+
+        // Đóng modal khi bấm ra vùng tối bên ngoài
+        $('#thongBaoModal').click(function(e) {
+            if(e.target.id === 'thongBaoModal') closeModal();
+        });
+
+
+        // Logic phụ: Tự động vô hiệu hóa ô Chi tiết nếu chọn Gửi Tất cả sinh viên
+        document.addEventListener('DOMContentLoaded', function() {
+            const select = document.getElementById('doiTuongSelect');
+            const input = document.getElementById('chiTietInput');
+
+            function toggleInput() {
+                if(select.value === 'Tất cả Sinh viên') {
+                    input.value = '';
+                    input.disabled = true;
+                    input.style.backgroundColor = '#f1f5f9';
+                } else {
+                    input.disabled = false;
+                    input.style.backgroundColor = '#fff';
+                }
+            }
+            select.addEventListener('change', toggleInput);
+            toggleInput();
+        });
+
+        // TÍCH HỢP QUẢN LÝ NHIỀU ẢNH
+        $(document).ready(function() {
+            let isUploadVisible = false;
+            let selectedImages = [];
+
+            // 1. Hàm Bật/Tắt khung ảnh
+            $('#btnToggleUpload').click(function() {
+                isUploadVisible = !isUploadVisible;
+                if (isUploadVisible) {
+                    $('#imageUploadSection').slideDown();
+                    $(this).html('<i data-lucide="x" style="width: 16px;"></i> <span>Tắt khung & Hủy ảnh</span>');
+                    $(this).css({ 'background': '#fee2e2', 'color': '#dc2626' });
+                } else {
+                    $('#imageUploadSection').slideUp();
+                    $(this).html('<i data-lucide="image-plus" style="width: 16px;"></i> <span>Bật khung thêm ảnh</span>');
+                    $(this).css({ 'background': '#e0e7ff', 'color': '#4f46e5' });
+
+                    // Xóa hết ảnh nếu người dùng chủ động tắt khung
+                    selectedImages = [];
+                    updateImagePreview();
+                }
+                lucide.createIcons();
+            });
+
+            // 2. Mở elFinder để chọn ảnh (Cho phép chọn nhiều file)
+            $("#btnSelectImage").on("click", function() {
+                $('<div/>').dialogelfinder({
+                    baseUrl: "/admin/lib/elFinder/",
+                    url: '/Admin/el-finder-file-system/connector',
+                    lang: 'vi',
+                    width: 840,
+                    height: 450,
+                    destroyOnClose: true,
+                    commandsOptions: {
+                        getfile: { multiple: true, oncomplete: 'close', folders: false }
+                    },
+                    getFileCallback: function (files) {
+                        // Elfinder trả về mảng nếu chọn nhiều, hoặc object nếu chọn 1
+                        let filesArray = Array.isArray(files) ? files : [files];
+
+                        filesArray.forEach(f => {
+                            if (!selectedImages.includes(f.url)) {
+                                selectedImages.push(f.url); // Thêm ảnh vào mảng nếu chưa có
+                            }
+                        });
+                        updateImagePreview();
+                    },
+                    onlyMimes: ["image"], // Chỉ cho chọn định dạng ảnh
+                }).dialogelfinder('instance');
+            });
+
+            // 3. Hàm render lại khung Preview Ảnh
+            function updateImagePreview() {
+                // Gán danh sách link ảnh vào ô input ẩn (ngăn cách bằng dấu phẩy) để Backend lưu DB
+                $('#file_input').val(selectedImages.join(','));
+                $('#previewContainer').empty();
+
+                if(selectedImages.length === 0) {
+                    $('#previewContainer').html('<div style="width: 100%; text-align: center; color: #94a3b8; font-size: 0.9rem;">Chưa có ảnh nào được chọn. Hãy bấm "Mở Kho Ảnh".</div>');
+                    return;
+                }
+
+                // Chạy vòng lặp tạo ra các cục ảnh vuông vức có nút X đỏ để xóa
+                selectedImages.forEach((url, index) => {
+                    let imgHtml = `
+                        <div style="position: relative; width: 100px; height: 100px; border-radius: 8px; overflow: hidden; border: 2px solid #e2e8f0; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                            <img src="${url}" style="width: 100%; height: 100%; object-fit: cover;" />
+                            <button type="button" onclick="removeImage(${index})" title="Xóa ảnh này" style="position: absolute; top: 4px; right: 4px; background: rgba(239, 68, 68, 0.9); color: white; border: none; border-radius: 50%; width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 14px; padding: 0;">&times;</button>
+                        </div>
+                    `;
+                    $('#previewContainer').append(imgHtml);
+                });
+            }
+
+            // 4. Hàm xóa ảnh khỏi danh sách (được gọi từ nút X đỏ)
+            window.removeImage = function(index) {
+                selectedImages.splice(index, 1);
+                updateImagePreview();
+            }
+
+            // Khởi tạo ban đầu
+            updateImagePreview();
+        });
+    </script>
+}

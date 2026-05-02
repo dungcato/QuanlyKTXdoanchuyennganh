@@ -1,0 +1,134 @@
+﻿@model QuanlyKTX.Models.VatTu
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Thêm Vật Tư Mới";
+}
+
+<style>
+    .card-panel {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        padding: 30px;
+        border: 1px solid #f1f5f9;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+        .form-group label {
+            font-weight: 600;
+            color: #475569;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+    .form-input {
+        width: 100%;
+        padding: 12px 15px;
+        border-radius: 8px;
+        border: 1px solid #cbd5e1;
+        transition: 0.2s;
+    }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
+        }
+</style>
+
+<div style="margin-bottom: 25px; display: flex; align-items: center; gap: 15px;">
+    <a href="/Admin/CoSoVatChat/Index" style="background: white; border: 1px solid #cbd5e1; color: #64748b; padding: 10px 15px; border-radius: 8px; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 8px;">
+        <i data-lucide="arrow-left" style="width: 18px;"></i> Trở lại
+    </a>
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #1e293b; margin: 0;">Thêm Mới Thiết Bị / Vật Tư</h2>
+</div>
+
+<div class="card-panel">
+    @if (TempData["Error"] != null)
+    {
+        <div style="padding: 15px; margin-bottom: 20px; background: #fee2e2; color: #dc2626; border-radius: 8px; font-weight: 600; display: flex; align-items: center; gap: 8px;">
+            <i data-lucide="alert-circle" style="width: 20px;"></i> @TempData["Error"]
+        </div>
+    }
+
+    <form action="/Admin/CoSoVatChat/Create" method="post">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+
+            <div style="background: #f8fafc; padding: 25px; border-radius: 12px; border: 1px solid #e2e8f0;">
+                <h4 style="margin-top: 0; color: #4f46e5; font-weight: 800; border-bottom: 2px solid #e0e7ff; padding-bottom: 10px; margin-bottom: 20px;"><i data-lucide="box" style="display: inline-block; vertical-align: text-bottom; width: 20px;"></i> Thông Tin Vật Tư</h4>
+
+                <div class="form-group">
+                    <label>Mã Tài Sản (Tự động)</label>
+                    <input type="text" name="MaTaiSan" value="@ViewBag.AutoMaTaiSan" readonly class="form-input" style="background: #eef2ff; color: #4f46e5; font-weight: bold; border: 1px dashed #6366f1; cursor: not-allowed;" />
+                </div>
+
+                <div class="form-group">
+                    <label>Tên Vật Tư <span style="color:red">*</span></label>
+                    <input type="text" name="TenVatTu" required class="form-input" placeholder="Ví dụ: Giường sắt 2 tầng, Điều hòa Daikin..." />
+                </div>
+
+                <div class="form-group">
+                    <label>Phân loại nhóm</label>
+                    <select name="LoaiVatTu" class="form-input">
+                        <option value="Đồ nội thất">Đồ nội thất (Giường, tủ, bàn...)</option>
+                        <option value="Thiết bị điện">Thiết bị điện (Quạt, điều hòa, đèn...)</option>
+                        <option value="Thiết bị vệ sinh">Thiết bị vệ sinh</option>
+                        <option value="Khác">Khác</option>
+                    </select>
+                </div>
+            </div>
+
+            <div style="background: #fff; padding: 25px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <h4 style="margin-top: 0; color: #f59e0b; font-weight: 800; border-bottom: 2px solid #fef3c7; padding-bottom: 10px; margin-bottom: 20px;"><i data-lucide="map-pin" style="display: inline-block; vertical-align: text-bottom; width: 20px;"></i> Vị Trí & Tình Trạng</h4>
+
+                <div class="form-group">
+                    <label>Nơi đặt tài sản (Phòng)</label>
+                    <select name="PhongId" class="form-input">
+                        <option value="">-- Kho chung (Chưa phân về phòng) --</option>
+                        @if (ViewBag.PhongList != null)
+                        {
+                            foreach (var item in ViewBag.PhongList as List<QuanlyKTX.Models.Phong>)
+                            {
+                                <option value="@item.PhongId">Phòng @item.PhongId</option>
+                            }
+                        }
+                    </select>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="form-group">
+                        <label>Ngày trang bị</label>
+                        <input type="date" name="NgayTrangBi" class="form-input" />
+                    </div>
+                    <div class="form-group">
+                        <label>Hạn bảo hành</label>
+                        <input type="date" name="HanBaoHanh" class="form-input" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Tình trạng hiện tại</label>
+                    <select name="TrangThai" class="form-input">
+                        <option value="Tốt">Tốt (Đang sử dụng bình thường)</option>
+                        <option value="Hư hỏng">Hư hỏng (Cần thay thế)</option>
+                        <option value="Đang bảo trì">Đang bảo trì / Chờ sửa chữa</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: right; border-top: 1px solid #f1f5f9; padding-top: 25px; margin-top: 20px;">
+            <button type="submit" style="background: #10b981; color: white; padding: 12px 40px; font-size: 1.05rem; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 10px;">
+                <i data-lucide="save"></i> Thêm Vật Tư Mới
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script>if (typeof lucide !== 'undefined') { lucide.createIcons(); }</script>
+}

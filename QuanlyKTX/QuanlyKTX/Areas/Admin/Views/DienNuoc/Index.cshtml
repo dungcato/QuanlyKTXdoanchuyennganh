@@ -1,0 +1,370 @@
+﻿@model IEnumerable<QuanlyKTX.Models.DienNuoc>
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Ghi nhận Điện nước";
+}
+
+<style>
+    /* CSS CHO BỘ LỌC VÀ FORM */
+    .info-card {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        padding: 25px;
+        margin-bottom: 25px;
+        border: 1px solid #f1f5f9;
+    }
+
+    .info-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #f1f5f9;
+        padding-bottom: 15px;
+    }
+
+    .info-header-title {
+        font-weight: 800;
+        color: #4f46e5;
+        font-size: 1.15rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .filter-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr auto;
+        gap: 15px;
+        align-items: end;
+    }
+
+    .form-group-admin label {
+        font-weight: 600;
+        color: #475569;
+        font-size: 0.85rem;
+        margin-bottom: 8px;
+        display: block;
+    }
+
+    .form-group-admin .input-wrapper {
+        position: relative;
+    }
+
+        .form-group-admin .input-wrapper i {
+            position: absolute;
+            left: 12px;
+            top: 11px;
+            color: #94a3b8;
+            width: 18px;
+        }
+
+    .form-group-admin input, .form-group-admin select {
+        width: 100%;
+        padding: 10px 10px 10px 40px;
+        border-radius: 8px;
+        border: 1px solid #cbd5e1;
+        font-family: inherit;
+    }
+
+        .form-group-admin input:focus, .form-group-admin select:focus {
+            border-color: #6366f1;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
+        }
+
+    .btn-filter {
+        background: #3b82f6;
+        color: white;
+        border: none;
+        padding: 10px 25px;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    /* CSS CHO BẢNG DỮ LIỆU */
+    .table-container {
+        overflow-x: auto;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+    }
+
+    .admin-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .admin-table th {
+            background: #f8fafc;
+            color: #64748b;
+            font-weight: 600;
+            padding: 15px;
+            text-align: left;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .admin-table td {
+            padding: 15px;
+            border-bottom: 1px solid #f1f5f9;
+            vertical-align: middle;
+        }
+
+    .room-info-cell .room {
+        font-weight: 800;
+        color: #1e293b;
+        font-size: 1.05rem;
+    }
+
+    .room-info-cell .building {
+        font-size: 0.8rem;
+        color: #64748b;
+    }
+
+    .usage-cell {
+        font-size: 0.85rem;
+        color: #475569;
+    }
+
+        .usage-cell .total {
+            font-weight: 700;
+            color: #0f172a;
+            margin-top: 5px;
+            font-size: 0.95rem;
+        }
+
+    .status-badge {
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+        .status-badge.auto {
+            background: #dcfce7;
+            color: #16a34a;
+        }
+
+        .status-badge.manual {
+            background: #e0e7ff;
+            color: #4f46e5;
+        }
+
+        .status-badge.missing {
+            background: #fee2e2;
+            color: #dc2626;
+        }
+
+    .btn-action {
+        background: none;
+        border: none;
+        padding: 8px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.2s;
+        color: #94a3b8;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+        .btn-action.view {
+            color: #3b82f6;
+            background: #eff6ff;
+        }
+
+            .btn-action.view:hover {
+                color: white;
+                background: #3b82f6;
+            }
+
+        .btn-action.del:hover {
+            color: #ef4444;
+            background: #fef2f2;
+        }
+</style>
+
+<!-- TIÊU ĐỀ TRANG -->
+<div style="margin-bottom: 25px; display: flex; justify-content: space-between; align-items: center;">
+    <div>
+        <h2 style="font-size: 1.5rem; font-weight: 800; color: #1e293b; margin: 0 0 5px 0;">Quản lý Điện nước</h2>
+        <p style="color: #64748b; font-size: 0.95rem; margin: 0;">Ghi nhận chỉ số, kiểm tra lỗi và phát hành hóa đơn đồng loạt.</p>
+    </div>
+    <a href="/Admin/DienNuoc/Create" style="background: #e0e7ff; color: #4f46e5; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 8px; transition: 0.2s;">
+        <i data-lucide="plus-circle" style="width: 18px;"></i> Nhập thủ công
+    </a>
+</div>
+
+@if (TempData["Success"] != null)
+{
+    <div style="padding: 15px; margin-bottom: 20px; background: #dcfce7; color: #16a34a; border-radius: 8px; font-weight: 600; display: flex; align-items: center; gap: 8px;">
+        <i data-lucide="check-circle" style="width: 20px;"></i> @TempData["Success"]
+    </div>
+}
+@if (TempData["Error"] != null)
+{
+    <div style="padding: 15px; margin-bottom: 20px; background: #fee2e2; color: #dc2626; border-radius: 8px; font-weight: 600; display: flex; align-items: center; gap: 8px;">
+        <i data-lucide="alert-circle" style="width: 20px;"></i> @TempData["Error"]
+    </div>
+}
+
+<!-- KHỐI 1: BỘ LỌC TÌM KIẾM -->
+<div class="info-card">
+    <div class="info-header" style="border-bottom: none; padding-bottom: 0; margin-bottom: 15px;">
+        <div class="info-header-title">
+            <i data-lucide="search" style="width: 20px;"></i> Tra cứu Chỉ số
+        </div>
+    </div>
+
+    <form action="/Admin/DienNuoc/Index" method="get" class="filter-card">
+        <div class="form-group-admin">
+            <label>Tìm theo Phòng</label>
+            <div class="input-wrapper">
+                <i data-lucide="door-open"></i>
+                <input type="text" name="searchPhong" value="@ViewBag.SearchPhong" placeholder="Nhập phòng..." />
+            </div>
+        </div>
+
+        <div class="form-group-admin">
+            <label>Lọc Tòa nhà</label>
+            <div class="input-wrapper">
+                <i data-lucide="building"></i>
+                @Html.DropDownList("searchToaNha", ViewBag.ToaNhaList as SelectList, "Tất cả Tòa", new { @style = "width: 100%; padding: 10px 10px 10px 40px; border-radius: 8px; border: 1px solid #cbd5e1; appearance: none;" })
+            </div>
+        </div>
+
+        <div class="form-group-admin">
+            <label>Kỳ (Tháng)</label>
+            <div class="input-wrapper">
+                <i data-lucide="calendar"></i>
+                <input type="number" name="searchThang" value="@ViewBag.SearchThang" required />
+            </div>
+        </div>
+
+        <div class="form-group-admin">
+            <label>Năm</label>
+            <div class="input-wrapper">
+                <i data-lucide="calendar"></i>
+                <input type="number" name="searchNam" value="@ViewBag.SearchNam" required />
+            </div>
+        </div>
+
+        <button type="submit" class="btn-filter"><i data-lucide="filter" style="width: 18px;"></i> Lọc</button>
+    </form>
+</div>
+
+<!-- KHỐI 2: BẢNG DANH SÁCH CHỈ SỐ -->
+<div class="info-card" style="padding: 0; overflow: hidden;">
+    <div class="info-header" style="padding: 20px 25px; margin: 0; border-bottom: 1px solid #e2e8f0; background: #f8fafc; display: flex; justify-content: space-between; align-items: center;">
+        <div class="info-header-title" style="color: #1e293b;">
+            <i data-lucide="clipboard-list" style="width: 20px;"></i>
+            <span>Dữ liệu đã chốt - Kỳ @ViewBag.SearchThang / @ViewBag.SearchNam</span>
+        </div>
+
+        <!-- NÚT PHÁT HÀNH HÓA ĐƠN HÀNG LOẠT -->
+        <form action="/Admin/DienNuoc/TaoHoaDonHangLoat" method="post" onsubmit="return confirm('Bạn có chắc chắn muốn tính tiền và phát hành Hóa Đơn cho TẤT CẢ các phòng chưa có hóa đơn trong kỳ này không?');">
+            <input type="hidden" name="thang" value="@ViewBag.SearchThang" />
+            <input type="hidden" name="nam" value="@ViewBag.SearchNam" />
+            <button type="submit" style="background: #10b981; color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);">
+                <i data-lucide="send" style="width: 18px;"></i> Chốt Sổ & Tạo Hóa Đơn Hàng Loạt
+            </button>
+        </form>
+    </div>
+
+    <div class="table-container" style="border: none; border-radius: 0;">
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th style="padding-left: 25px;">Phòng</th>
+                    <th>Chỉ số Điện (kWh)</th>
+                    <th>Chỉ số Nước (m³)</th>
+                    <th>Trạng thái & Nguồn</th>
+                    <th>Thời gian Chốt</th>
+                    <th style="text-align: center;">Tác vụ</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null && Model.Any())
+                {
+                    var danhSachDaTao = ViewBag.DanhSachDaTaoHoaDon as List<string> ?? new List<string>();
+
+                    foreach (var item in Model)
+                    {
+                        int tieuThuDien = (item.DienMoi ?? 0) - (item.DienCu ?? 0);
+                        int tieuThuNuoc = (item.NuocMoi ?? 0) - (item.NuocCu ?? 0);
+                        bool daTaoHoaDon = danhSachDaTao.Contains(item.PhongId);
+
+                        <tr>
+                            <td style="padding-left: 25px;">
+                                <div class="room-info-cell">
+                                    <div class="room">@item.PhongId</div>
+                                    <div class="building">Tòa @(item.Phong?.ToaNhaId ?? "---")</div>
+                                </div>
+                            </td>
+                            <td class="usage-cell">
+                                Cũ: @item.DienCu | Mới: @item.DienMoi<br />
+                                <div class="total" style="color: #d97706;">Tiêu thụ: @tieuThuDien</div>
+                            </td>
+                            <td class="usage-cell">
+                                Cũ: @item.NuocCu | Mới: @item.NuocMoi<br />
+                                <div class="total" style="color: #0284c7;">Tiêu thụ: @tieuThuNuoc</div>
+                            </td>
+                            <td>
+                                @if (item.NguonNhap == "Tự động (IoT)" || item.NguonNhap == "IoT")
+                                {
+                                    <span class="status-badge auto" style="margin-bottom: 5px;"><i data-lucide="cpu" style="width: 12px;"></i> Tự động (IoT)</span>
+                                }
+                                else
+                                {
+                                    <span class="status-badge manual" style="margin-bottom: 5px;"><i data-lucide="user" style="width: 12px;"></i> Nhập tay/Sửa</span>
+                                }
+                                <br />
+                                @if (daTaoHoaDon)
+                                {
+                                    <span style="font-size: 0.75rem; color: #10b981; font-weight: 700;"><i data-lucide="check" style="width: 12px; vertical-align: text-bottom;"></i> Đã lên Hóa đơn</span>
+                                }
+                                else
+                                {
+                                    <span style="font-size: 0.75rem; color: #f59e0b; font-weight: 700;"><i data-lucide="clock" style="width: 12px; vertical-align: text-bottom;"></i> Chờ chốt sổ</span>
+                                }
+                            </td>
+                            <td style="font-size: 0.85rem; color: #64748b;">
+                                @(item.NgayChot?.ToString("dd/MM/yyyy HH:mm") ?? "---")
+                            </td>
+                            <td style="text-align: center;">
+                                <div style="display: flex; gap: 8px; justify-content: center;">
+                                    <a href="/Admin/DienNuoc/Edit/@item.DienNuocId" class="btn-action view" title="Sửa lại chỉ số"><i data-lucide="edit-3" style="width: 16px;"></i></a>
+
+                                    <form action="/Admin/DienNuoc/Delete/@item.DienNuocId" method="post" style="display:inline;" onsubmit="return confirm('Hủy kết quả chốt số này?');">
+                                        <button type="submit" class="btn-action del"><i data-lucide="trash-2" style="width: 16px;"></i></button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr><td colspan="6" style="text-align: center; padding: 50px; color: #94a3b8; font-weight: 500;">Chưa có dữ liệu chốt số trong kỳ này.</td></tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+    </script>
+}

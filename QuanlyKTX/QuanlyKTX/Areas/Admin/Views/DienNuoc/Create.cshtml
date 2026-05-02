@@ -1,0 +1,147 @@
+﻿@model QuanlyKTX.Models.DienNuoc
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Chốt số Điện nước";
+}
+
+<style>
+    .card-panel {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        padding: 30px;
+        border: 1px solid #f1f5f9;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+        .form-group label {
+            font-weight: 600;
+            color: #475569;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+    .form-input {
+        width: 100%;
+        padding: 12px 15px;
+        border-radius: 8px;
+        border: 1px solid #cbd5e1;
+        transition: 0.2s;
+    }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #10b981;
+            box-shadow: 0 0 0 3px rgba(16,185,129,0.1);
+        }
+</style>
+
+<div style="margin-bottom: 25px; display: flex; align-items: center; gap: 15px;">
+    <a href="/Admin/DienNuoc/Index" style="background: white; border: 1px solid #cbd5e1; color: #64748b; padding: 10px 15px; border-radius: 8px; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 8px;">
+        <i data-lucide="arrow-left" style="width: 18px;"></i> Trở lại
+    </a>
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #1e293b; margin: 0;">Khởi tạo Chỉ số & Hóa đơn</h2>
+</div>
+
+<div class="card-panel">
+    @if (TempData["Error"] != null)
+    {
+        <div style="padding: 15px; margin-bottom: 20px; background: #fee2e2; color: #dc2626; border-radius: 8px; font-weight: 600; display: flex; align-items: center; gap: 8px;">
+            <i data-lucide="alert-circle" style="width: 20px;"></i> @TempData["Error"]
+        </div>
+    }
+
+    <form action="/Admin/DienNuoc/Create" method="post">
+
+        <div style="background: #ecfdf5; padding: 20px; border-radius: 12px; border: 1px dashed #34d399; margin-bottom: 25px; display: flex; align-items: center; gap: 15px; color: #065f46;">
+            <i data-lucide="zap" style="width: 30px; height: 30px;"></i>
+            <div>
+                <h4 style="margin: 0 0 5px 0; font-size: 1.05rem;">Chốt số Tự động</h4>
+                <p style="margin: 0; font-size: 0.9rem;">Nếu để trống ô <b>Số Cũ</b>, hệ thống sẽ tự động quét hóa đơn của tháng trước để lấy số liệu đắp vào.</p>
+            </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+
+            <div style="background: #f8fafc; padding: 25px; border-radius: 12px; border: 1px solid #e2e8f0;">
+                <h4 style="margin-top: 0; color: #4f46e5; font-weight: 800; border-bottom: 2px solid #e0e7ff; padding-bottom: 10px; margin-bottom: 20px;"><i data-lucide="home" style="display: inline-block; vertical-align: text-bottom; width: 20px;"></i> Thông Tin Biểu Mẫu</h4>
+
+                <div class="form-group">
+                    <label>Phòng thu tiền <span style="color:red">*</span></label>
+                    <select name="PhongId" required class="form-input">
+                        <option value="">-- Chọn phòng --</option>
+                        @if (ViewBag.PhongList != null)
+                        {
+                            foreach (var p in ViewBag.PhongList as List<QuanlyKTX.Models.Phong>)
+                            {
+                                <option value="@p.PhongId">Phòng @p.PhongId</option>
+                            }
+                        }
+                    </select>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="form-group">
+                        <label>Kỳ chốt (Tháng)</label>
+                        <input type="number" name="Thang" value="@ViewBag.ThangHienTai" required class="form-input" />
+                    </div>
+                    <div class="form-group">
+                        <label>Năm</label>
+                        <input type="number" name="Nam" value="@ViewBag.NamHienTai" required class="form-input" />
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="form-group">
+                        <label>Đơn giá Điện (VNĐ/kWh)</label>
+                        <input type="number" name="DonGiaDien" value="3500" class="form-input" />
+                    </div>
+                    <div class="form-group">
+                        <label>Đơn giá Nước (VNĐ/m³)</label>
+                        <input type="number" name="DonGiaNuoc" value="15000" class="form-input" />
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: #fff; padding: 25px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <h4 style="margin-top: 0; color: #f59e0b; font-weight: 800; border-bottom: 2px solid #fef3c7; padding-bottom: 10px; margin-bottom: 20px;"><i data-lucide="file-digit" style="display: inline-block; vertical-align: text-bottom; width: 20px;"></i> Chỉ Số Tiêu Thụ</h4>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="form-group">
+                        <label>Điện Cũ</label>
+                        <input type="number" name="DienCu" class="form-input" placeholder="Tự động tìm..." />
+                    </div>
+                    <div class="form-group">
+                        <label style="color: #b91c1c;">Điện Mới <span style="color:red">*</span></label>
+                        <input type="number" name="DienMoi" required class="form-input" style="border-color: #fca5a5; background: #fef2f2;" />
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px;">
+                    <div class="form-group">
+                        <label>Nước Cũ</label>
+                        <input type="number" name="NuocCu" class="form-input" placeholder="Tự động tìm..." />
+                    </div>
+                    <div class="form-group">
+                        <label style="color: #0369a1;">Nước Mới <span style="color:red">*</span></label>
+                        <input type="number" name="NuocMoi" required class="form-input" style="border-color: #7dd3fc; background: #f0f9ff;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: right; border-top: 1px solid #f1f5f9; padding-top: 25px; margin-top: 20px;">
+            <button type="submit" style="background: #10b981; color: white; padding: 12px 40px; font-size: 1.05rem; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);">
+                <i data-lucide="send"></i> Chốt số & Xuất Hóa Đơn
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script>if (typeof lucide !== 'undefined') { lucide.createIcons(); }</script>
+}

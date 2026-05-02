@@ -1,0 +1,369 @@
+﻿@model IEnumerable<QuanlyKTX.Models.HoaDon>
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Quản lý Hóa đơn";
+}
+
+<style>
+    /* BỘ CSS CHUẨN THEO UI THIẾT KẾ */
+    .filter-section {
+        background: white;
+        padding: 25px;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        margin-bottom: 25px;
+        border: 1px solid #f1f5f9;
+    }
+
+    .table-section {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        overflow: hidden;
+        padding-bottom: 20px;
+        border: 1px solid #f1f5f9;
+    }
+
+    .table-header {
+        padding: 20px 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #f1f5f9;
+    }
+
+    .hd-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .hd-table th {
+            background: #fff;
+            color: #94a3b8;
+            font-weight: 600;
+            padding: 15px 25px;
+            text-align: left;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            border-bottom: 2px solid #f1f5f9;
+            letter-spacing: 0.5px;
+        }
+
+        .hd-table td {
+            padding: 20px 25px;
+            border-bottom: 1px solid #f8fafc;
+            vertical-align: middle;
+        }
+
+    /* Avatar & Tên */
+    .user-block {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .avatar-circle {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        color: white;
+        font-size: 1.1rem;
+        flex-shrink: 0;
+    }
+
+    .user-name {
+        font-weight: 700;
+        color: #1e293b;
+        font-size: 0.95rem;
+        margin: 0;
+    }
+
+    .user-id {
+        color: #94a3b8;
+        font-size: 0.8rem;
+        margin: 0;
+    }
+
+    /* Chi tiết Bill Breakdown */
+    .bill-detail {
+        font-size: 0.85rem;
+        color: #475569;
+        line-height: 1.6;
+    }
+
+        .bill-detail span {
+            display: inline-block;
+            width: 80px;
+        }
+
+    .bill-total {
+        font-weight: 800;
+        color: #0f172a;
+        margin-top: 5px;
+        font-size: 0.95rem;
+    }
+
+    /* Badges Trạng thái giống ảnh */
+    .stt-badge {
+        padding: 6px 14px;
+        border-radius: 30px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .stt-pending {
+        background: #fffbeb;
+        color: #d97706;
+        border: 1px solid #fef3c7;
+    }
+    /* Chưa thanh toán */
+    .stt-paid {
+        background: #dcfce7;
+        color: #16a34a;
+        border: 1px solid #bbf7d0;
+    }
+    /* Đã thanh toán */
+    .stt-overdue {
+        background: #fee2e2;
+        color: #dc2626;
+        border: 1px solid #fecaca;
+    }
+    /* Quá hạn */
+
+    /* Nút hành động */
+    .btn-act {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+        transition: 0.2s;
+        margin-right: 5px;
+    }
+
+    .btn-remind {
+        background: #fffbeb;
+        color: #d97706;
+    }
+    /* Nút chuông */
+    .btn-view {
+        background: #eff6ff;
+        color: #3b82f6;
+    }
+    /* Nút mắt */
+    .btn-print {
+        background: #f1f5f9;
+        color: #475569;
+    }
+    /* Nút in */
+    .btn-del {
+        background: #fef2f2;
+        color: #ef4444;
+    }
+    /* Nút xóa */
+    .btn-act:hover {
+        filter: brightness(0.95);
+        transform: translateY(-1px);
+    }
+</style>
+
+<!-- HEADER & THÔNG BÁO -->
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+    <div>
+        <h2 style="font-size: 1.5rem; font-weight: 800; color: #1e293b; margin: 0; margin-bottom: 5px;">Quản lý Hóa đơn</h2>
+        <p style="color: #64748b; font-size: 0.95rem; margin: 0;">Tạo, theo dõi và quản lý thanh toán phí KTX.</p>
+    </div>
+</div>
+
+@if (TempData["Success"] != null)
+{
+    <div style="padding: 15px; margin-bottom: 20px; background: #dcfce7; color: #16a34a; border-radius: 8px; font-weight: 600; display: flex; align-items: center; gap: 8px;">
+        <i data-lucide="check-circle" style="width: 20px;"></i> @TempData["Success"]
+    </div>
+}
+@if (TempData["Error"] != null)
+{
+    <div style="padding: 15px; margin-bottom: 20px; background: #fee2e2; color: #dc2626; border-radius: 8px; font-weight: 600; display: flex; align-items: center; gap: 8px;">
+        <i data-lucide="alert-circle" style="width: 20px;"></i> @TempData["Error"]
+    </div>
+}
+
+<!-- KHU VỰC BỘ LỌC (Chuẩn UI) -->
+<div class="filter-section">
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px; color: #6366f1; font-weight: 700; font-size: 1.1rem;">
+        <i data-lucide="search" style="width: 22px;"></i> Bộ lọc và Tra cứu Hóa đơn
+    </div>
+
+    <form action="/Admin/HoaDon/Index" method="get" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr auto auto; gap: 15px; align-items: end;">
+        <div>
+            <label style="font-size: 0.85rem; color: #64748b; margin-bottom: 8px; display: block; font-weight: 600;">Phòng / Tên / MSSV</label>
+            <div style="position: relative;">
+                <i data-lucide="user" style="position: absolute; left: 12px; top: 10px; color: #94a3b8; width: 18px;"></i>
+                <input type="text" name="searchPhong" value="@ViewBag.SearchPhong" class="form-control" placeholder="Nhập mã phòng, MSSV..." style="width: 100%; padding: 10px 10px 10px 40px; border-radius: 8px; border: 1px solid #cbd5e1;" />
+            </div>
+        </div>
+        <div>
+            <label style="font-size: 0.85rem; color: #64748b; margin-bottom: 8px; display: block; font-weight: 600;">Kỳ (Tháng)</label>
+            <input type="number" name="searchThang" value="@ViewBag.SearchThang" class="form-control" placeholder="Tháng..." style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1;" />
+        </div>
+        <div>
+            <label style="font-size: 0.85rem; color: #64748b; margin-bottom: 8px; display: block; font-weight: 600;">Năm</label>
+            <input type="number" name="searchNam" value="@ViewBag.SearchNam" class="form-control" placeholder="Năm..." style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1;" />
+        </div>
+        <div>
+            <label style="font-size: 0.85rem; color: #64748b; margin-bottom: 8px; display: block; font-weight: 600;">Lọc theo Trạng thái HD</label>
+            <div style="position: relative;">
+                <i data-lucide="check-circle-2" style="position: absolute; left: 12px; top: 10px; color: #94a3b8; width: 18px;"></i>
+                <select name="searchTrangThai" class="form-control" style="width: 100%; padding: 10px 10px 10px 40px; border-radius: 8px; border: 1px solid #cbd5e1; appearance: none;">
+                    <option value="">Tất cả Trạng thái</option>
+                    <option value="Chưa thanh toán" selected="@(ViewBag.SearchTrangThai == "Chưa thanh toán")">Chưa thanh toán</option>
+                    <option value="Đã thanh toán" selected="@(ViewBag.SearchTrangThai == "Đã thanh toán")">Đã thanh toán</option>
+                    <option value="Quá hạn" selected="@(ViewBag.SearchTrangThai == "Quá hạn")">Quá hạn</option>
+                </select>
+            </div>
+        </div>
+        <button type="submit" style="background: #6366f1; color: white; border: none; padding: 10px 30px; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+            <i data-lucide="filter" style="width: 18px;"></i> Lọc
+        </button>
+        <a href="/Admin/HoaDon/Index" style="background: #f1f5f9; color: #475569; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; cursor: pointer; text-decoration: none;">
+            Xuất Excel
+        </a>
+    </form>
+</div>
+
+<!-- KHU VỰC BẢNG DỮ LIỆU -->
+<div class="table-section">
+    <div class="table-header">
+        <h3 style="margin: 0; font-size: 1.1rem; color: #1e293b; font-weight: 700; display: flex; align-items: center; gap: 10px;">
+            <i data-lucide="receipt" style="color: #6366f1;"></i> Danh sách Hóa đơn (@Model.Count())
+        </h3>
+        <a href="/Admin/HoaDon/Create" style="background: #10b981; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);">
+            <i data-lucide="plus" style="width: 18px;"></i> Tạo Hóa đơn Thủ công
+        </a>
+    </div>
+
+    <table class="hd-table">
+        <thead>
+            <tr>
+                <th>Sinh Viên Đại Diện</th>
+                <th>Phòng</th>
+                <th>Chi tiết Hóa đơn</th>
+                <th>Trạng thái</th>
+                <th>Hạn thanh toán</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                var colors = new[] { "#f59e0b", "#3b82f6", "#ef4444", "#10b981", "#8b5cf6", "#ec4899" };
+                int colorIndex = 0;
+
+                foreach (var item in Model)
+                {
+                    var svName = item.MssvNavigation?.HoTen ?? "Chưa gán tên";
+                    var firstLetter = svName.Substring(0, 1).ToUpper();
+                    var bgColor = colors[colorIndex % colors.Length];
+                    colorIndex++;
+
+                    <tr>
+                        <!-- 1. CỘT SINH VIÊN -->
+                        <td>
+                            <div class="user-block">
+                                <div class="avatar-circle" style="background-color: @bgColor;">@firstLetter</div>
+                                <div>
+                                    <p class="user-name">@svName</p>
+                                    <p class="user-id">@item.Mssv</p>
+                                </div>
+                            </div>
+                        </td>
+
+                        <!-- 2. CỘT PHÒNG -->
+                        <td>
+                            <p style="margin: 0; font-weight: 700; color: #1e293b;">@item.PhongId</p>
+                            <p style="margin: 0; font-size: 0.8rem; color: #94a3b8;">Kỳ @item.Thang / @item.Nam</p>
+                        </td>
+
+                        <!-- 3. CỘT CHI TIẾT HÓA ĐƠN BREAKDOWN -->
+                        <td>
+                            <div class="bill-detail">
+                                <div><span>Điện:</span> @(item.TienDien?.ToString("N0") ?? "0")đ</div>
+                                <div><span>Nước:</span> @(item.TienNuoc?.ToString("N0") ?? "0")đ</div>
+                                <div><span>Phòng+DV:</span> @(((item.TienPhong ?? 0) + (item.PhiDichVu ?? 0)).ToString("N0"))đ</div>
+                                <div class="bill-total">Tổng: @(item.TongTien?.ToString("N0") ?? "0")đ</div>
+                            </div>
+                        </td>
+
+                        <!-- 4. CỘT TRẠNG THÁI -->
+                        <td>
+                            @if (item.TrangThai == "Đã thanh toán")
+                            {
+                                <span class="stt-badge stt-paid"><i data-lucide="check" style="width: 14px;"></i> Đã thanh toán</span>
+                            }
+                            else if (item.TrangThai == "Quá hạn")
+                            {
+                                <span class="stt-badge stt-overdue"><i data-lucide="alert-triangle" style="width: 14px;"></i> Quá hạn</span>
+                            }
+                            else
+                            {
+                                <span class="stt-badge stt-pending"><i data-lucide="clock" style="width: 14px;"></i> Chưa thanh toán</span>
+                            }
+                        </td>
+
+                        <!-- 5. HẠN THANH TOÁN -->
+                        <td>
+                            <span style="color: #475569; font-weight: 500;">
+                                @(item.HanThanhToan?.ToString("dd/MM/yyyy") ?? "---")
+                            </span>
+                        </td>
+
+                        <!-- 6. HÀNH ĐỘNG -->
+                        <td>
+                            @if (item.TrangThai != "Đã thanh toán")
+                            {
+                                <!-- Chuông nhắc nhở (Đã bọc trong form để gửi dữ liệu) -->
+                                <form action="/Admin/HoaDon/Remind/@item.HoaDonId" method="post" style="display:inline;" onsubmit="return confirm('Xác nhận gửi Email thông báo nhắc nợ cho sinh viên này?');">
+                                    <button type="submit" class="btn-act btn-remind" title="Gửi nhắc nhở"><i data-lucide="bell" style="width: 18px;"></i></button>
+                                </form>
+                            }
+
+                            <!-- Nút Xem/Chỉnh sửa -->
+                            <a href="/Admin/HoaDon/Edit/@item.HoaDonId" class="btn-act btn-view" title="Chi tiết/Thu tiền"><i data-lucide="eye" style="width: 18px;"></i></a>
+
+                            <!-- Nút In -->
+                            @if (item.TrangThai == "Đã thanh toán")
+                            {
+                                <button type="button" class="btn-act btn-print" title="In Biên lai" onclick="window.print()"><i data-lucide="printer" style="width: 18px;"></i></button>
+                            }
+
+                            <!-- Nút Xóa -->
+                            <form action="/Admin/HoaDon/Delete/@item.HoaDonId" method="post" style="display:inline;" onsubmit="return confirm('Xác nhận xóa Hóa đơn này khỏi hệ thống?');">
+                                <button type="submit" class="btn-act btn-del" title="Xóa Hóa đơn"><i data-lucide="trash-2" style="width: 18px;"></i></button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr><td colspan="6" style="text-align: center; padding: 50px; color: #94a3b8; font-weight: 500;">Chưa có dữ liệu Hóa đơn trong kỳ này.</td></tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@section Scripts {
+    <script>
+        if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+    </script>
+}

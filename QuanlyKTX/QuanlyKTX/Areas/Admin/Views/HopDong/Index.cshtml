@@ -1,0 +1,331 @@
+﻿@model IEnumerable<QuanlyKTX.Models.HopDong>
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Quản lý Hợp đồng";
+}
+
+<style>
+    .filter-section {
+        background: white;
+        padding: 25px;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        margin-bottom: 25px;
+    }
+
+    .table-section {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        overflow: hidden;
+        padding-bottom: 20px;
+    }
+
+    .table-header {
+        padding: 20px 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #f1f5f9;
+    }
+
+    .table-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #1e293b;
+        margin: 0;
+    }
+
+    .hd-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .hd-table th {
+            background: #fff;
+            color: #94a3b8;
+            font-weight: 600;
+            padding: 15px 25px;
+            text-align: left;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            border-bottom: 2px solid #f1f5f9;
+        }
+
+        .hd-table td {
+            padding: 20px 25px;
+            border-bottom: 1px solid #f8fafc;
+            vertical-align: middle;
+        }
+
+    /* Styles cho Sinh Viên */
+    .user-block {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .avatar-circle {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        color: white;
+        font-size: 1.1rem;
+    }
+
+    .user-name {
+        font-weight: 700;
+        color: #1e293b;
+        font-size: 0.95rem;
+        margin: 0;
+    }
+
+    .user-id {
+        color: #94a3b8;
+        font-size: 0.8rem;
+        margin: 0;
+    }
+
+    /* Styles cho Badges Trạng thái giống ảnh */
+    .stt-badge {
+        padding: 6px 14px;
+        border-radius: 30px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .stt-pending {
+        background: #fffbeb;
+        color: #d97706;
+    }
+    /* Chờ duyệt */
+    .stt-active {
+        background: #dcfce7;
+        color: #16a34a;
+    }
+    /* Còn hiệu lực */
+    .stt-warning {
+        background: #ffedd5;
+        color: #ea580c;
+    }
+    /* Sắp hết hạn */
+    .stt-expired {
+        background: #fee2e2;
+        color: #dc2626;
+    }
+    /* Đã hết hạn */
+
+    /* Nút hành động */
+    .btn-act {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+        transition: 0.2s;
+        margin-right: 5px;
+    }
+
+    .btn-view {
+        background: #eff6ff;
+        color: #3b82f6;
+    }
+
+    .btn-del {
+        background: #fef2f2;
+        color: #ef4444;
+    }
+
+    .btn-approve {
+        background: #dcfce7;
+        color: #16a34a;
+    }
+
+    .btn-act:hover {
+        filter: brightness(0.9);
+    }
+</style>
+
+<!-- HIỂN THỊ THÔNG BÁO -->
+@if (TempData["Success"] != null)
+{
+    <div style="padding: 15px; margin-bottom: 20px; background: #dcfce7; color: #16a34a; border-radius: 8px; font-weight: 600; display: flex; align-items: center; gap: 8px;">
+        <i data-lucide="check-circle" style="width: 20px;"></i> @TempData["Success"]
+    </div>
+}
+@if (TempData["Error"] != null)
+{
+    <div style="padding: 15px; margin-bottom: 20px; background: #fee2e2; color: #dc2626; border-radius: 8px; font-weight: 600; display: flex; align-items: center; gap: 8px;">
+        <i data-lucide="alert-circle" style="width: 20px;"></i> @TempData["Error"]
+    </div>
+}
+
+<!-- KHU VỰC BỘ LỌC -->
+<div class="filter-section">
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px; color: #4f46e5; font-weight: 700; font-size: 1.1rem;">
+        <i data-lucide="search" style="width: 22px;"></i> Bộ lọc và Tra cứu Hợp đồng
+    </div>
+    <form action="/Admin/HopDong/Index" method="get" style="display: flex; gap: 20px; align-items: flex-end;">
+        <div style="flex: 2;">
+            <label style="font-size: 0.85rem; color: #64748b; margin-bottom: 8px; display: block; font-weight: 600;">Tìm theo Tên, MSSV, Phòng</label>
+            <div style="position: relative;">
+                <i data-lucide="user" style="position: absolute; left: 12px; top: 10px; color: #94a3b8; width: 18px;"></i>
+                <input type="text" name="searchString" value="@ViewBag.SearchString" class="form-control" placeholder="Nhập tên, MSSV, Phòng..." style="width: 100%; padding: 10px 10px 10px 40px; border-radius: 8px; border: 1px solid #cbd5e1;" />
+            </div>
+        </div>
+        <div style="flex: 1.5;">
+            <label style="font-size: 0.85rem; color: #64748b; margin-bottom: 8px; display: block; font-weight: 600;">Lọc theo Trạng thái HĐ</label>
+            <div style="position: relative;">
+                <i data-lucide="check-circle-2" style="position: absolute; left: 12px; top: 10px; color: #94a3b8; width: 18px;"></i>
+                <select name="searchTrangThai" class="form-control" style="width: 100%; padding: 10px 10px 10px 40px; border-radius: 8px; border: 1px solid #cbd5e1; appearance: none;">
+                    <option value="">Tất cả Trạng thái</option>
+                    <option value="Chờ duyệt" selected="@(ViewBag.SearchTrangThai == "Chờ duyệt")">Chờ duyệt</option>
+                    <option value="Còn hiệu lực" selected="@(ViewBag.SearchTrangThai == "Còn hiệu lực")">Còn hiệu lực</option>
+                    <option value="Sắp hết hạn" selected="@(ViewBag.SearchTrangThai == "Sắp hết hạn")">Sắp hết hạn</option>
+                    <option value="Đã hết hạn" selected="@(ViewBag.SearchTrangThai == "Đã hết hạn")">Đã hết hạn</option>
+                </select>
+            </div>
+        </div>
+        <div style="display: flex; gap: 10px;">
+            <button type="submit" style="background: #6366f1; color: white; border: none; padding: 10px 30px; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                <i data-lucide="filter" style="width: 18px;"></i> Lọc
+            </button>
+            <button type="button" style="background: #f1f5f9; color: #475569; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; cursor: pointer;">
+                Xuất Excel
+            </button>
+        </div>
+    </form>
+</div>
+
+<!-- KHU VỰC BẢNG DỮ LIỆU -->
+<div class="table-section">
+    <div class="table-header">
+        <h3 class="table-title">
+            <i data-lucide="file-text" style="color: #6366f1;"></i> Danh sách Hợp đồng (@Model.Count())
+        </h3>
+        <a href="/Admin/HopDong/Create" style="background: #6366f1; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);">
+            <i data-lucide="plus" style="width: 18px;"></i> Tạo Hợp đồng Mới
+        </a>
+    </div>
+
+    <table class="hd-table">
+        <thead>
+            <tr>
+                <th>Sinh Viên</th>
+                <th>Chi tiết Phòng</th>
+                <th>Thời hạn Hợp đồng</th>
+                <th>Trạng thái</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                // Mảng màu ngẫu nhiên cho Avatar chữ cái đầu
+                var colors = new[] { "#f59e0b", "#3b82f6", "#ef4444", "#10b981", "#8b5cf6" };
+                int colorIndex = 0;
+
+                foreach (var item in Model)
+                {
+                    var svName = item.MssvNavigation?.HoTen ?? "Chưa rõ";
+                    var firstLetter = string.IsNullOrEmpty(svName) ? "U" : svName.Substring(0, 1).ToUpper();
+                    var bgColor = colors[colorIndex % colors.Length];
+                    colorIndex++;
+
+                    <tr>
+                        <td>
+                            <div class="user-block">
+                                <!-- Avatar tròn hiển thị chữ cái đầu -->
+                                <div class="avatar-circle" style="background-color: @bgColor;">@firstLetter</div>
+                                <div>
+                                    <p class="user-name">@svName</p>
+                                    <p class="user-id">@item.Mssv</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <p style="margin: 0; font-weight: 700; color: #1e293b;">@item.PhongId</p>
+                            <!-- LẤY TÒA NHÀ TỪ DATABASE (Nếu DB của ông lưu tên khác thì sửa lại ToaNhaId nhé) -->
+                            <p style="margin: 0; font-size: 0.8rem; color: #94a3b8;">Tòa @(item.Phong?.ToaNhaId ?? "Chưa rõ")</p>
+                        </td>
+                        <td>
+                            <span style="color: #475569; font-weight: 500;">
+                                <!-- Đã sửa lỗi CS0023: Xóa dấu ? ở NgayBatDau và NgayKetThuc -->
+                                @(item.NgayBatDau.ToString("dd/MM/yyyy")) - @(item.NgayKetThuc.ToString("dd/MM/yyyy"))
+                            </span>
+                        </td>
+                        <td>
+                            @if (item.TrangThai == "Chờ duyệt")
+                            {
+                                <span class="stt-badge stt-pending"><i data-lucide="refresh-cw" style="width: 14px;"></i> Chờ duyệt</span>
+                            }
+                            else if (item.TrangThai == "Còn hiệu lực")
+                            {
+                                <span class="stt-badge stt-active"><i data-lucide="check" style="width: 14px;"></i> Còn hiệu lực</span>
+                            }
+                            else if (item.TrangThai == "Sắp hết hạn")
+                            {
+                                <span class="stt-badge stt-warning"><i data-lucide="alert-circle" style="width: 14px;"></i> Sắp hết hạn</span>
+                            }
+                            else
+                            {
+                                <span class="stt-badge stt-expired"><i data-lucide="x-circle" style="width: 14px;"></i> Đã hết hạn</span>
+                            }
+                        </td>
+                        <td>
+                            <!-- LOGIC NÚT BẤM THEO TRẠNG THÁI DATABASE (Chuẩn thiết kế) -->
+                            @if (item.TrangThai == "Chờ duyệt")
+                            {
+                                <a href="/Admin/HopDong/Approve/@item.MaHopDong" class="btn-act btn-approve" title="Duyệt Hợp đồng"><i data-lucide="check" style="width: 18px;"></i></a>
+                                <form action="/Admin/HopDong/Delete/@item.MaHopDong" method="post" style="display:inline;" onsubmit="return confirm('Hủy hợp đồng này?');">
+                                    <button type="submit" class="btn-act btn-del" title="Từ chối/Hủy"><i data-lucide="x" style="width: 18px;"></i></button>
+                                </form>
+                            }
+                            else if (item.TrangThai == "Còn hiệu lực")
+                            {
+                                <a href="/Admin/HopDong/Edit/@item.MaHopDong" class="btn-act btn-view" title="Xem chi tiết"><i data-lucide="eye" style="width: 18px;"></i></a>
+                                <a href="javascript:window.print()" class="btn-act" style="background: #f1f5f9; color: #475569;" title="In Hợp đồng"><i data-lucide="printer" style="width: 18px;"></i></a>
+                                <form action="/Admin/HopDong/Delete/@item.MaHopDong" method="post" style="display:inline;" onsubmit="return confirm('Xóa hợp đồng này?');">
+                                    <button type="submit" class="btn-act btn-del" title="Xóa"><i data-lucide="trash-2" style="width: 18px;"></i></button>
+                                </form>
+                            }
+                            else if (item.TrangThai == "Sắp hết hạn")
+                            {
+                                <a href="/Admin/HopDong/Renew/@item.MaHopDong" class="btn-act btn-view" style="background: #e0e7ff; color: #4f46e5;" title="Gia hạn"><i data-lucide="calendar-plus" style="width: 18px;"></i></a>
+                                <a href="/Admin/HopDong/Edit/@item.MaHopDong" class="btn-act btn-view" title="Xem chi tiết"><i data-lucide="eye" style="width: 18px;"></i></a>
+                            }
+                            else
+                            {
+                                <!-- Đã hết hạn thì chỉ cho xem -->
+                                <a href="/Admin/HopDong/Edit/@item.MaHopDong" class="btn-act btn-view" title="Xem chi tiết"><i data-lucide="eye" style="width: 18px;"></i></a>
+                            }
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr><td colspan="5" style="text-align: center; padding: 40px; color: #94a3b8; font-weight: 500;">Chưa có hợp đồng nào trong hệ thống.</td></tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@section Scripts {
+    <script>
+        if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+    </script>
+}

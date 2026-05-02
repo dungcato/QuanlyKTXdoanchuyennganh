@@ -1,0 +1,205 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Cảnh báo An ninh";
+}
+
+<!-- TIÊU ĐỀ TRANG MỚI -->
+<div style="margin-bottom: 30px; display: flex; justify-content: space-between; align-items: flex-end;">
+    <div>
+        <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-main); margin-bottom: 5px;">Cảnh báo An ninh</h2>
+        <p style="color: var(--text-muted); font-size: 0.95rem; font-weight: 500; margin: 0;">Trung tâm tiếp nhận và xử lý sự cố từ Camera YOLO.</p>
+    </div>
+    <div style="font-size: 13px; font-weight: 600; color: var(--text-muted); background: white; padding: 8px 15px; border-radius: 8px; border: 1px solid var(--border);">
+        <i data-lucide="calendar" style="width: 16px; vertical-align: text-bottom; margin-right: 5px;"></i> Hôm nay: <span style="color: var(--accent);">@DateTime.Now.ToString("dd/MM/yyyy")</span>
+    </div>
+</div>
+
+<!-- 1. HÀNG KPI CARDS (Bám sát thiết kế bo góc, shadow mềm) -->
+<section class="alert-dashboard-header">
+    <div class="kpi-card">
+        <div class="kpi-info" style="flex: 1;">
+            <p>CẢNH BÁO KHẨN</p>
+            <h3 style="color: #ef4444;">03</h3>
+        </div>
+        <div class="kpi-icon" style="background: #fef2f2; color: #ef4444;"><i data-lucide="shield-alert"></i></div>
+    </div>
+
+    <div class="kpi-card">
+        <div class="kpi-info" style="flex: 1;">
+            <p>ĐANG XỬ LÝ</p>
+            <h3 style="color: #f59e0b;">02</h3>
+        </div>
+        <div class="kpi-icon" style="background: #fffbeb; color: #f59e0b;"><i data-lucide="loader" style="animation: spin 3s linear infinite;"></i></div>
+    </div>
+
+    <div class="kpi-card">
+        <div class="kpi-info" style="flex: 1;">
+            <p>VÙNG NÓNG</p>
+            <h3 style="color: #3b82f6;">Sảnh B1</h3>
+        </div>
+        <div class="kpi-icon" style="background: #eff6ff; color: #3b82f6;"><i data-lucide="cctv"></i></div>
+    </div>
+
+    <div class="kpi-card">
+        <div class="kpi-info" style="flex: 1;">
+            <p>ĐÃ GIẢI QUYẾT</p>
+            <h3 style="color: #10b981;">15</h3>
+        </div>
+        <div class="kpi-icon" style="background: #ecfdf5; color: #10b981;"><i data-lucide="check-square"></i></div>
+    </div>
+</section>
+
+<!-- 2. LAYOUT 2 CỘT: MASTER (LIST) - DETAIL (XỬ LÝ) -->
+<section class="alert-layout">
+
+    <!-- CỘT TRÁI: Danh sách -->
+    <div class="alert-list-container">
+        <div class="list-header">
+            <h3><i data-lucide="list-filter" style="color: var(--accent); width: 18px;"></i> Danh sách Sự cố</h3>
+            <select class="alert-filter">
+                <option value="new">Sắp xếp: Mới nhất</option>
+                <option value="urgent">Khẩn cấp trước</option>
+            </select>
+        </div>
+
+        <div class="alert-items">
+            <!-- Thẻ Mới (Active) -->
+            <div class="alert-card active unread">
+                <div class="alert-thumb">CAM1</div>
+                <div class="alert-content">
+                    <div class="alert-title">Phát hiện người lạ (Blacklist)</div>
+                    <div class="alert-meta">
+                        <span><i data-lucide="clock" style="width: 12px"></i> 10:45</span>
+                        <span><i data-lucide="map-pin" style="width: 12px"></i> Cổng Chính A</span>
+                    </div>
+                    <span style="font-size: 10px; font-weight: 700; background: #fee2e2; color: #dc2626; padding: 2px 6px; border-radius: 4px;">KHẨN CẤP</span>
+                </div>
+            </div>
+
+            <!-- Thẻ Đang xử lý -->
+            <div class="alert-card">
+                <div class="alert-thumb">CAM2</div>
+                <div class="alert-content">
+                    <div class="alert-title">Khuôn mặt không khớp thẻ</div>
+                    <div class="alert-meta">
+                        <span><i data-lucide="clock" style="width: 12px"></i> 10:30</span>
+                        <span><i data-lucide="map-pin" style="width: 12px"></i> Sảnh B1</span>
+                    </div>
+                    <span style="font-size: 10px; font-weight: 700; background: #fef3c7; color: #d97706; padding: 2px 6px; border-radius: 4px;">ĐANG XỬ LÝ</span>
+                </div>
+            </div>
+
+            <!-- Thẻ Hoàn thành -->
+            <div class="alert-card">
+                <div class="alert-thumb">CAM3</div>
+                <div class="alert-content">
+                    <div class="alert-title">Cố tình vượt rào chắn xe</div>
+                    <div class="alert-meta">
+                        <span><i data-lucide="clock" style="width: 12px"></i> 09:15</span>
+                        <span><i data-lucide="map-pin" style="width: 12px"></i> Nhà xe A</span>
+                    </div>
+                    <span style="font-size: 10px; font-weight: 700; background: #dcfce7; color: #16a34a; padding: 2px 6px; border-radius: 4px;">ĐÃ XỬ LÝ</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CỘT PHẢI: Chi tiết & Khung hành động -->
+    <div class="alert-detail-container">
+
+        <div class="detail-header-top">
+            <div>
+                <h2 class="detail-title-large">Phát hiện người lạ (Blacklist)</h2>
+                <span class="detail-id">ID: #AL-20251115-003</span>
+            </div>
+            <span style="font-size: 12px; font-weight: 800; background: #ef4444; color: white; padding: 6px 12px; border-radius: 8px; display: inline-flex; align-items: center; gap: 5px;">
+                <i data-lucide="alert-triangle" style="width: 14px;"></i> MỨC KHẨN CẤP
+            </span>
+        </div>
+
+        <!-- Khung ảnh AI (Giống màn hình Camera Control) -->
+        <div class="detail-evidence">
+            <img src="https://images.unsplash.com/photo-1555861496-faa3e11747ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="evidence-img" alt="Bằng chứng Camera" />
+
+            <div class="ai-overlay-box">
+                > TARGET: UNKNOWN_PERSON<br />
+                > YOLO_CONF: 98.5%<br />
+                > ACTION: BLOCKED
+            </div>
+
+            <!-- Vẽ khung nhận diện đỏ -->
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 140px; height: 180px; border: 2px solid #ef4444; background: rgba(239, 68, 68, 0.1);">
+                <div style="position: absolute; top: -22px; left: -2px; background: #ef4444; color: white; font-size: 11px; padding: 3px 8px; font-weight: bold; font-family: monospace;">Threat (98%)</div>
+            </div>
+        </div>
+
+        <!-- Thông tin Phân tích (Bọc trong khung nền xám nhạt cho gọn gàng) -->
+        <div class="detail-info-grid">
+            <div class="info-group">
+                <label>THỜI GIAN</label>
+                <div><i data-lucide="clock" style="width: 16px; color: var(--accent);"></i> 15/11/2025 - 10:45:00</div>
+            </div>
+            <div class="info-group">
+                <label>VỊ TRÍ</label>
+                <div><i data-lucide="map-pin" style="width: 16px; color: var(--accent);"></i> Cổng Chính A (CAM-01)</div>
+            </div>
+            <div class="info-group">
+                <label>PHÂN LOẠI</label>
+                <div><i data-lucide="alert-octagon" style="width: 16px; color: #ef4444;"></i> Xâm nhập trái phép</div>
+            </div>
+            <div class="info-group">
+                <label>TRẠNG THÁI HIỆN TẠI</label>
+                <div id="currentStatusUI" style="color: #ef4444;"><i data-lucide="bell-ring" style="width: 16px;"></i> Chưa tiếp nhận</div>
+            </div>
+        </div>
+
+        <!-- Khu vực Xử lý (Nút bấm hiện đại) -->
+        <div class="action-panel">
+            <div class="action-title">
+                <i data-lucide="shield" style="width: 18px; color: var(--accent);"></i> BẢNG ĐIỀU KHIỂN & XỬ LÝ
+            </div>
+            <div class="action-buttons-grid">
+
+                <button class="btn-action-alert btn-accept" id="btnAcceptTask">
+                    <i data-lucide="user-check" style="width: 18px;"></i> Bấm để Tiếp nhận
+                </button>
+
+                <button class="btn-action-alert btn-false">
+                    <i data-lucide="eye-off" style="width: 18px;"></i> Cảnh báo giả
+                </button>
+
+                <button class="btn-action-alert btn-alert-siren" onclick="alert('ĐÃ KÍCH HOẠT CÒI BÁO ĐỘNG VÀ PHÁT LOA TẠI CỔNG A!')">
+                    <i data-lucide="siren" style="width: 18px; animation: pulse 1s infinite;"></i> BẬT CÒI & GỌI BẢO VỆ
+                </button>
+
+                <button class="btn-action-alert btn-resolve" style="grid-column: span 2;">
+                    <i data-lucide="check-circle" style="width: 18px;"></i> Đóng sự cố (Đã xử lý an toàn)
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        // Fake logic bấm nút tiếp nhận
+        const btnAccept = document.getElementById("btnAcceptTask");
+        const statusUI = document.getElementById("currentStatusUI");
+
+        if (btnAccept) {
+            btnAccept.addEventListener("click", function () {
+                // Đổi nút
+                this.style.backgroundColor = "#f1f5f9";
+                this.style.color = "#475569";
+                this.style.cursor = "not-allowed";
+                this.innerHTML = '<i data-lucide="check" style="width: 18px;"></i> Đã tiếp nhận';
+
+                // Đổi trạng thái
+                statusUI.innerHTML = '<i data-lucide="loader" style="width: 16px; animation: spin 2s linear infinite;"></i> Đang xử lý...';
+                statusUI.style.color = "#f59e0b";
+
+                lucide.createIcons();
+            });
+        }
+    </script>
+}

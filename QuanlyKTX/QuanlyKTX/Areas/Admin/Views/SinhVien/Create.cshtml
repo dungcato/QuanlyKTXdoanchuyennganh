@@ -1,0 +1,153 @@
+﻿@model QuanlyKTX.Models.SinhVien
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Thêm Sinh Viên Mới";
+}
+
+<div style="margin-bottom: 25px; display: flex; justify-content: space-between; align-items: center;">
+    <div style="display: flex; align-items: center; gap: 15px;">
+        <a href="/Admin/SinhVien/Index" class="btn-icon" style="background: white; border: 1px solid var(--border); color: var(--text-muted); padding: 8px 12px; border-radius: 8px; text-decoration: none;">
+            <i data-lucide="arrow-left" style="width: 18px;"></i> Trở lại
+        </a>
+        <h2 style="font-size: 1.5rem; font-weight: 800; color: var(--text-main); margin: 0;">Thêm Mới Hồ Sơ Sinh Viên</h2>
+    </div>
+</div>
+
+<div class="info-card" style="border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.02); padding: 30px; background: white;">
+    <!-- SỬA LẠI ACTION GỬI FORM THỦ CÔNG -->
+    <form action="/Admin/SinhVien/Create" method="post">
+
+        <h4 style="font-size: 14px; font-weight: 700; color: #3b82f6; text-transform: uppercase; margin-bottom: 15px; border-bottom: 2px solid #eff6ff; padding-bottom: 10px;">I. Thông Tin Cá Nhân</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px;">
+            <div class="form-group-admin">
+                <label style="font-weight: 600; margin-bottom: 8px; display: block;">Mã Sinh Viên (MSSV) <span style="color: red">*</span></label>
+                <input type="text" name="Mssv" required class="form-control" placeholder="Nhập MSSV..." style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1;" />
+            </div>
+            <div class="form-group-admin">
+                <label style="font-weight: 600; margin-bottom: 8px; display: block;">Họ và Tên <span style="color: red">*</span></label>
+                <input type="text" name="HoTen" required class="form-control" placeholder="Nhập họ tên đầy đủ..." style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1;" />
+            </div>
+            <div class="form-group-admin">
+                <label style="font-weight: 600; margin-bottom: 8px; display: block;">Ngày sinh</label>
+                <input type="date" name="NgaySinh" class="form-control" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1;" />
+            </div>
+            <div class="form-group-admin">
+                <label style="font-weight: 600; margin-bottom: 8px; display: block;">Giới tính</label>
+                <select name="GioiTinh" class="form-control" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1;">
+                    <option value="Nam">Nam</option>
+                    <option value="Nữ">Nữ</option>
+                </select>
+            </div>
+            <div class="form-group-admin">
+                <label style="font-weight: 600; margin-bottom: 8px; display: block;">Số CCCD</label>
+                <input type="text" name="Cccd" class="form-control" placeholder="Nhập 12 số CCCD..." style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1;" />
+            </div>
+            <div class="form-group-admin">
+                <label style="font-weight: 600; margin-bottom: 8px; display: block;">Quê quán</label>
+                <input type="text" name="QueQuan" class="form-control" placeholder="Ví dụ: Nghệ An..." style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1;" />
+            </div>
+        </div>
+
+        <h4 style="font-size: 14px; font-weight: 700; color: #3b82f6; text-transform: uppercase; margin-bottom: 15px; border-bottom: 2px solid #eff6ff; padding-bottom: 10px;">II. Liên Hệ & Đào Tạo</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px;">
+            <div class="form-group-admin">
+                <label style="font-weight: 600; margin-bottom: 8px; display: block;">Số điện thoại</label>
+                <input type="text" name="Sdt" class="form-control" placeholder="Nhập số điện thoại..." style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1;" />
+            </div>
+            <div class="form-group-admin">
+                <label style="font-weight: 600; margin-bottom: 8px; display: block;">Email cá nhân</label>
+                <input type="email" name="Email" class="form-control" placeholder="abc@gmail.com..." style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1;" />
+            </div>
+            <div class="form-group-admin">
+                <label style="font-weight: 600; margin-bottom: 8px; display: block;">Lớp</label>
+                <input type="text" name="Lop" class="form-control" placeholder="Ví dụ: 64K CNTT" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1;" />
+            </div>
+            <div class="form-group-admin">
+                <label style="font-weight: 600; margin-bottom: 8px; display: block;">Khoa / Viện</label>
+                <input type="text" name="Khoa" class="form-control" placeholder="Ví dụ: Viện Kỹ Thuật" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1;" />
+            </div>
+        </div>
+
+        <h4 style="font-size: 14px; font-weight: 700; color: #3b82f6; text-transform: uppercase; margin-bottom: 15px; border-bottom: 2px solid #eff6ff; padding-bottom: 10px;">III. Lưu Trú & An Ninh</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px;">
+            <div class="form-group-admin">
+                <label style="font-weight: 600; margin-bottom: 8px; display: block;">Phòng đang ở</label>
+                <select name="PhongDangOid" class="form-control" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1;">
+                    <option value="">-- Chưa xếp phòng --</option>
+                    @if (ViewBag.PhongList != null)
+                    {
+                        foreach (var p in ViewBag.PhongList)
+                        {
+                            <option value="@p.PhongId">Phòng @p.PhongId</option>
+                        }
+                    }
+                </select>
+            </div>
+            <div class="form-group-admin">
+                <label style="font-weight: 600; margin-bottom: 8px; display: block;">Trạng thái</label>
+                <select name="TrangThai" class="form-control" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1;">
+                    <option value="Đang lưu trú">Đang lưu trú</option>
+                    <option value="Chờ xếp phòng">Chờ xếp phòng</option>
+                </select>
+            </div>
+
+            <div class="form-group-admin" style="grid-column: 1 / -1;">
+                <label style="font-weight: 600; margin-bottom: 8px; display: block;">Dữ liệu nhận diện khuôn mặt (FaceID Camera AI)</label>
+                <div style="display: flex; gap: 20px; margin-top: 10px; background: #f8fafc; padding: 15px; border-radius: 12px; border: 1px dashed #cbd5e1;">
+                    <div style="width: 120px; height: 150px; border: 2px solid #e2e8f0; border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: white;">
+                        <img id="imgPreview" src="https://placehold.co/120x150?text=Chưa+có+ảnh" style="width:100%; height:100%; object-fit: cover;" alt="Preview" />
+                    </div>
+                    <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 10px;">
+                        <button type="button" id="btnSelectImage" style="background: #10b981; color: white; border: none; padding: 10px 20px; border-radius: 8px; width: fit-content; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                            <i data-lucide="camera" style="width: 18px;"></i> Chọn ảnh định danh
+                        </button>
+                        <input type="text" id="file_input" name="FaceIdData" class="form-control" readonly placeholder="Đường dẫn ảnh sẽ tự động điền vào đây..." style="background: white; width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1;" />
+                        <p style="font-size: 12px; color: #64748b; margin: 0;">Khuyến nghị: Tỷ lệ ảnh 3x4 hoặc 4x6, rõ khuôn mặt để hệ thống AI nhận diện chính xác.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: right; padding-top: 20px; border-top: 1px solid #e2e8f0;">
+            <button type="submit" style="background: #6366f1; color: white; padding: 12px 40px; font-size: 15px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
+                <i data-lucide="save" style="width: 18px;"></i> Lưu Hồ Sơ
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="~/admin/lib/snote/jquery.min.js"></script>
+    <script src="~/admin/lib/jqueryui/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="~/admin/lib/jqueryui/themes/base/theme.css" />
+    <link rel="stylesheet" href="~/admin/lib/jqueryui/themes/base/jquery-ui.css" />
+
+    <script src="~/admin/lib/elFinder/js/elfinder.min.js"></script>
+    <link rel="stylesheet" href="~/admin/lib/elFinder/css/elfinder.full.css" />
+    <link rel="stylesheet" href="~/admin/lib/elFinder/css/theme.min.css" />
+
+    <script>
+        if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+
+        $(document).ready(function() {
+            $("#btnSelectImage").on("click", function() {
+                $('<div/>').dialogelfinder({
+                    baseUrl: "/admin/lib/elFinder/",
+                    url: '/Admin/el-finder-file-system/connector',
+                    lang: 'vi',
+                    width: 840,
+                    height: 450,
+                    destroyOnClose: true,
+                    getFileCallback: function (files) {
+                        $('#file_input').val(files.url);
+                        $('#imgPreview').attr('src', files.url);
+                    },
+                    commandsOptions: {
+                        getfile: { oncomplete: 'close', folders: false }
+                    },
+                    onlyMimes: ["image"],
+                }).dialogelfinder('instance');
+            });
+        });
+    </script>
+}

@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BQL KTX Đại học Vinh</title>
+    <link rel="stylesheet" href="~/css/admin-style.css" asp-append-version="true" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <div class="app-admin-container">
+
+        <!-- ================= SIDEBAR TRÁI ĐÃ GẮN LINK ================= -->
+        <aside class="sidebar-admin">
+            <div class="sidebar-brand">
+                <h2>BQL KTX ĐẠI HỌC<br />VINH</h2>
+                <p>Hệ thống Quản lý</p>
+            </div>
+            <nav class="sidebar-nav">
+                <!-- TỔNG QUAN -->
+                <div class="nav-group-title">TỔNG QUAN</div>
+                <ul class="nav-item">
+                    <li>
+                        <a href="/Admin/Home/Index" class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "Home" ? "active" : "")">
+                            <i data-lucide="layout-dashboard"></i> Tổng quan
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- QUẢN LÝ NGHIỆP VỤ -->
+                <div class="nav-group-title">QUẢN LÝ NGHIỆP VỤ</div>
+                <ul class="nav-item">
+                    <li><a href="/Admin/SinhVien/Index" class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "SinhVien" ? "active" : "")"><i data-lucide="users"></i> Quản lý Sinh viên</a></li>
+                    <li><a href="/Admin/HopDong/Index" class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "HopDong" ? "active" : "")"><i data-lucide="file-text"></i> Quản lý Hợp đồng</a></li>
+                    <li><a href="/Admin/HoaDon/Index" class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "HoaDon" ? "active" : "")"><i data-lucide="dollar-sign"></i> Quản lý Hóa đơn</a></li>
+                    <li><a href="/Admin/CoSoVatChat/Index" class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "CoSoVatChat" ? "active" : "")"><i data-lucide="database"></i> Quản lý Cơ sở vật chất</a></li>
+                    <li><a href="/Admin/Phong/Index" class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "Phong" ? "active" : "")"><i data-lucide="layout"></i> Quản lý Phòng</a></li>
+                    <li><a href="/Admin/ThongBao/Index" class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "ThongBao" ? "active" : "")"><i data-lucide="send"></i> Gửi thông báo</a></li>
+                    <li><a href="/Admin/PhanAnh/Index" class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "PhanAnh" ? "active" : "")"><i data-lucide="wrench"></i> Xử lý Phản ánh</a></li>
+                    <li><a href="/Admin/DienNuoc/Index" class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "DienNuoc" ? "active" : "")"><i data-lucide="droplet"></i> Ghi nhận Điện nước</a></li>
+                </ul>
+
+                <!-- QUẢN LÝ AN NINH -->
+                <div class="nav-group-title">QUẢN LÝ AN NINH</div>
+                <ul class="nav-item">
+                    <li><a href="/Admin/Camera/Index" class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "Camera" ? "active" : "")"><i data-lucide="camera"></i> Giám sát An ninh Ra & vào</a></li>
+                    <li><a href="/Admin/Khach/Index" class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "Khach" ? "active" : "")"><i data-lucide="user-plus"></i> Đăng ký khách</a></li>
+                    <li><a href="/Admin/CanhBao/Index" class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "CanhBao" ? "active" : "")"><i data-lucide="alert-triangle"></i> Cảnh báo & Sự cố</a></li>
+                </ul>
+
+                <!-- TÀI KHOẢN -->
+                <div class="nav-group-title">Tài khoản</div>
+                <ul class="nav-item">
+                    <li><a href="/Admin/TaiKhoan/Index" class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "TaiKhoan" ? "active" : "")"><i data-lucide="settings"></i> Tài khoản & Phân quyền</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- ================= KHU VỰC PHẢI (MAIN AREA) ================= -->
+        <main class="main-admin-wrapper">
+
+            <header class="header-admin">
+                <div class="header-left">
+                    <img src="https://upload.wikimedia.org/wikipedia/vi/a/a2/Logo_Đại_học_Vinh.png" alt="Logo" class="header-logo" onerror="this.src='https://placehold.co/50x50/3b82f6/white?text=VU'" />
+                    <div class="header-welcome">
+                        <h2>Xin chào Admin!</h2>
+                        <p>Chúc một ngày làm việc hiệu quả.</p>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="search-box">
+                        <i data-lucide="search" style="width: 16px; color: #94a3b8;"></i>
+                        <input type="text" placeholder="Tìm kiếm nhanh ..." />
+                    </div>
+                    <div class="icon-btn">
+                        <i data-lucide="bell" style="width: 20px;"></i>
+                        <span class="badge">5</span>
+                    </div>
+                    <div class="admin-profile">
+                        <div class="admin-info">
+                            <p>Admin</p>
+                            <span>Ban quản lý <i data-lucide="chevron-down" style="width: 12px; vertical-align: middle;"></i></span>
+                        </div>
+                        <img src="https://ui-avatars.com/api/?name=Admin&background=1e293b&color=fff" alt="Avatar" class="admin-avatar" />
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-admin-scroll">
+                <div class="admin-content-area">
+                    @RenderBody()
+                </div>
+
+                <footer class="footer-admin">
+                    <div class="footer-grid">
+                        <div class="footer-sec">
+                            <h3>TRƯỜNG ĐẠI HỌC VINH</h3>
+                            <p>182 Lê Duẩn, TP. Vinh, Nghệ An</p>
+                            <p><i data-lucide="phone" style="width: 14px; color: #ef4444;"></i> Hotline: 0238.3855.452</p>
+                            <p><i data-lucide="mail" style="width: 14px; color: #94a3b8;"></i> ktx@vinhuni.edu.vn</p>
+                        </div>
+                        <div class="footer-sec">
+                            <h3>Liên kết nhanh</h3>
+                            <a href="#">Trang chủ</a>
+                            <a href="#">Hướng dẫn sử dụng</a>
+                            <a href="#">Quy định KTX</a>
+                            <a href="#">Liên hệ</a>
+                        </div>
+                        <div class="footer-sec">
+                            <h3>Hỗ trợ</h3>
+                            <p>Bộ phận kỹ thuật: 0123.456.789</p>
+                            <p>Thời gian hỗ trợ: 7:00 - 21:00</p>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        &copy; 2026 Trường Đại học Vinh. Phát triển bởi Nhóm 6.
+                    </div>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

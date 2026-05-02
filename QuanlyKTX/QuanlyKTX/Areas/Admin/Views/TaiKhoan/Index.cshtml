@@ -1,0 +1,560 @@
+﻿@model IEnumerable<QuanlyKTX.Models.TaiKhoan>
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Quản lý Tài khoản & Phân quyền";
+}
+
+<style>
+    /* BỐ CỤC CHUNG */
+    .page-header {
+        margin-bottom: 25px;
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #1e293b;
+        margin: 0 0 5px 0;
+    }
+
+    .page-subtitle {
+        color: #64748b;
+        font-size: 0.95rem;
+        margin: 0;
+    }
+
+    /* DASHBOARD CARDS */
+    .stats-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        margin-bottom: 25px;
+    }
+
+    .stat-item {
+        background: white;
+        border-radius: 16px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+        border: 1px solid #f1f5f9;
+        transition: 0.2s;
+    }
+
+        .stat-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+    .stat-icon-box {
+        width: 55px;
+        height: 55px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        flex-shrink: 0;
+    }
+
+    .stat-details h4 {
+        margin: 0;
+        font-size: 1.6rem;
+        font-weight: 900;
+        color: #1e293b;
+        line-height: 1;
+        margin-bottom: 5px;
+    }
+
+    .stat-details p {
+        margin: 0;
+        font-size: 0.85rem;
+        color: #64748b;
+        font-weight: 600;
+    }
+
+    /* KHỐI FORM & BẢNG */
+    .info-card {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+        padding: 25px;
+        margin-bottom: 25px;
+        border: 1px solid #f1f5f9;
+    }
+
+    .info-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 2px solid #f1f5f9;
+        padding-bottom: 12px;
+        margin-bottom: 20px;
+    }
+
+    .info-header-title {
+        font-size: 1.1rem;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    /* INPUT FORMS */
+    .form-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        align-items: end;
+    }
+
+    .form-group-admin label {
+        font-weight: 600;
+        color: #475569;
+        font-size: 0.85rem;
+        margin-bottom: 8px;
+        display: block;
+    }
+
+    .input-wrapper {
+        position: relative;
+    }
+
+        .input-wrapper i {
+            position: absolute;
+            left: 12px;
+            top: 11px;
+            color: #94a3b8;
+            width: 18px;
+        }
+
+        .input-wrapper input, .input-wrapper select {
+            width: 100%;
+            padding: 10px 10px 10px 40px;
+            border-radius: 8px;
+            border: 1px solid #cbd5e1;
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+
+    .btn-add-new {
+        background: #4f46e5;
+        color: white;
+        border: none;
+        height: 43px;
+        border-radius: 8px;
+        font-weight: 700;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        transition: 0.2s;
+    }
+
+        .btn-add-new:hover {
+            background: #4338ca;
+        }
+
+    /* BẢNG DỮ LIỆU */
+    .table-container {
+        overflow-x: auto;
+        margin-top: 15px;
+    }
+
+    .user-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .user-table th {
+            background: #f8fafc;
+            color: #64748b;
+            font-weight: 600;
+            padding: 15px;
+            text-align: left;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .user-table td {
+            padding: 15px;
+            border-bottom: 1px solid #f8fafc;
+            vertical-align: middle;
+        }
+
+    .user-cell {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .user-avatar-small {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    .user-name-box .name {
+        font-weight: 800;
+        color: #1e293b;
+        font-size: 0.95rem;
+    }
+
+    .user-name-box .email {
+        font-size: 0.8rem;
+        color: #64748b;
+    }
+
+    /* BADGE ROLE */
+    .role-badge {
+        padding: 5px 12px;
+        border-radius: 6px;
+        font-size: 0.75rem;
+        font-weight: 700;
+    }
+
+    .role-admin {
+        background: #fee2e2;
+        color: #dc2626;
+        border: 1px solid #fecaca;
+    }
+
+    .role-manager {
+        background: #e0e7ff;
+        color: #4f46e5;
+        border: 1px solid #c7d2fe;
+    }
+
+    .role-guard {
+        background: #ffedd5;
+        color: #ea580c;
+        border: 1px solid #fed7aa;
+    }
+
+    .role-default {
+        background: #f1f5f9;
+        color: #475569;
+        border: 1px solid #e2e8f0;
+    }
+
+    /* NÚT BẬT TẮT SWITCH (BAN/UNBAN) */
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 46px;
+        height: 24px;
+    }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #cbd5e1;
+        transition: .3s;
+        border-radius: 24px;
+    }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .3s;
+            border-radius: 50%;
+        }
+
+    input:checked + .slider {
+        background-color: #10b981;
+    }
+
+        input:checked + .slider:before {
+            transform: translateX(22px);
+        }
+
+    /* NÚT TÁC VỤ */
+    .btn-act {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+        transition: 0.2s;
+        margin-right: 5px;
+    }
+
+    .btn-reset {
+        background: #fef3c7;
+        color: #d97706;
+    }
+
+        .btn-reset:hover {
+            background: #fde68a;
+        }
+
+    .btn-del {
+        background: #fef2f2;
+        color: #ef4444;
+    }
+
+        .btn-del:hover {
+            background: #fecaca;
+        }
+</style>
+
+<div class="page-header">
+    <h2 class="page-title">Quản lý Tài khoản & Phân quyền</h2>
+    <p class="page-subtitle">Cấp phát tài khoản, phân quyền và kiểm soát truy cập hệ thống.</p>
+</div>
+
+<!-- THÔNG BÁO HỆ THỐNG -->
+@if (TempData["Success"] != null)
+{
+    <div style="padding: 15px; margin-bottom: 20px; background: #dcfce7; color: #16a34a; border-radius: 8px; font-weight: 600; display: flex; align-items: center; gap: 8px;">
+        <i data-lucide="check-circle" style="width: 20px;"></i> @TempData["Success"]
+    </div>
+}
+@if (TempData["Error"] != null)
+{
+    <div style="padding: 15px; margin-bottom: 20px; background: #fee2e2; color: #dc2626; border-radius: 8px; font-weight: 600; display: flex; align-items: center; gap: 8px;">
+        <i data-lucide="alert-circle" style="width: 20px;"></i> @TempData["Error"]
+    </div>
+}
+
+<!-- KHỐI DASHBOARD -->
+<div class="stats-row">
+    <div class="stat-item">
+        <div class="stat-icon-box" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">
+            <i data-lucide="users" style="width: 26px;"></i>
+        </div>
+        <div class="stat-details">
+            <h4>@ViewBag.Total</h4>
+            <p>Tổng Tài khoản</p>
+        </div>
+    </div>
+    <div class="stat-item">
+        <div class="stat-icon-box" style="background: linear-gradient(135deg, #10b981, #059669);">
+            <i data-lucide="user-check" style="width: 26px;"></i>
+        </div>
+        <div class="stat-details">
+            <h4>@ViewBag.Active</h4>
+            <p>Đang hoạt động</p>
+        </div>
+    </div>
+    <div class="stat-item">
+        <div class="stat-icon-box" style="background: linear-gradient(135deg, #ef4444, #dc2626);">
+            <i data-lucide="user-x" style="width: 26px;"></i>
+        </div>
+        <div class="stat-details">
+            <h4>@ViewBag.Banned</h4>
+            <p>Đã khóa (Banned)</p>
+        </div>
+    </div>
+    <div class="stat-item">
+        <div class="stat-icon-box" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
+            <i data-lucide="shield" style="width: 26px;"></i>
+        </div>
+        <div class="stat-details">
+            <h4>@ViewBag.AdminCount</h4>
+            <p>Quản trị viên (Admin)</p>
+        </div>
+    </div>
+</div>
+
+<!-- KHỐI TẠO TÀI KHOẢN -->
+<div class="info-card">
+    <div class="info-header" style="color: #4f46e5;">
+        <div class="info-header-title"><i data-lucide="user-plus" style="width: 20px;"></i> Cấp Tài khoản Mới</div>
+    </div>
+
+    <form action="/Admin/TaiKhoan/CapTaiKhoan" method="POST">
+        @Html.AntiForgeryToken() <!-- BỔ SUNG TOKEN BẢO MẬT VÀO ĐÂY -->
+        <div class="form-grid">
+            <div class="form-group-admin">
+                <label>Tên đăng nhập / Email <span style="color: red;">*</span></label>
+                <div class="input-wrapper">
+                    <i data-lucide="mail"></i>
+                    <input type="text" name="TenDangNhap" placeholder="Ví dụ: admin, abc@gmail.com..." required />
+                </div>
+            </div>
+
+            <div class="form-group-admin">
+                <label>Vai trò (Role) <span style="color: red;">*</span></label>
+                <div class="input-wrapper">
+                    <i data-lucide="shield"></i>
+                    <select name="VaiTroId" required>
+                        <option value="">-- Chọn vai trò --</option>
+                        @if (ViewBag.VaiTroList != null)
+                        {
+                            foreach (var vt in ViewBag.VaiTroList as List<QuanlyKTX.Models.VaiTro>)
+                            {
+                                <option value="@vt.VaiTroId">@vt.TenVaiTro</option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group-admin">
+                <label>Mật khẩu khởi tạo</label>
+                <div class="input-wrapper">
+                    <i data-lucide="key"></i>
+                    <input type="text" value="123456" readonly style="background: #f1f5f9; color: #64748b; font-weight: bold; cursor: not-allowed;" title="Mật khẩu sẽ được mã hóa an toàn" />
+                </div>
+            </div>
+
+            <button type="submit" class="btn-add-new">
+                <i data-lucide="check-circle" style="width: 18px;"></i> Xác nhận Cấp quyền
+            </button>
+        </div>
+    </form>
+</div>
+
+<!-- KHỐI BẢNG TÀI KHOẢN & LỌC -->
+<div class="info-card">
+    <div class="info-header" style="margin-bottom: 15px; border-bottom: none; padding-bottom: 0;">
+        <div class="info-header-title" style="color: #1e293b;"><i data-lucide="list" style="width: 20px;"></i> Danh sách Người dùng Hệ thống</div>
+    </div>
+
+    <!-- Thanh Lọc -->
+    <form action="/Admin/TaiKhoan/Index" method="GET" style="display: flex; gap: 15px; background: #f8fafc; padding: 15px; border-radius: 12px; border: 1px solid #e2e8f0; margin-bottom: 20px;">
+        <div class="input-wrapper" style="flex: 2;">
+            <i data-lucide="search"></i>
+            <input type="text" name="searchString" value="@ViewBag.SearchString" placeholder="Tìm theo tên đăng nhập..." style="border: 1px solid #cbd5e1; width: 100%;" />
+        </div>
+
+        <select name="searchVaiTro" style="flex: 1; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1; outline: none;">
+            <option value="">Tất cả Vai trò</option>
+            @if (ViewBag.VaiTroList != null)
+            {
+                foreach (var vt in ViewBag.VaiTroList as List<QuanlyKTX.Models.VaiTro>)
+                {
+                    if (ViewBag.SearchVaiTro == vt.VaiTroId)
+                    {
+                        <option value="@vt.VaiTroId" selected>@vt.TenVaiTro</option>
+                    }
+                    else
+                    {
+                        <option value="@vt.VaiTroId">@vt.TenVaiTro</option>
+                    }
+                }
+            }
+        </select>
+
+        <select name="searchTrangThai" style="flex: 1; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1; outline: none;">
+            <option value="">Tất cả Trạng thái</option>
+            <option value="active" selected="@(ViewBag.SearchTrangThai == "active")">Đang hoạt động</option>
+            <option value="blocked" selected="@(ViewBag.SearchTrangThai == "blocked")">Bị khóa (Banned)</option>
+        </select>
+
+        <button type="submit" style="background: #3b82f6; color: white; border: none; padding: 0 25px; border-radius: 8px; font-weight: 600; cursor: pointer;">Lọc</button>
+    </form>
+
+    <div class="table-container">
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>Tên đăng nhập</th>
+                    <th>Vai trò (Role)</th>
+                    <th>Ngày cấp</th>
+                    <th>Trạng thái (Khóa)</th>
+                    <th style="text-align: center;">Tác vụ</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null && Model.Any())
+                {
+                    foreach (var item in Model)
+                    {
+                        string roleClass = "role-default";
+                        string roleIcon = "";
+                        string roleName = item.VaiTro?.TenVaiTro ?? "Chưa phân quyền";
+
+                        if (roleName.ToLower().Contains("admin")) { roleClass = "role-admin"; roleIcon = "shield-check"; }
+                        else if (roleName.ToLower().Contains("quản lý")) { roleClass = "role-manager"; roleIcon = "briefcase"; }
+                        else if (roleName.ToLower().Contains("bảo vệ") || roleName.ToLower().Contains("an ninh")) { roleClass = "role-guard"; roleIcon = "shield-alert"; }
+
+                        bool isBlocked = (item.TrangThai == false);
+
+                        <tr style="@(isBlocked ? "background: #f8fafc; opacity: 0.8;" : "")">
+                            <td>
+                                <div class="user-cell">
+                                    <img src="https://ui-avatars.com/api/?name=@item.TenDangNhap&background=random" class="user-avatar-small" style="@(isBlocked ? "filter: grayscale(100%);" : "")" />
+                                    <div class="user-name-box">
+                                        <div class="name" style="@(isBlocked ? "text-decoration: line-through; color: #94a3b8;" : "")">@item.TenDangNhap</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="role-badge @roleClass">
+                                    @if (roleIcon != "")
+                                    {
+                                        <i data-lucide="@roleIcon" style="width: 12px; vertical-align: text-bottom; margin-right: 3px;"></i>
+                                    }
+                                    @roleName
+                                </span>
+                            </td>
+                            <td style="color: #64748b; font-size: 0.85rem;">@(item.NgayTao?.ToString("dd/MM/yyyy") ?? "---")</td>
+
+                            <!-- CỘT NÚT BẬT TẮT SWITCH (BỔ SUNG TOKEN) -->
+                            <td>
+                                <form action="/Admin/TaiKhoan/ToggleStatus/@item.TaiKhoanId" method="post" style="margin: 0;" onchange="this.submit()">
+                                    @Html.AntiForgeryToken()
+                                    <label class="switch" title="@(isBlocked ? "Tài khoản đang bị khóa" : "Tài khoản hoạt động bình thường")">
+                                        <input type="checkbox" @(isBlocked ? "" : "checked") />
+                                        <span class="slider"></span>
+                                    </label>
+                                </form>
+                            </td>
+
+                            <td style="text-align: center;">
+                                <div style="display: flex; gap: 5px; justify-content: center;">
+                                    <!-- Reset MK (BỔ SUNG TOKEN) -->
+                                    <form action="/Admin/TaiKhoan/ResetPassword/@item.TaiKhoanId" method="post" onsubmit="return confirm('Xác nhận khôi phục mật khẩu của @item.TenDangNhap về mặc định (123456)?');">
+                                        @Html.AntiForgeryToken()
+                                        <button type="submit" class="btn-act btn-reset" title="Reset Mật khẩu về 123456"><i data-lucide="key" style="width: 16px;"></i></button>
+                                    </form>
+
+                                    <!-- Xóa tài khoản (BỔ SUNG TOKEN) -->
+                                    <form action="/Admin/TaiKhoan/Delete/@item.TaiKhoanId" method="post" onsubmit="return confirm('XÓA VĨNH VIỄN tài khoản @item.TenDangNhap?');">
+                                        @Html.AntiForgeryToken()
+                                        <button type="submit" class="btn-act btn-del" title="Xóa tài khoản"><i data-lucide="trash-2" style="width: 16px;"></i></button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr><td colspan="5" style="text-align: center; padding: 40px; color: #94a3b8;">Chưa có dữ liệu tài khoản hệ thống.</td></tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+    </script>
+}

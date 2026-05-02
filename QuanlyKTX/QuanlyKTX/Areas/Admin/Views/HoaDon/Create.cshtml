@@ -1,0 +1,219 @@
+﻿@model QuanlyKTX.Models.HoaDon
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Xuất Hóa Đơn Mới";
+}
+
+<style>
+    .card-panel {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        padding: 30px;
+        border: 1px solid #f1f5f9;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+        .form-group label {
+            font-weight: 600;
+            color: #475569;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+    .form-input {
+        width: 100%;
+        padding: 12px 15px;
+        border-radius: 8px;
+        border: 1px solid #cbd5e1;
+        transition: 0.2s;
+    }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
+        }
+</style>
+
+<div style="margin-bottom: 25px; display: flex; align-items: center; gap: 15px;">
+    <a href="/Admin/HoaDon/Index" style="background: white; border: 1px solid #cbd5e1; color: #64748b; padding: 10px 15px; border-radius: 8px; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 8px;">
+        <i data-lucide="arrow-left" style="width: 18px;"></i> Trở lại
+    </a>
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #1e293b; margin: 0;">Khởi tạo Hóa đơn (Thủ công)</h2>
+</div>
+
+<div class="card-panel">
+    @if (TempData["Error"] != null)
+    {
+        <div style="padding: 15px; margin-bottom: 20px; background: #fee2e2; color: #dc2626; border-radius: 8px; font-weight: 600; display: flex; align-items: center; gap: 8px;">
+            <i data-lucide="alert-circle" style="width: 20px;"></i> @TempData["Error"]
+        </div>
+    }
+
+    <form action="/Admin/HoaDon/Create" method="post">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+
+            <!-- CỘT TRÁI: THÔNG TIN KỲ THU -->
+            <div style="background: #f8fafc; padding: 25px; border-radius: 12px; border: 1px solid #e2e8f0;">
+                <h4 style="margin-top: 0; color: #4f46e5; font-weight: 800; border-bottom: 2px solid #e0e7ff; padding-bottom: 10px; margin-bottom: 20px;"><i data-lucide="info" style="display: inline-block; vertical-align: text-bottom; width: 20px;"></i> Thông Tin Biểu Mẫu</h4>
+
+                <div class="form-group">
+                    <label>Mã Hóa Đơn (Tự động sinh)</label>
+                    <input type="text" name="MaHoaDon" value="@ViewBag.AutoMaHD" readonly class="form-input" style="background: #eef2ff; color: #4f46e5; font-weight: bold; border: 1px dashed #6366f1; cursor: not-allowed;" />
+                </div>
+
+                <div class="form-group">
+                    <label>Phòng thu tiền <span style="color:red">*</span></label>
+                    <select name="PhongId" id="selectPhong" required class="form-input">
+                        <option value="">-- Chọn phòng --</option>
+                        @if (ViewBag.PhongList != null)
+                        {
+                            // ÉP KIỂU ĐỂ TRÌNH DUYỆT HIỂU ĐÂY LÀ LIST OBJECT TỪ CONTROLLER ĐẨY QUA
+                            foreach (var item in ViewBag.PhongList as List<QuanlyKTX.Models.Phong>)
+                            {
+                                <option value="@item.PhongId">Phòng @item.PhongId</option>
+                            }
+                        }
+                    </select>
+                </div>
+
+                <!-- SELECT SINH VIÊN (Sẽ được JS tự động lọc) -->
+                <div class="form-group">
+                    <label>Sinh viên đại diện</label>
+                    <select name="Mssv" id="selectSv" class="form-input">
+                        <option value="">-- Để trống --</option>
+                        @if (ViewBag.SinhVienList != null)
+                        {
+                            foreach (var item in ViewBag.SinhVienList as List<QuanlyKTX.Models.SinhVien>)
+                            {
+                                <!-- Gắn data-phong ngầm vào đây -->
+                                <option value="@item.Mssv" data-phong="@item.PhongDangOid">@item.HoTen</option>
+                            }
+                        }
+                    </select>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="form-group">
+                        <label>Kỳ (Tháng)</label>
+                        <input type="number" name="Thang" value="@ViewBag.ThangHienTai" required class="form-input" />
+                    </div>
+                    <div class="form-group">
+                        <label>Năm</label>
+                        <input type="number" name="Nam" value="@ViewBag.NamHienTai" required class="form-input" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Hạn thanh toán</label>
+                    <input type="date" name="HanThanhToan" class="form-input" />
+                </div>
+
+                <div class="form-group">
+                    <label>Trạng thái ban đầu</label>
+                    <select name="TrangThai" class="form-input">
+                        <option value="Chưa thanh toán">Chưa thanh toán (Treo nợ)</option>
+                        <option value="Đã thanh toán">Đã thanh toán (Đóng tiền ngay)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- CỘT PHẢI: KÊ KHAI TIỀN -->
+            <div style="background: #fff; padding: 25px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <h4 style="margin-top: 0; color: #ef4444; font-weight: 800; border-bottom: 2px solid #fee2e2; padding-bottom: 10px; margin-bottom: 20px;"><i data-lucide="banknote" style="display: inline-block; vertical-align: text-bottom; width: 20px;"></i> Kê Khai Khoản Thu</h4>
+
+                <div class="form-group">
+                    <label>1. Tiền Phòng / Giường (VNĐ)</label>
+                    <input type="number" step="1000" name="TienPhong" class="form-input phi-input" placeholder="0" />
+                </div>
+
+                <div class="form-group">
+                    <label>2. Tiền Điện tiêu thụ (VNĐ)</label>
+                    <input type="number" step="1000" name="TienDien" class="form-input phi-input" placeholder="0" />
+                </div>
+
+                <div class="form-group">
+                    <label>3. Tiền Nước sinh hoạt (VNĐ)</label>
+                    <input type="number" step="1000" name="TienNuoc" class="form-input phi-input" placeholder="0" />
+                </div>
+
+                <div class="form-group">
+                    <label>4. Phí Dịch vụ (Rác, Wifi...) (VNĐ)</label>
+                    <input type="number" step="1000" name="PhiDichVu" class="form-input phi-input" placeholder="0" />
+                </div>
+
+                <!-- HIỂN THỊ TỔNG TIỀN TỰ ĐỘNG -->
+                <div style="margin-top: 25px; background: #fff5f5; padding: 20px; border-radius: 12px; text-align: center; border: 2px dashed #fca5a5;">
+                    <span style="font-size: 0.9rem; color: #dc2626; font-weight: 800; letter-spacing: 1px;">TỔNG CỘNG PHẢI THU</span>
+                    <div id="TongTienView" style="font-size: 2.2rem; font-weight: 900; color: #b91c1c; margin-top: 5px;">0 đ</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: right; border-top: 1px solid #f1f5f9; padding-top: 25px; margin-top: 20px;">
+            <button type="submit" style="background: #10b981; color: white; padding: 12px 40px; font-size: 1.05rem; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);">
+                <i data-lucide="save"></i> Xuất Hóa Đơn & Lưu Hệ Thống
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+        if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- 1. LOGIC LỌC SINH VIÊN THEO PHÒNG ---
+            const phongSelect = document.getElementById('selectPhong');
+            const svSelect = document.getElementById('selectSv');
+
+            // Lưu giữ lại toàn bộ option sinh viên vào bộ nhớ ảo
+            const allSvOptions = Array.from(svSelect.querySelectorAll('option:not([value=""])'));
+
+            function locSinhVienTheoPhong() {
+                const phongId = phongSelect.value;
+                const currentMssv = svSelect.value;
+
+                // Xóa danh sách hiện tại
+                svSelect.innerHTML = '<option value="">-- Để trống --</option>';
+
+                // Render lại chỉ những sinh viên có data-phong khớp
+                allSvOptions.forEach(opt => {
+                    if (opt.getAttribute('data-phong') === phongId) {
+                        svSelect.appendChild(opt.cloneNode(true));
+                    }
+                });
+
+                // Nếu sinh viên đang chọn vẫn nằm trong phòng đó thì giữ nguyên
+                if (currentMssv && Array.from(svSelect.options).some(o => o.value === currentMssv)) {
+                    svSelect.value = currentMssv;
+                }
+            }
+
+            // Lắng nghe sự thay đổi
+            phongSelect.addEventListener('change', locSinhVienTheoPhong);
+            locSinhVienTheoPhong(); // Chạy lúc load trang để dọn dẹp
+
+            // --- 2. LOGIC TÍNH TỔNG TIỀN ---
+            const inputs = document.querySelectorAll('.phi-input');
+            const totalView = document.getElementById('TongTienView');
+            const formatVND = (money) => new Intl.NumberFormat('vi-VN').format(money) + ' đ';
+
+            function calcTotal() {
+                let total = 0;
+                inputs.forEach(input => {
+                    let val = parseFloat(input.value);
+                    if (!isNaN(val)) total += val;
+                });
+                totalView.innerText = formatVND(total);
+            }
+
+            inputs.forEach(input => { input.addEventListener('input', calcTotal); });
+        });
+    </script>
+}

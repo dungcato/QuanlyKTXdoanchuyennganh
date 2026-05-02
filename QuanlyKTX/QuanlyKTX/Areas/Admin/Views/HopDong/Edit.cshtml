@@ -1,0 +1,129 @@
+﻿@model QuanlyKTX.Models.HopDong
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Cập nhật Hợp đồng";
+}
+
+<div style="margin-bottom: 25px; display: flex; justify-content: space-between; align-items: center;">
+    <div style="display: flex; align-items: center; gap: 15px;">
+        <a href="/Admin/HopDong/Index" style="background: white; border: 1px solid #cbd5e1; color: #64748b; padding: 8px 15px; border-radius: 8px; text-decoration: none; display: flex; align-items: center; gap: 5px; font-weight: 600;">
+            <i data-lucide="arrow-left" style="width: 18px;"></i> Trở lại
+        </a>
+        <h2 style="font-size: 1.5rem; font-weight: 800; color: #1e293b; margin: 0;">Chi tiết & Cập nhật Hợp đồng</h2>
+    </div>
+</div>
+
+<div style="background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); padding: 30px;">
+    <form action="/Admin/HopDong/Edit" method="post">
+
+        <!-- CÁC KHÓA ẨN: Dựa chuẩn theo file HopDong.cs của ông -->
+        <input type="hidden" name="HopDongId" value="@Model?.HopDongId" />
+        <input type="hidden" name="MaHopDong" value="@Model?.MaHopDong" />
+
+        <h4 style="font-size: 14px; font-weight: 700; color: #f59e0b; text-transform: uppercase; margin-bottom: 20px; border-bottom: 2px solid #fef3c7; padding-bottom: 10px;">I. Thông Tin Hợp Đồng</h4>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px;">
+            <div>
+                <label style="font-weight: 600; margin-bottom: 8px; display: block; color: #475569;">Sinh Viên (Đã khóa)</label>
+                <!-- Tránh sửa người ký hợp đồng -->
+                <input type="text" value="@Model?.Mssv" readonly class="form-control" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #cbd5e1; background: #f1f5f9; color: #64748b; font-weight: bold; cursor: not-allowed;" />
+                <input type="hidden" name="Mssv" value="@Model?.Mssv" />
+            </div>
+
+            <div>
+                <label style="font-weight: 600; margin-bottom: 8px; display: block; color: #475569;">Phòng</label>
+                <select name="PhongId" class="form-control" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #cbd5e1;">
+                    @if (ViewBag.PhongList != null)
+                    {
+                        foreach (var item in ViewBag.PhongList)
+                        {
+                            <option value="@item.Value" selected="@(Model?.PhongId == item.Value)">Phòng @item.Text</option>
+                        }
+                    }
+                </select>
+            </div>
+
+            <div>
+                <label style="font-weight: 600; margin-bottom: 8px; display: block; color: #475569;">Ngày Bắt Đầu</label>
+                <!-- FIX LỖI DATEONLY BẰNG CÁCH CHECK NULL TƯỜNG MINH -->
+                <input type="date" name="NgayBatDau" value="@(Model != null ? Model.NgayBatDau.ToString("yyyy-MM-dd") : "")" required class="form-control" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #cbd5e1;" />
+            </div>
+
+            <div>
+                <label style="font-weight: 600; margin-bottom: 8px; display: block; color: #475569;">Ngày Kết Thúc</label>
+                <!-- FIX LỖI DATEONLY -->
+                <input type="date" name="NgayKetThuc" value="@(Model != null ? Model.NgayKetThuc.ToString("yyyy-MM-dd") : "")" required class="form-control" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #cbd5e1;" />
+            </div>
+
+            <div>
+                <label style="font-weight: 600; margin-bottom: 8px; display: block; color: #475569;">Thời hạn (Tháng)</label>
+                <input type="number" name="ThoiHanThang" value="@Model?.ThoiHanThang" class="form-control" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #cbd5e1;" />
+            </div>
+
+            <div>
+                <label style="font-weight: 600; margin-bottom: 8px; display: block; color: #475569;">Giá phòng / Tháng (VNĐ)</label>
+                <input type="number" name="GiaPhongThang" value="@Model?.GiaPhongThang" class="form-control" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #cbd5e1;" />
+            </div>
+
+            <div>
+                <label style="font-weight: 600; margin-bottom: 8px; display: block; color: #475569;">Tiền Cọc (VNĐ)</label>
+                <input type="number" name="TienCoc" value="@Model?.TienCoc" class="form-control" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #cbd5e1;" />
+            </div>
+
+            <div>
+                <label style="font-weight: 600; margin-bottom: 8px; display: block; color: #475569;">Trạng thái Hợp đồng</label>
+                <select name="TrangThai" class="form-control" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #cbd5e1;">
+                    @if (Model?.TrangThai == "Chờ duyệt")
+                    {
+                        <option value="Chờ duyệt" selected>Chờ duyệt</option>
+                    }
+                    else
+                    {
+                        <option value="Chờ duyệt">Chờ duyệt</option>
+                    }
+                    @if (Model?.TrangThai == "Còn hiệu lực")
+                    {
+                        <option value="Còn hiệu lực" selected>Còn hiệu lực</option>
+                    }
+                    else
+                    {
+                        <option value="Còn hiệu lực">Còn hiệu lực</option>
+                    }
+                    @if (Model?.TrangThai == "Sắp hết hạn")
+                    {
+                        <option value="Sắp hết hạn" selected>Sắp hết hạn</option>
+                    }
+                    else
+                    {
+                        <option value="Sắp hết hạn">Sắp hết hạn</option>
+                    }
+                    @if (Model?.TrangThai == "Đã hết hạn")
+                    {
+                        <option value="Đã hết hạn" selected>Đã hết hạn</option>
+                    }
+                    else
+                    {
+                        <option value="Đã hết hạn">Đã hết hạn</option>
+                    }
+                </select>
+            </div>
+
+            <div style="grid-column: 1 / -1;">
+                <label style="font-weight: 600; margin-bottom: 8px; display: block; color: #475569;">Ghi chú</label>
+                <textarea name="GhiChu" class="form-control" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #cbd5e1;" rows="3">@Model?.GhiChu</textarea>
+            </div>
+        </div>
+
+        <div style="text-align: right; padding-top: 20px; border-top: 1px solid #f1f5f9;">
+            <button type="submit" style="background: #f59e0b; color: white; padding: 12px 40px; font-size: 1rem; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);">
+                <i data-lucide="save" style="width: 20px;"></i> Lưu Cập nhật
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+        if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+    </script>
+}

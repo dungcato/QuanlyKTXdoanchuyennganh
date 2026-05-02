@@ -1,0 +1,203 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Trạm AI Giám Sát";
+}
+
+<!-- TIÊU ĐỀ TRANG -->
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+    <div>
+        <h2 style="font-size: 1.5rem; font-weight: 700; color: var(--text-main);">Trạm Giám Sát AI KTX</h2>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Hệ thống nhận diện khuôn mặt YOLOv8 kiểm soát an ninh tự động.</p>
+    </div>
+    <div style="display: flex; gap: 10px;">
+        <button class="btn-filter secondary" onclick="alert('Cấu hình tham số AI (Ngưỡng quét, Khoảng cách...)')">
+            <i data-lucide="settings" style="width: 16px;"></i> Cấu hình
+        </button>
+        <button class="btn-add-new" id="btnPower" onclick="toggleSystem()" style="background: #1e293b;">
+            <i data-lucide="power" style="width: 18px;"></i> <span id="powerText">Khởi động Hệ thống</span>
+        </button>
+    </div>
+</div>
+
+<div class="camera-dashboard">
+    a
+    <!-- CỘT TRÁI: VIDEO STREAM -->
+    <div class="camera-wrapper-card">
+
+        <!-- Tabs Chọn Cam -->
+        <div style="display: flex; gap: 10px; margin-bottom: 5px;">
+            <button class="btn-filter primary" style="padding: 8px 15px;"><i data-lucide="video" style="width: 16px;"></i> Cam 01: Cổng Chính</button>
+            <button class="btn-filter secondary" style="padding: 8px 15px;"><i data-lucide="video" style="width: 16px;"></i> Cam 02: Nhà Xe</button>
+        </div>
+
+        <!-- Khung Video Stream YOLO -->
+        <div class="video-frame-yolo">
+            <!--
+                CHỖ NÀY ĐỂ NHÚNG LINK STREAM CỦA PYTHON:
+                Đổi src="http://127.0.0.1:5000/video_feed" khi code xong AI
+            -->
+            <img id="yolo-stream-img" src="https://placehold.co/1280x720/0f172a/334155?text=SYSTEM+OFFLINE" alt="YOLO Stream" />
+
+            <div class="yolo-overlay">
+                <div style="display: flex; justify-content: space-between;">
+                    <div class="yolo-badge" id="liveBadge" style="display: none; background: rgba(239, 68, 68, 0.2); border-color: #ef4444; color: #ef4444;">
+                        <div class="yolo-live-dot"></div> REC
+                    </div>
+                    <div class="yolo-badge" id="modelBadge" style="display: none;">
+                        <i data-lucide="cpu" style="width: 14px;"></i> YOLOv8_Face | FPS: <span id="fps">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thanh Cấu hình Độ Nhạy -->
+        <div class="yolo-controls-bar">
+            <div class="ai-slider-group">
+                <label>Độ tin cậy (Confidence):</label>
+                <input type="range" class="ai-slider" min="50" max="99" value="85" oninput="document.getElementById('conf-val').innerText = this.value + '%'" />
+                <span class="ai-slider-val" id="conf-val">85%</span>
+            </div>
+
+            <div style="display: flex; gap: 10px;">
+                <button class="btn-filter secondary" style="background: white;"><i data-lucide="camera" style="width: 16px;"></i> Snapshot</button>
+                <button class="btn-add-new" style="background: #ef4444; box-shadow: none;" onclick="triggerAlarm()">
+                    <i data-lucide="bell-ring" style="width: 16px;"></i> Báo động đỏ
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CỘT PHẢI: LOG NHẬN DIỆN REALTIME -->
+    <div class="yolo-log-panel">
+        <div class="yolo-log-header">
+            <h3 style="margin:0; font-size:14px; font-weight:700; display:flex; align-items:center; gap:8px;">
+                <i data-lucide="scan-line" style="color:var(--accent);"></i> Nhật ký Quét
+            </h3>
+            <span style="font-size:12px; color:var(--text-muted);" id="scanCount">0 lượt hôm nay</span>
+        </div>
+
+        <!-- Khung chứa thẻ Log -->
+        <div class="yolo-log-list" id="yoloLogContainer">
+            <div style="text-align: center; color: #94a3b8; margin-top: 50px; font-size: 13px;">
+                <i data-lucide="server-off" style="width: 40px; height: 40px; opacity: 0.5; margin-bottom: 10px;"></i>
+                <p>Hệ thống đang tắt.<br />Vui lòng khởi động AI Model.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Các biến toàn cục
+        let isSystemOn = false;
+        let simInterval = null;
+        let fpsInterval = null;
+        let scanTotal = 0;
+
+        // 1. Hàm Bật/Tắt hệ thống
+        function toggleSystem() {
+            const btn = document.getElementById('btnPower');
+            const streamImg = document.getElementById('yolo-stream-img');
+            const logContainer = document.getElementById('yoloLogContainer');
+
+            if(!isSystemOn) {
+                // BẬT AI
+                btn.style.background = "#ef4444";
+                document.getElementById('powerText').innerText = "Tắt Hệ thống";
+
+                // Mở ảnh GIF mô phỏng nhận diện
+                streamImg.src = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjM1NDUyNDQwOTk5MzY5OTY1OTQ4NDgxMDIxMzI4MjAxMjA1/26TNw5P3QyYqB4k4E/giphy.gif";
+                streamImg.style.filter = "hue-rotate(190deg) saturate(2) contrast(1.2)";
+
+                document.getElementById('liveBadge').style.display = "inline-flex";
+                document.getElementById('modelBadge').style.display = "inline-flex";
+                logContainer.innerHTML = ""; // Xóa dòng chữ offline
+
+                fpsInterval = setInterval(() => { document.getElementById('fps').innerText = Math.floor(Math.random() * 5 + 28); }, 1000);
+
+                // Kích hoạt giả lập dữ liệu bắn về
+                simulateYoloData();
+            } else {
+                // TẮT AI
+                btn.style.background = "#1e293b";
+                document.getElementById('powerText').innerText = "Khởi động Hệ thống";
+                streamImg.src = "https://placehold.co/1280x720/0f172a/334155?text=SYSTEM+OFFLINE";
+                streamImg.style.filter = "none";
+
+                document.getElementById('liveBadge').style.display = "none";
+                document.getElementById('modelBadge').style.display = "none";
+
+                clearInterval(fpsInterval);
+                clearTimeout(simInterval);
+            }
+            isSystemOn = !isSystemOn;
+            lucide.createIcons();
+        }
+
+        // 2. Hàm Báo động
+        function triggerAlarm() {
+            alert('CẢNH BÁO: Đã kích hoạt còi báo động khẩn cấp tại cổng KTX!');
+        }
+
+        // ==============================================================
+        // 3. MÔ PHỎNG LUỒNG DỮ LIỆU TỪ PYTHON YOLOv8 BẮN SANG
+        // Bản thực tế: Mày sẽ thay khối này bằng SignalR Connection
+        // ==============================================================
+        const sampleData = [
+            { name: "Lê Anh Dũng", mssv: "23574801", conf: 98.7, img: "https://ui-avatars.com/api/?name=Dung+Le&background=e2e8f0&color=475569" },
+            { name: "Nguyễn Thị Mai", mssv: "22123999", conf: 96.2, img: "https://ui-avatars.com/api/?name=Mai+N&background=e2e8f0&color=475569" },
+            { name: "Trần Văn Hoàng", mssv: "21123444", conf: 92.5, img: "https://ui-avatars.com/api/?name=Hoang+T&background=e2e8f0&color=475569" }
+        ];
+
+        function simulateYoloData() {
+            if (!isSystemOn) return;
+
+            const isStranger = Math.random() > 0.85; // 15% xác suất bắt dính người lạ
+            const timeStr = new Date().toLocaleTimeString('vi-VN');
+            const logContainer = document.getElementById('yoloLogContainer');
+            let html = "";
+
+            if (!isStranger) {
+                // Render sinh viên quen
+                const sv = sampleData[Math.floor(Math.random() * sampleData.length)];
+                html = `
+                    <div class="yolo-card known">
+                        <img src="${sv.img}" class="yolo-face-img" />
+                        <div class="yolo-info">
+                            <h4>${sv.name}</h4>
+                            <p>MSSV: ${sv.mssv} | Lúc: ${timeStr}</p>
+                            <span class="yolo-conf high">Khớp FaceID: ${sv.conf}%</span>
+                        </div>
+                    </div>`;
+            } else {
+                // Render người lạ
+                const conf = (Math.random() * 20 + 20).toFixed(1);
+                html = `
+                    <div class="yolo-card unknown">
+                        <div class="yolo-face-img" style="background:#ef4444; display:flex; align-items:center; justify-content:center; color:white;">
+                            <i data-lucide="scan-face"></i>
+                        </div>
+                        <div class="yolo-info">
+                            <h4 style="color: #ef4444;">KHÔNG XÁC ĐỊNH</h4>
+                            <p>Đối tượng lạ mặt | Lúc: ${timeStr}</p>
+                            <span class="yolo-conf low">Độ tin cậy AI: ${conf}%</span>
+                        </div>
+                    </div>`;
+            }
+
+            // Nhét thẻ html vào đầu danh sách (Real-time update)
+            logContainer.insertAdjacentHTML('afterbegin', html);
+            lucide.createIcons();
+
+            // Cập nhật bộ đếm
+            scanTotal++;
+            document.getElementById('scanCount').innerText = scanTotal + " lượt hôm nay";
+
+            // Xóa bớt log cũ (Chỉ giữ 15 dòng để web không bị đơ)
+            if (logContainer.children.length > 15) { logContainer.lastElementChild.remove(); }
+
+            // Gọi đệ quy sau 3-6 giây (giả lập luồng người đi bộ)
+            simInterval = setTimeout(simulateYoloData, Math.floor(Math.random() * 3000) + 3000);
+        }
+    </script>
+}

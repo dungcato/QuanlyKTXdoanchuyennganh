@@ -1,0 +1,233 @@
+﻿@model QuanlyKTX.Models.DienNuoc
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Xử lý Lỗi IoT & Chỉ số";
+}
+
+<style>
+    .card-panel {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        padding: 30px;
+        border: 1px solid #f1f5f9;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+        .form-group label {
+            font-weight: 600;
+            color: #475569;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+    .form-input {
+        width: 100%;
+        padding: 12px 15px;
+        border-radius: 8px;
+        border: 1px solid #cbd5e1;
+        transition: 0.2s;
+    }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
+        }
+
+    /* CSS cho bảng Hóa đơn tạm tính */
+    .calc-result {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px dashed #cbd5e1;
+        font-size: 0.95rem;
+    }
+
+        .calc-result:last-child {
+            border-bottom: none;
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #dc2626;
+            margin-top: 10px;
+            padding-top: 15px;
+            border-top: 2px solid #fecaca;
+        }
+</style>
+
+<div style="margin-bottom: 25px; display: flex; align-items: center; gap: 15px;">
+    <a href="/Admin/DienNuoc/Index" style="background: white; border: 1px solid #cbd5e1; color: #64748b; padding: 10px 15px; border-radius: 8px; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 8px;">
+        <i data-lucide="arrow-left" style="width: 18px;"></i> Trở lại
+    </a>
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #1e293b; margin: 0;">Hiệu chỉnh Số liệu Tiêu thụ</h2>
+</div>
+
+<div class="card-panel">
+    <form action="/Admin/DienNuoc/Edit" method="post">
+        <input type="hidden" name="DienNuocId" value="@Model?.DienNuocId" />
+
+        @if (ViewBag.DaCoHoaDon == true)
+        {
+            <div style="background: #fef2f2; padding: 20px; border-radius: 12px; border: 1px dashed #ef4444; margin-bottom: 25px; display: flex; align-items: center; gap: 15px; color: #b91c1c;">
+                <i data-lucide="alert-octagon" style="width: 30px; height: 30px;"></i>
+                <div>
+                    <h4 style="margin: 0 0 5px 0; font-size: 1.05rem;">Cảnh báo: Phòng này ĐÃ PHÁT HÀNH HÓA ĐƠN</h4>
+                    <p style="margin: 0; font-size: 0.9rem;">Hệ thống phát hiện Hóa Đơn của tháng này đã được tạo. Nếu bạn sửa số liệu ở đây, hệ thống sẽ <b>CƯỠNG CHẾ CẬP NHẬT LẠI TIỀN</b> trong hóa đơn để đảm bảo dữ liệu khớp nhau.</p>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div style="background: #f0fdf4; padding: 20px; border-radius: 12px; border: 1px dashed #10b981; margin-bottom: 25px; display: flex; align-items: center; gap: 15px; color: #047857;">
+                <i data-lucide="check-circle" style="width: 30px; height: 30px;"></i>
+                <div>
+                    <h4 style="margin: 0 0 5px 0; font-size: 1.05rem;">An toàn: Hóa đơn chưa được tạo</h4>
+                    <p style="margin: 0; font-size: 0.9rem;">Bạn cứ thoải mái sửa đổi số đo thực tế bị sai ở đây và bấm Lưu. Sau khi ưng ý, hãy ra ngoài danh sách bấm <b>Xác nhận Tạo hóa đơn</b>.</p>
+                </div>
+            </div>
+        }
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+
+            <!-- CỘT 1: Cấu hình cơ bản -->
+            <div style="background: #f8fafc; padding: 25px; border-radius: 12px; border: 1px solid #e2e8f0;">
+                <h4 style="margin-top: 0; color: #4f46e5; font-weight: 800; border-bottom: 2px solid #e0e7ff; padding-bottom: 10px; margin-bottom: 20px;"><i data-lucide="home" style="display: inline-block; vertical-align: text-bottom; width: 20px;"></i> Thông Tin Biểu Mẫu (Khóa)</h4>
+
+                <div class="form-group">
+                    <label>Phòng thu tiền</label>
+                    <input type="text" value="@Model?.PhongId" readonly class="form-input" style="background: #eef2ff; font-weight: bold; cursor: not-allowed;" />
+                    <input type="hidden" name="PhongId" value="@Model?.PhongId" />
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="form-group">
+                        <label>Kỳ chốt (Tháng)</label>
+                        <input type="number" value="@Model?.Thang" readonly class="form-input" style="background: #f1f5f9; cursor: not-allowed;" />
+                        <input type="hidden" name="Thang" value="@Model?.Thang" />
+                    </div>
+                    <div class="form-group">
+                        <label>Năm</label>
+                        <input type="number" value="@Model?.Nam" readonly class="form-input" style="background: #f1f5f9; cursor: not-allowed;" />
+                        <input type="hidden" name="Nam" value="@Model?.Nam" />
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="form-group">
+                        <label>Đơn giá Điện (VNĐ)</label>
+                        <input type="number" name="DonGiaDien" id="donGiaDien" value="@Model?.DonGiaDien" required class="form-input auto-calc" />
+                    </div>
+                    <div class="form-group">
+                        <label>Đơn giá Nước (VNĐ)</label>
+                        <input type="number" name="DonGiaNuoc" id="donGiaNuoc" value="@Model?.DonGiaNuoc" required class="form-input auto-calc" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- CỘT 2: Tùy chỉnh & Hiển thị Hóa Đơn Sinh Ra -->
+            <div style="background: #fff; padding: 25px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <h4 style="margin-top: 0; color: #f59e0b; font-weight: 800; border-bottom: 2px solid #fef3c7; padding-bottom: 10px; margin-bottom: 20px;"><i data-lucide="edit-3" style="display: inline-block; vertical-align: text-bottom; width: 20px;"></i> Nhập Lại Chỉ Số Thực Tế</h4>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="form-group">
+                        <label>Điện Cũ</label>
+                        <input type="number" name="DienCu" id="dienCu" value="@Model?.DienCu" required class="form-input auto-calc" />
+                    </div>
+                    <div class="form-group">
+                        <label style="color: #b91c1c;">Điện Mới</label>
+                        <input type="number" name="DienMoi" id="dienMoi" value="@Model?.DienMoi" required class="form-input auto-calc" style="border-color: #fca5a5; background: #fef2f2;" />
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px;">
+                    <div class="form-group">
+                        <label>Nước Cũ</label>
+                        <input type="number" name="NuocCu" id="nuocCu" value="@Model?.NuocCu" required class="form-input auto-calc" />
+                    </div>
+                    <div class="form-group">
+                        <label style="color: #0369a1;">Nước Mới</label>
+                        <input type="number" name="NuocMoi" id="nuocMoi" value="@Model?.NuocMoi" required class="form-input auto-calc" style="border-color: #7dd3fc; background: #f0f9ff;" />
+                    </div>
+                </div>
+
+                <!-- BẢNG TÍNH TIỀN HÓA ĐƠN TRỰC TIẾP -->
+                <h4 style="margin-top: 25px; color: #10b981; font-weight: 800; border-bottom: 2px solid #dcfce7; padding-bottom: 10px; margin-bottom: 15px;"><i data-lucide="calculator" style="display: inline-block; vertical-align: text-bottom; width: 20px;"></i> Dự kiến Tiền phát sinh</h4>
+                <div style="background: #f8fafc; padding: 15px; border-radius: 8px; border: 1px dashed #cbd5e1;">
+                    <div class="calc-result">
+                        <span>Tiêu thụ Điện (<span id="ttDien" style="font-weight: 700; color: #2563eb;">0</span>)</span>
+                        <span id="tienDien" style="font-weight: 700; color: #475569;">0 đ</span>
+                    </div>
+                    <div class="calc-result">
+                        <span>Tiêu thụ Nước (<span id="ttNuoc" style="font-weight: 700; color: #0284c7;">0</span>)</span>
+                        <span id="tienNuoc" style="font-weight: 700; color: #475569;">0 đ</span>
+                    </div>
+                    <div class="calc-result">
+                        <span>TỔNG CỘNG</span>
+                        <span id="tongTien">0 đ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: right; border-top: 1px solid #f1f5f9; padding-top: 25px; margin-top: 20px;">
+            <button type="submit" style="background: #3b82f6; color: white; padding: 12px 40px; font-size: 1.05rem; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);">
+                <i data-lucide="save"></i> Ghi nhận Chỉ số sửa đổi
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+        if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+
+        // SCRIPT TÍNH TOÁN TIỀN REAL-TIME KHI GÕ SỐ
+        document.addEventListener('DOMContentLoaded', function() {
+            const dienCu = document.getElementById('dienCu');
+            const dienMoi = document.getElementById('dienMoi');
+            const nuocCu = document.getElementById('nuocCu');
+            const nuocMoi = document.getElementById('nuocMoi');
+            const donGiaDien = document.getElementById('donGiaDien');
+            const donGiaNuoc = document.getElementById('donGiaNuoc');
+
+            const ttDien = document.getElementById('ttDien');
+            const ttNuoc = document.getElementById('ttNuoc');
+            const tienDien = document.getElementById('tienDien');
+            const tienNuoc = document.getElementById('tienNuoc');
+            const tongTien = document.getElementById('tongTien');
+
+            const formatVND = num => new Intl.NumberFormat('vi-VN').format(num) + ' đ';
+
+            function calculateInvoice() {
+                let dc = parseFloat(dienCu.value) || 0;
+                let dm = parseFloat(dienMoi.value) || 0;
+                let nc = parseFloat(nuocCu.value) || 0;
+                let nm = parseFloat(nuocMoi.value) || 0;
+                let gd = parseFloat(donGiaDien.value) || 0;
+                let gn = parseFloat(donGiaNuoc.value) || 0;
+
+                let td = Math.max(0, dm - dc);
+                let tn = Math.max(0, nm - nc);
+
+                let sumDien = td * gd;
+                let sumNuoc = tn * gn;
+
+                ttDien.innerText = td + ' kWh';
+                ttNuoc.innerText = tn + ' m³';
+                tienDien.innerText = formatVND(sumDien);
+                tienNuoc.innerText = formatVND(sumNuoc);
+                tongTien.innerText = formatVND(sumDien + sumNuoc);
+            }
+
+            document.querySelectorAll('.auto-calc').forEach(el => {
+                el.addEventListener('input', calculateInvoice);
+            });
+
+            calculateInvoice();
+        });
+    </script>
+}

@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "File Manager"; // Tiêu đề trang [cite: 315]
+}
+
+<div id="elfinder"></div>
+
+@section Scripts {
+    <link rel="stylesheet" href="~/Admin/lib/jqueryui/themes/themes/base/theme.css" />
+    <link rel="stylesheet" href="~/Admin/lib/elFinder/css/elfinder.full.css" />
+    <link rel="stylesheet" href="~/Admin/lib/elFinder/css/theme.min.css" />
+
+    <script src="~/Admin/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/Admin/lib/jqueryui/jquery-ui.min.js"></script>
+    <script src="~/Admin/lib/elFinder/js/elfinder.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var options = {
+                baseUrl: "/Admin/lib/elFinder/",
+                url: "/Admin/el-finder-file-system/connector", // Đường dẫn nối đến FileSystemController [cite: 364]
+                rememberLastDir: false,
+                commands: [
+                    'open', 'reload', 'home', 'up', 'back', 'forward', 'getfile', 'quicklook',
+                    'download', 'rm', 'duplicate', 'rename', 'mkdir', 'mkfile', 'upload', 'copy',
+                    'cut', 'paste', 'edit', 'extract', 'archive', 'search', 'info', 'view', 'help', 'fullscreen'
+                ],
+                lang: 'vi', // Chuyển giao diện sang Tiếng Việt
+                uiOptions: {
+                    toolbar: [
+                        ['back', 'forward'],
+                        ['reload'],
+                        ['home', 'up'],
+                        ['mkdir', 'mkfile', 'upload'],
+                        ['open', 'download', 'getfile'],
+                        ['info'],
+                        ['quicklook'],
+                        ['copy', 'cut', 'paste'],
+                        ['rm'],
+                        ['duplicate', 'rename', 'edit', 'resize'],
+                        ['extract', 'archive'],
+                        ['search'],
+                        ['view', 'sort']
+                    ]
+                }
+            };
+            // Khởi tạo elFinder vào thẻ div phía trên
+            $('#elfinder').elfinder(options).elfinder('instance');
+        });
+    </script>
+}

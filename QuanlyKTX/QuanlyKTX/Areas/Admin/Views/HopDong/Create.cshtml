@@ -1,0 +1,177 @@
+﻿@model QuanlyKTX.Models.HopDong
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Tạo Hợp đồng Mới";
+}
+
+<div style="margin-bottom: 25px; display: flex; justify-content: space-between; align-items: center;">
+    <div style="display: flex; align-items: center; gap: 15px;">
+        <a href="/Admin/HopDong/Index" style="background: white; border: 1px solid #cbd5e1; color: #64748b; padding: 8px 15px; border-radius: 8px; text-decoration: none; display: flex; align-items: center; gap: 5px; font-weight: 600;">
+            <i data-lucide="arrow-left" style="width: 18px;"></i> Trở lại
+        </a>
+        <h2 style="font-size: 1.5rem; font-weight: 800; color: #1e293b; margin: 0;">Khởi Tạo Hợp Đồng Tự Động</h2>
+    </div>
+</div>
+
+<div style="background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); padding: 30px;">
+    @if (TempData["Error"] != null)
+    {
+        <div style="padding: 15px; margin-bottom: 20px; background: #fee2e2; color: #dc2626; border-radius: 8px; font-weight: 600; display: flex; align-items: center; gap: 8px;">
+            <i data-lucide="alert-circle" style="width: 20px;"></i> @TempData["Error"]
+        </div>
+    }
+
+    <form action="/Admin/HopDong/Create" method="post">
+
+        <h4 style="font-size: 14px; font-weight: 700; color: #4f46e5; text-transform: uppercase; margin-bottom: 20px; border-bottom: 2px solid #e0e7ff; padding-bottom: 10px;">I. Thông Tin Bắt Buộc</h4>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px;">
+            <div>
+                <label style="font-weight: 600; margin-bottom: 8px; display: block; color: #475569;">Mã Hợp Đồng (Tự động sinh)</label>
+                <!-- Dùng ViewBag để gán mã, thêm readonly để người dùng không sửa bậy -->
+                <input type="text" name="MaHopDong" value="@ViewBag.AutoMaHD" readonly class="form-control" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px dashed #6366f1; background: #eef2ff; color: #4f46e5; font-weight: bold; cursor: not-allowed;" />
+            </div>
+
+            <div>
+                <label style="font-weight: 600; margin-bottom: 8px; display: block; color: #475569;">Trạng thái Hợp đồng ban đầu</label>
+                <select name="TrangThai" class="form-control" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #cbd5e1;">
+                    <option value="Còn hiệu lực">Còn hiệu lực (Duyệt ngay)</option>
+                    <option value="Chờ duyệt">Chờ duyệt (Chưa hiệu lực)</option>
+                </select>
+            </div>
+
+            <div>
+                <label style="font-weight: 600; margin-bottom: 8px; display: block; color: #475569;">Chọn Sinh Viên <span style="color: red">*</span></label>
+                <select name="Mssv" required class="form-control" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #cbd5e1;">
+                    <option value="">-- Chọn sinh viên ký hợp đồng --</option>
+                    @if (ViewBag.SinhVienList != null)
+                    {
+                        foreach (var item in ViewBag.SinhVienList)
+                        {
+                            <option value="@item.Value">@item.Text (@item.Value)</option>
+                        }
+                    }
+                </select>
+            </div>
+
+            <div>
+                <label style="font-weight: 600; margin-bottom: 8px; display: block; color: #475569;">Chọn Phòng <span style="color: red">*</span></label>
+                <select name="PhongId" required class="form-control" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #cbd5e1;">
+                    <option value="">-- Chọn phòng trống --</option>
+                    @if (ViewBag.PhongList != null)
+                    {
+                        foreach (var item in ViewBag.PhongList)
+                        {
+                            <option value="@item.Value">Phòng @item.Text</option>
+                        }
+                    }
+                </select>
+            </div>
+
+            <div>
+                <label style="font-weight: 600; margin-bottom: 8px; display: block; color: #475569;">Ngày Bắt Đầu <span style="color: red">*</span></label>
+                <input type="date" id="ngayBatDau" name="NgayBatDau" required class="form-control" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #cbd5e1;" />
+            </div>
+
+            <div>
+                <label style="font-weight: 600; margin-bottom: 8px; display: block; color: #475569;">Ngày Kết Thúc <span style="color: red">*</span></label>
+                <input type="date" id="ngayKetThuc" name="NgayKetThuc" required class="form-control" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #cbd5e1;" />
+            </div>
+
+            <div>
+                <label style="font-weight: 600; margin-bottom: 8px; display: block; color: #475569;">Thời hạn (Tháng) - Tự động tính</label>
+                <input type="number" id="soThang" name="ThoiHanThang" class="form-control" placeholder="Hệ thống tự tính..." style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #cbd5e1; background: #f8fafc;" />
+            </div>
+
+            <div>
+                <label style="font-weight: 600; margin-bottom: 8px; display: block; color: #475569;">Giá phòng / Tháng (VNĐ)</label>
+                <input type="number" id="giaPhong" name="GiaPhongThang" class="form-control" placeholder="Nhập giá tiền 1 tháng..." style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #cbd5e1;" />
+            </div>
+
+            <div>
+                <label style="font-weight: 600; margin-bottom: 8px; display: block; color: #475569;">Tiền Cọc (VNĐ)</label>
+                <input type="number" name="TienCoc" class="form-control" placeholder="Ví dụ: 1000000" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #cbd5e1;" />
+            </div>
+
+            <!-- KHU VỰC HIỂN THỊ TỔNG TIỀN TỰ ĐỘNG -->
+            <div style="background: #dcfce7; padding: 15px; border-radius: 8px; border: 1px dashed #16a34a; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <span style="font-size: 0.9rem; color: #16a34a; font-weight: 600; text-transform: uppercase;">Ước tính Tổng tiền HĐ</span>
+                <span id="hienThiTongTien" style="font-size: 1.5rem; font-weight: 800; color: #15803d; margin-top: 5px;">0 đ</span>
+            </div>
+
+            <div style="grid-column: 1 / -1;">
+                <label style="font-weight: 600; margin-bottom: 8px; display: block; color: #475569;">Ghi chú / Điều khoản bổ sung</label>
+                <textarea name="GhiChu" class="form-control" placeholder="Nhập ghi chú (nếu có)..." style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #cbd5e1;" rows="3"></textarea>
+            </div>
+        </div>
+
+        <div style="text-align: right; padding-top: 20px; border-top: 1px solid #f1f5f9;">
+            <button type="submit" style="background: #4f46e5; color: white; padding: 12px 40px; font-size: 1rem; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);">
+                <i data-lucide="plus-circle" style="width: 20px;"></i> Khởi tạo Hợp đồng
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+        if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+
+        // SCRIPT TỰ ĐỘNG TÍNH TOÁN
+        document.addEventListener('DOMContentLoaded', function() {
+            const dateStart = document.getElementById('ngayBatDau');
+            const dateEnd = document.getElementById('ngayKetThuc');
+            const inputThang = document.getElementById('soThang');
+            const inputGia = document.getElementById('giaPhong');
+            const txtTongTien = document.getElementById('hienThiTongTien');
+
+            // Hàm format tiền Việt Nam
+            const formatVND = (money) => new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(money);
+
+            // Hàm tính số tháng
+            function tinhSoThang() {
+                if (dateStart.value && dateEnd.value) {
+                    let start = new Date(dateStart.value);
+                    let end = new Date(dateEnd.value);
+
+                    if (end > start) {
+                        // Tính chênh lệch tháng
+                        let months = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
+                        // Nếu số ngày của ngày kết thúc nhỏ hơn ngày bắt đầu, trừ đi 1 tháng
+                        if (end.getDate() < start.getDate()) {
+                            months--;
+                        }
+                        if (months <= 0) months = 1; // Mặc định tối thiểu 1 tháng
+
+                        inputThang.value = months;
+                        tinhTongTien(); // Cập nhật luôn tiền
+                    }
+                }
+            }
+
+            // Hàm tính tổng tiền
+            function tinhTongTien() {
+                let soThang = parseInt(inputThang.value) || 0;
+                let giaPhong = parseInt(inputGia.value) || 0;
+
+                let tongTien = soThang * giaPhong;
+                txtTongTien.innerText = formatVND(tongTien);
+            }
+
+            // Lắng nghe sự kiện thay đổi dữ liệu
+            dateStart.addEventListener('change', tinhSoThang);
+            dateEnd.addEventListener('change', tinhSoThang);
+            inputThang.addEventListener('input', tinhTongTien); // Cho phép sửa tay số tháng nếu muốn
+            inputGia.addEventListener('input', tinhTongTien);
+        });
+    </script>
+}
+```eof
+
+### Cách test sự thông minh này:
+1. Nhấn `Ctrl + Shift + B` để build. F5 trình duyệt.
+2. Ông sẽ thấy ô **Mã hợp đồng** đã được điền sẵn chữ màu tím xanh rất xịn (không xóa được).
+3. Ông thử chọn **Ngày bắt đầu** là `01/05/2026`, **Ngày kết thúc** là `01/10/2026`. Ngay lập tức ô **Thời hạn** tự nhảy lên số `5`.
+4. Ông gõ vào ô **Giá phòng** là `1000000`, lập tức cái bảng xanh xanh bên cạnh nhảy chữ **5.000.000 đ**.
+
+Khách thuê KTX nhìn vào cái là biết ngay phải đóng bao nhiêu tiền, quản lý nhàn tênh luôn ông ạ!
