@@ -11,14 +11,11 @@ namespace QuanlyKTX.Areas.Admin.Controllers
     public class FileSystemController : Controller
     {
         IWebHostEnvironment _env;
+
         public FileSystemController(IWebHostEnvironment env) => _env = env;
 
-        [Route("Index")]
-        public IActionResult Index()
-        {
-            return View();
-        }
-
+        // URL để client-side kết nối đến backend
+        // /el-finder-file-system/connector
         [Route("connector")]
         public async Task<IActionResult> Connector()
         {
@@ -27,13 +24,9 @@ namespace QuanlyKTX.Areas.Admin.Controllers
             if (result is JsonResult)
             {
                 var json = result as JsonResult;
-                // ĐIỂM ĂN TIỀN 1: Bổ sung ép kiểu "application/json"
-                return Content(JsonSerializer.Serialize(json.Value), json.ContentType ?? "application/json");
+                return Content(JsonSerializer.Serialize(json.Value), json.ContentType);
             }
-            else
-            {
-                return Json(result);
-            }
+            return result;
         }
 
         [Route("thumb/{hash}")]
@@ -45,29 +38,36 @@ namespace QuanlyKTX.Areas.Admin.Controllers
 
         private Connector GetConnector()
         {
-            string pathroot = "files";
             var driver = new FileSystemDriver();
-            string absoluteUrl = UriHelper.BuildAbsolute(Request.Scheme, Request.Host);
+
+            string absoluteUrl = UriHelper.BuildAbsolute(
+                Request.Scheme, Request.Host);
             var uri = new Uri(absoluteUrl);
-            string rootDirectory = Path.Combine(_env.WebRootPath, pathroot);
 
-            // ĐIỂM ĂN TIỀN 2: Tự động tạo thư mục nếu chưa có
-            if (!Directory.Exists(rootDirectory)) Directory.CreateDirectory(rootDirectory);
+            // Thư mục gốc để lưu file upload
+            string rootDirectory = Path.Combine(_env.WebRootPath, "files");
 
-            string url = $"/{pathroot}/";
-            string urlthumb = $"{uri.Scheme}://Admin/el-finder-file-system/thumb/";
+            // Tạo thư mục nếu chưa có
+            if (!Directory.Exists(rootDirectory))
+                Directory.CreateDirectory(rootDirectory);
 
-            var root = new RootVolume(rootDirectory, url, urlthumb)
+            var root = new RootVolume(
+                rootDirectory,
+                $"{uri.Scheme}://{uri.Host}:{uri.Port}/files/",
+                $"{uri.Scheme}://{uri.Host}:{uri.Port}/Admin/el-finder-file-system/thumb/")
             {
+                // Không cho phép xóa thư mục gốc
                 IsReadOnly = false,
                 IsLocked = false,
-                Alias = "Kho Ảnh Sinh Viên",
-                ThumbnailSize = 100,
+                Alias = "Files",
+                MaxUploadSizeInKb = 2048, // 2MB
             };
 
             driver.AddRoot(root);
+
             return new Connector(driver)
             {
+                // Giới hạn loại file được upload
                 MimeDetect = MimeDetectOption.Internal
             };
         }

@@ -2,15 +2,89 @@
 
 @if (Model.LoadLibrary)
 {
-    <script src="~/Admin/lib/snote/jquery.min.js"></script>
-    <script src="~/Admin/lib/snote/bootstrap.bundle.min.js"></script>
-    <link href="~/Admin/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/admin/lib/snote/jquery.min.js"></script>
+    <script src="~/admin/lib/snote/bootstrap.bundle.min.js"></script>
+    <link href="~/admin/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/admin/lib/snote/summernote-bs4.min.js"></script>
+    <link rel="stylesheet" href="~/admin/lib/snote/summernote-bs4.min.css" />
 
-    <link href="~/Admin/lib/jqueryui/themes/themes/base/theme.css" rel="stylesheet" />
-    <link href="~/Admin/lib/jqueryui/themes/themes/base/jquery-ui.css" rel="stylesheet" />
-    <link href="~/Admin/lib/elFinder/css/elfinder.full.css" rel="stylesheet" />
-    <link href="~/Admin/lib/elFinder/css/theme.css" rel="stylesheet" />
+    <link href="~/admin/lib/jueryui/themes/base/theme.css" rel="stylesheet" />
+    <link href="~/admin/lib/jueryui/themes/jquery-ui.css" rel="stylesheet" />
+    <link href="~/admin/lib/elfinder/css/elfinder.full.css" rel="stylesheet" />
+    <link href="~/admin/lib/elfinder/css/theme.css" rel="stylesheet" />
 
-    <script src="~/Admin/lib/jqueryui/jquery-ui.js"></script>
-    <script src="~/Admin/lib/elFinder/js/elfinder.min.js"></script>
+    <script src="~/admin/lib/jueryui/jquery-ui.min.js"></script>
+    <script src="~/admin/lib/elfinder/js/elfinder.min.js"></script>
 }
+
+<script>
+    (function (factory) {
+        if (typeof define === 'function' && define.amd) {
+            define(['jquery'], factory);
+        } else if (typeof module === 'object' && module.exports) {
+            module.exports = factory(require('jquery'));
+        } else {
+            factory(window.jQuery);
+        }
+    }(function ($) {
+        $.extend($.summernote.plugins, {
+            // Tao plugin ten elfinder
+            'elfinder': function (context) {
+                var ui = $.summernote.ui;
+                var options = context.options;
+
+                this.initialize = function () {
+                    var $editor = context.layoutInfo.editor;
+
+                    // Tạo button elfinder trong toolbar
+                    var $btn = ui.button({
+                        contents: '<i class="note-icon-picture"/>',
+                        tooltip: 'Chèn ảnh từ Files',
+                        click: function () {
+                            var $modal = $('<div class="modal fade" tabindex="-1" role="dialog">' +
+                                '<div class="modal-dialog modal-xl" role="document">' +
+                                '<div class="modal-content">' +
+                                '<div class="modal-header">' +
+                                '<h5 class="modal-title">File Manager</h5>' +
+                                '<button type="button" class="close" data-dismiss="modal">' +
+                                '<span>&times;</span></button></div>' +
+                                '<div class="modal-body"><div id="elfinderModal"></div></div>' +
+                                '</div></div></div>');
+
+                            $('body').append($modal);
+                            $modal.modal('show');
+
+                            $modal.on('shown.bs.modal', function () {
+                                $('#elfinderModal').elfinder({
+                                    url: '/Admin/el-finder-file-system/connector',
+                                    getFileCallback: function (file) {
+                                        context.invoke('editor.insertImage', file.url);
+                                        $modal.modal('hide');
+                                    }
+                                });
+                            });
+
+                            $modal.on('hidden.bs.modal', function () {
+                                $modal.remove();
+                            });
+                        }
+                    }).render();
+
+                    this.$btn = $btn;
+                };
+            }
+        });
+
+        $(document).ready(function () {
+            $('#@Model.IDEditor').summernote({
+                height: @Model.Height,
+                toolbar: @Html.Raw(Model.toolBar),
+                callbacks: {
+                    onImageUpload: function (files) {
+                        // Xử lý upload ảnh trực tiếp nếu cần
+                    }
+                }
+            });
+        });
+    }));
+</script>

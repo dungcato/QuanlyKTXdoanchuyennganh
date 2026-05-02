@@ -475,15 +475,16 @@
 </div>
 
 @section Scripts {
-    <!-- THÊM THƯ VIỆN ELFINDER CHO PHẦN CHỌN ẢNH -->
     <script src="~/admin/lib/snote/jquery.min.js"></script>
-    <script src="~/admin/lib/jqueryui/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="~/admin/lib/jqueryui/themes/base/theme.css" />
-    <link rel="stylesheet" href="~/admin/lib/jqueryui/themes/base/jquery-ui.css" />
 
-    <script src="~/admin/lib/elFinder/js/elfinder.min.js"></script>
+        {{-- jQuery UI - dùng CDN cho chắc vì theme smoothness là bắt buộc --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.min.css" />
+    <script src="~/admin/lib/jqueryui/jquery-ui.min.js"></script>
+
     <link rel="stylesheet" href="~/admin/lib/elFinder/css/elfinder.full.css" />
     <link rel="stylesheet" href="~/admin/lib/elFinder/css/theme.min.css" />
+    <script src="~/admin/lib/elFinder/js/elfinder.min.js"></script>
+
 
     <script>
         if (typeof lucide !== 'undefined') { lucide.createIcons(); }

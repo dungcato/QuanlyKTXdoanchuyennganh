@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrator\\Desktop\\QuanlyKTX\\QuanlyKTXdoanchuyennganh\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX.csproj": {}
+    "C:\\Users\\Administrator\\Desktop\\QuanLyKTX\\QuanlyKTXdoanchuyennganh\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrator\\Desktop\\QuanlyKTX\\QuanlyKTXdoanchuyennganh\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX.csproj": {
+    "C:\\Users\\Administrator\\Desktop\\QuanLyKTX\\QuanlyKTXdoanchuyennganh\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\QuanlyKTX\\QuanlyKTXdoanchuyennganh\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\QuanLyKTX\\QuanlyKTXdoanchuyennganh\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX.csproj",
         "projectName": "QuanlyKTX",
-        "projectPath": "C:\\Users\\Administrator\\Desktop\\QuanlyKTX\\QuanlyKTXdoanchuyennganh\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX.csproj",
+        "projectPath": "C:\\Users\\Administrator\\Desktop\\QuanLyKTX\\QuanlyKTXdoanchuyennganh\\QuanlyKTX\\QuanlyKTX\\QuanlyKTX.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Administrator\\Desktop\\QuanlyKTX\\QuanlyKTXdoanchuyennganh\\QuanlyKTX\\QuanlyKTX\\obj\\",
         "projectStyle": "PackageReference",
