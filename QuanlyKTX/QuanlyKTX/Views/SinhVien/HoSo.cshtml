@@ -5,10 +5,16 @@
 }
 
 <div class="container-fluid p-0">
+    @* Quan trọng: enctype="multipart/form-data" để gửi được file *@
     <form action="/SinhVien/LuuHoSo" method="POST" enctype="multipart/form-data">
+        @* Các trường ẩn để giữ dữ liệu và định danh *@
+        <input type="hidden" name="Mssv" value="@Model.Mssv" />
+        <input type="hidden" name="FaceIdData" value="@Model.FaceIdData" />
 
         <div class="profile-header-card dashboard-fade-in">
-            <div class="profile-cover" id="coverDisplay" style="background-image: url('@(string.IsNullOrEmpty(Model.FaceIdData) ? "/images/default-cover.jpg" : Model.FaceIdData)'); position: relative;">
+            @* Hiển thị Ảnh bìa *@
+            <div class="profile-cover" id="coverDisplay"
+                 style="background-image: url('@(string.IsNullOrEmpty(Model.FaceIdData) ? "/images/default-cover.jpg" : Model.FaceIdData)'); position: relative; background-size: cover; background-position: center;">
                 <label for="coverInput" style="position: absolute; right: 20px; bottom: 20px; background: rgba(0,0,0,0.5); color: white; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-size: 13px;">
                     <i data-lucide="image" style="width: 16px; vertical-align: middle;"></i> Đổi ảnh bìa
                 </label>
@@ -16,7 +22,10 @@
             </div>
 
             <div class="profile-avatar-wrapper">
-                <img id="avatarDisplay" src="https://ui-avatars.com/api/?name=@Model.HoTen&background=1e3c72&color=fff&size=200&bold=true" alt="Avatar">
+                @* Hiển thị Ảnh đại diện - Ưu tiên lấy từ FaceIdData *@
+                <img id="avatarDisplay"
+                     src="@(string.IsNullOrEmpty(Model.FaceIdData) ? "https://ui-avatars.com/api/?name=" + Model.HoTen + "&background=1e3c72&color=fff&size=200&bold=true" : Model.FaceIdData)"
+                     alt="Avatar">
                 <label for="avatarInput" class="edit-avatar-btn" title="Cập nhật ảnh đại diện" style="cursor: pointer;">
                     <i data-lucide="camera" style="width: 18px; height: 18px;"></i>
                 </label>
@@ -39,25 +48,28 @@
 
                     <div class="form-group">
                         <label class="form-label">Mã Sinh Viên (MSSV)</label>
-                        <input type="text" class="form-input" name="Mssv" value="@Model.Mssv" readonly>
+                        <input type="text" class="form-input" value="@Model.Mssv" readonly style="background-color: #f8fafc;">
                     </div>
 
                     <div class="form-group">
                         <label class="form-label">Căn cước công dân (CCCD)</label>
-                        <input type="text" class="form-input" name="Cccd" value="@Model.Cccd" readonly>
+                        <input type="text" class="form-input" name="Cccd" value="@Model.Cccd" readonly style="background-color: #f8fafc;">
                     </div>
 
-                    <button type="submit" class="btn-primary-custom"><i data-lucide="save"></i> Lưu thay đổi</button>
+                    <button type="submit" class="btn-primary-custom" style="width: 100%; margin-top: 10px;">
+                        <i data-lucide="save"></i> Lưu thay đổi
+                    </button>
                 </div>
             </div>
 
             <div class="profile-main-content">
+                @* Thông tin cá nhân *@
                 <div class="info-card">
                     <div class="info-card-header">
                         <div class="header-icon-box" style="background: #fef2f2; color: #ef4444;"><i data-lucide="user"></i></div>
-                        <h3>Thông tin cá nhân</h3>
+                        <h3>Thông tin cơ bản</h3>
                     </div>
-                    <div class="form-grid">
+                    <div class="form-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                         <div class="form-group">
                             <label class="form-label">Họ và Tên</label>
                             <input type="text" class="form-input" name="HoTen" value="@Model.HoTen" required>
@@ -79,38 +91,41 @@
                         </div>
                     </div>
                 </div>
-                <div class="info-card" style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-                    <h3 style="margin-top: 0; margin-bottom: 25px; font-size: 18px; display: flex; align-items: center; gap: 10px;">
+
+                @* Liên hệ *@
+                <div class="info-card" style="margin-top: 20px;">
+                    <h3 style="margin-bottom: 20px; font-size: 18px; display: flex; align-items: center; gap: 10px;">
                         <i data-lucide="mail" style="color: #eab308;"></i> Liên hệ & Quê quán
                     </h3>
                     <div class="form-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                         <div class="form-group">
                             <label class="form-label">Số điện thoại</label>
-                            <input type="text" class="form-input" name="Sdt" value="@Model.Sdt" style="width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: 10px;">
+                            <input type="text" class="form-input" name="Sdt" value="@Model.Sdt">
                         </div>
                         <div class="form-group">
                             <label class="form-label">Email</label>
-                            <input type="email" class="form-input" name="Email" value="@Model.Email" style="width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: 10px;">
+                            <input type="email" class="form-input" name="Email" value="@Model.Email">
                         </div>
                         <div class="form-group" style="grid-column: span 2;">
                             <label class="form-label">Quê quán</label>
-                            <input type="text" class="form-input" name="QueQuan" value="@Model.QueQuan" style="width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: 10px;">
+                            <input type="text" class="form-input" name="QueQuan" value="@Model.QueQuan">
                         </div>
                     </div>
                 </div>
 
-                <div class="info-card" style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-                    <h3 style="margin-top: 0; margin-bottom: 25px; font-size: 18px; display: flex; align-items: center; gap: 10px;">
+                @* Người thân *@
+                <div class="info-card" style="margin-top: 20px;">
+                    <h3 style="margin-bottom: 20px; font-size: 18px; display: flex; align-items: center; gap: 10px;">
                         <i data-lucide="users" style="color: #4f46e5;"></i> Thông tin người thân
                     </h3>
                     <div class="form-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                         <div class="form-group">
                             <label class="form-label">Họ tên người thân</label>
-                            <input type="text" class="form-input" name="HoTenNguoiThan" value="@Model.HoTenNguoiThan" style="width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: 10px;">
+                            <input type="text" class="form-input" name="HoTenNguoiThan" value="@Model.HoTenNguoiThan">
                         </div>
                         <div class="form-group">
                             <label class="form-label">SĐT người thân</label>
-                            <input type="text" class="form-input" name="SdtnguoiThan" value="@Model.SdtnguoiThan" style="width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: 10px;">
+                            <input type="text" class="form-input" name="SdtnguoiThan" value="@Model.SdtnguoiThan">
                         </div>
                     </div>
                 </div>
@@ -120,7 +135,7 @@
 </div>
 
 <script>
-    // Hàm xem trước ảnh khi chọn file
+    // Hàm xem trước ảnh khi chọn file từ máy tính
     function previewImage(input, displayId) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();

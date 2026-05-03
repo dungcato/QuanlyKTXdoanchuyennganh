@@ -1,0 +1,309 @@
+﻿@model QuanlyKTX.Models.ThongBao
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = Model.TieuDe;
+}
+
+<style>
+    /* Tổng thể trang */
+    .notification-page {
+        padding: 40px 20px;
+        background: #f8fafc;
+        min-height: 100vh;
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+
+    /* Thẻ Card chính */
+    .main-card {
+        background: white;
+        border-radius: 24px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.04);
+        max-width: 1050px;
+        margin: 0 auto;
+        overflow: hidden;
+        border: 1px solid rgba(226, 232, 240, 0.8);
+    }
+
+    /* Header thông báo */
+    .card-header-custom {
+        padding: 50px 50px 30px 50px;
+        border-bottom: 1px solid #f1f5f9;
+        background: linear-gradient(to bottom, #ffffff, #fafafa);
+    }
+
+    /* Nhãn (Badges) */
+    .badge-wrapper {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 25px;
+    }
+
+    .badge-item {
+        padding: 8px 18px;
+        border-radius: 12px;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .badge-TaiChinh {
+        background: #ecfdf5;
+        color: #065f46;
+        border: 1px solid #6ee7b7;
+    }
+
+    .badge-BaoTri {
+        background: #fff7ed;
+        color: #9a3412;
+        border: 1px solid #fdba74;
+    }
+
+    .badge-SuKien {
+        background: #eff6ff;
+        color: #1e40af;
+        border: 1px solid #93c5fd;
+    }
+
+    .badge-urgent {
+        background: #fff1f2;
+        color: #e11d48;
+        border: 1px solid #fda4af;
+    }
+
+    .title-tb {
+        font-size: 32px;
+        font-weight: 800;
+        color: #0f172a;
+        margin-bottom: 20px;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+    }
+
+    .meta-tb {
+        display: flex;
+        gap: 30px;
+        color: #64748b;
+        font-size: 14px;
+    }
+
+    /* Nội dung chi tiết */
+    .content-tb {
+        padding: 40px 50px;
+        color: #334155;
+        line-height: 1.8;
+        font-size: 16px;
+    }
+
+        .content-tb b, .content-tb strong {
+            color: #0f172a;
+            font-weight: 700;
+        }
+
+        /* Bảng dữ liệu trong nội dung */
+        .content-tb table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 25px 0;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+        }
+
+        .content-tb th {
+            background: #f8fafc;
+            padding: 14px;
+            text-align: left;
+            font-size: 14px;
+            color: #475569;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .content-tb td {
+            padding: 14px;
+            border-bottom: 1px solid #f1f5f9;
+            font-size: 15px;
+        }
+
+    /* File đính kèm */
+    .attachment-card {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        border: 1px solid #e2e8f0;
+        border-radius: 16px;
+        background: #fafafa;
+        margin-top: 40px;
+        transition: all 0.3s ease;
+    }
+
+        .attachment-card:hover {
+            border-color: #6366f1;
+            background: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+    /* Footer nút bấm */
+    .footer-actions {
+        padding: 30px 50px;
+        background: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #f1f5f9;
+    }
+
+    .btn-custom-tb {
+        padding: 12px 28px;
+        border-radius: 14px;
+        font-weight: 700;
+        font-size: 14px;
+        transition: all 0.3s;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        border: none;
+        cursor: pointer;
+        text-decoration: none !important;
+    }
+
+    .btn-back {
+        background: #fff;
+        color: #64748b;
+        border: 1px solid #e2e8f0;
+    }
+
+        .btn-back:hover {
+            background: #f8fafc;
+            color: #1e293b;
+        }
+
+    .btn-primary-tb {
+        background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        color: white;
+        box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.4);
+    }
+
+        .btn-primary-tb:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -5px rgba(79, 70, 229, 0.5);
+            filter: brightness(1.1);
+        }
+
+    .btn-print {
+        background: #f1f5f9;
+        color: #475569;
+    }
+
+        .btn-print:hover {
+            background: #e2e8f0;
+        }
+
+    /* Hiệu ứng in */
+    @@media print {
+        .notification-page {
+            padding: 0;
+            background: white;
+        }
+
+        .main-card {
+            box-shadow: none;
+            border: none;
+        }
+
+        .footer-actions, .btn-back {
+            display: none;
+        }
+    }
+</style>
+
+<div class="notification-page">
+    <div class="main-card dashboard-fade-in">
+
+        @* Header *@
+        <div class="card-header-custom">
+            <div class="badge-wrapper">
+                <span class="badge-item badge-@(Model.LoaiThongBao == "Tài chính" ? "TaiChinh" : (Model.LoaiThongBao == "Bảo trì" ? "BaoTri" : "SuKien"))">
+                    <i data-lucide="tag" style="width:14px;"></i> @Model.LoaiThongBao
+                </span>
+                <span class="badge-item badge-urgent">
+                    <i data-lucide="alert-circle" style="width:14px;"></i> Quan trọng
+                </span>
+            </div>
+            <h1 class="title-tb">@Model.TieuDe</h1>
+            <div class="meta-tb">
+                <span><i data-lucide="calendar" style="width:16px;"></i> <b>Ngày gửi:</b> @Model.NgayGui?.ToString("dd/MM/yyyy - HH:mm")</span>
+                <span><i data-lucide="user" style="width:16px;"></i> <b>Người gửi:</b> Ban Quản Lý KTX</span>
+            </div>
+        </div>
+
+        @* Nội dung chính lấy từ SQL *@
+        <div class="content-tb">
+            <p style="margin-bottom: 25px;"><b>Kính gửi:</b> @Model.DoiTuongNhan (@Model.ChiTietDoiTuong)</p>
+
+            <div class="main-text">
+                @Html.Raw(Model.NoiDung)
+            </div>
+
+            @* Nếu là Tài chính, gợi ý thêm bảng thông tin (Mày có thể sửa phần này trong DB) *@
+            @if (Model.LoaiThongBao == "Tài chính")
+            {
+                <div style="margin-top: 35px; padding: 25px; background: #fdf2f8; border-radius: 16px; border: 1px solid #fbcfe8;">
+                    <h5 style="color: #9d174d; font-weight: 800; margin-bottom: 15px;">💎 Thông tin thanh toán</h5>
+                    <p style="font-size: 14px; margin-bottom: 5px;">• Ngân hàng: <b>Vietcombank</b></p>
+                    <p style="font-size: 14px; margin-bottom: 5px;">• Số tài khoản: <b>1028 888 888</b></p>
+                    <p style="font-size: 14px;">• Nội dung: <b>KTX @Model.ThongBaoId [MSSV]</b></p>
+                </div>
+            }
+
+            @* File đính kèm *@
+            @if (!string.IsNullOrEmpty(Model.FileDinhKem))
+            {
+                <div class="attachment-card">
+                    <div style="background: #fee2e2; color: #ef4444; padding: 12px; border-radius: 12px;">
+                        <i data-lucide="file-text" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <div style="flex: 1;">
+                        <div style="font-weight: 700; color: #1e293b; font-size: 15px;">@Model.FileDinhKem.Split('/').Last()</div>
+                        <div style="font-size: 13px; color: #64748b;">Tài liệu đính kèm chính thức (.pdf)</div>
+                    </div>
+                    <a href="@Model.FileDinhKem" target="_blank" class="btn btn-sm btn-outline-danger" style="border-radius: 8px; font-weight: 600;">Tải về</a>
+                </div>
+            }
+        </div>
+
+        @* Footer hành động *@
+        <div class="footer-actions">
+            <a asp-action="Index" class="btn-custom-tb btn-back">
+                <i data-lucide="chevron-left"></i> Quay lại
+            </a>
+
+            <div style="display: flex; gap: 12px;">
+                <button class="btn-custom-tb btn-print" onclick="window.print()">
+                    <i data-lucide="printer"></i> In bản sao
+                </button>
+
+                @if (Model.LoaiThongBao == "Tài chính")
+                {
+                    <a asp-action="HoaDon" asp-controller="GiaoDich" class="btn-custom-tb btn-primary-tb">
+                        <i data-lucide="credit-card"></i> Thanh toán ngay
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+        });
+    </script>
+}

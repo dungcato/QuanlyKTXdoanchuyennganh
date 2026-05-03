@@ -54,10 +54,14 @@
                     </div>
                     <div class="invoice-actions">
                         <button class="btn-action-hd btn-view-hd"><span>📄</span> Chi tiết</button>
-                        <button class="btn-action-hd btn-pay-hd"
-                                onclick="openPaymentModal('@item.MaHoaDon', '@item.TongTien?.ToString("N0")')">
-                            <span>💳</span> Thanh toán Ngay
-                        </button>
+
+                        @* Form gửi thẳng dữ liệu sang Controller không qua Modal *@
+                        <form asp-action="ThanhToanVnPay" asp-controller="GiaoDich" method="post" style="display:inline;">
+                            <input type="hidden" name="maHoaDon" value="@item.MaHoaDon" />
+                            <button type="submit" class="btn-action-hd btn-pay-hd" style="border:none; cursor:pointer;">
+                                <span>💳</span> Thanh toán Ngay
+                            </button>
+                        </form>
                     </div>
                 </div>
             }
@@ -80,51 +84,10 @@
     </section>
 </div>
 
-<div class="modal-qr" id="paymentModal">
-    <div class="modal-content-qr">
-        <div class="modal-header-qr">
-            <h3>Xác nhận Thanh toán</h3>
-            <button class="modal-close-qr" onclick="closeModal()">&times;</button>
-        </div>
-        <div class="modal-body-qr">
-            <div class="qr-payment-section">
-                <div class="qr-code-container">
-                    <div class="bank-logo-hd">VNPAY</div>
-                    <p style="margin: 10px 0;">Hóa đơn: <strong id="modalMaHD"></strong></p>
-                    <p>Số tiền: <strong id="modalSoTien" style="color: #e11d48; font-size: 1.2rem;"></strong></p>
-                    <div class="qr-code-image-hd" style="background: #f8fafc; border: 1px dashed #cbd5e1; padding: 20px;">
-                        <i data-lucide="qr-code" style="width: 100px; height: 100px; color: #64748b;"></i>
-                        <p style="font-size: 0.8rem; margin-top: 10px;">Quét mã hoặc nhấn nút bên dưới để chuyển tới cổng VNPAY</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal-footer-qr" style="display: flex; justify-content: space-between; padding: 20px;">
-            <button class="btn-modal-hd secondary" onclick="closeModal()">Quay lại</button>
-
-            <form asp-action="ThanhToanVnPay" asp-controller="GiaoDich" method="post">
-                <input type="hidden" name="maHoaDon" id="hiddenMaHD" />
-                <button type="submit" class="btn-modal-hd primary" style="background: #4f46e5; color: white;">
-                    🚀 Mở Cổng VNPAY TEST
-                </button>
-            </form>
-        </div>
-    </div>
-</div>
+@* Modal đã được lược bỏ để tối ưu hóa tốc độ thanh toán *@
 
 @section Scripts {
     <script>
-        function openPaymentModal(maHD, soTien) {
-            document.getElementById("modalMaHD").innerText = maHD;
-            document.getElementById("modalSoTien").innerText = soTien + "đ";
-            document.getElementById("hiddenMaHD").value = maHD;
-            document.getElementById("paymentModal").classList.add("active");
-        }
-
-        function closeModal() {
-            document.getElementById("paymentModal").classList.remove("active");
-        }
-
         document.addEventListener("DOMContentLoaded", function () {
             if (typeof lucide !== 'undefined') { lucide.createIcons(); }
         });

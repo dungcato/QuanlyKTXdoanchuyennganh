@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QuanlyKTX")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+210f628b5769660903beffd85d92adfdf64ca66d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+47e81fbade5859446ff112d5a772a6264f80a424")]
 [assembly: System.Reflection.AssemblyProductAttribute("QuanlyKTX")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QuanlyKTX")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -52,7 +52,6 @@
         {
             @foreach (var item in Model)
             {
-                // Xác định class để lọc bằng JS
                 string categoryClass = "";
                 string iconName = "bell";
 
@@ -60,34 +59,48 @@
                 else if (item.LoaiThongBao == "Bảo trì") { categoryClass = "maintenance"; iconName = "wrench"; }
                 else { categoryClass = "event"; iconName = "megaphone"; }
 
-                // Giả lập trạng thái unread nếu mới gửi trong 1 ngày
                 string unreadClass = (item.NgayGui >= DateTime.Now.AddDays(-1)) ? "unread" : "";
 
-                <div class="notification-item @categoryClass @unreadClass">
-                    <div class="notification-icon"><i data-lucide="@iconName"></i></div>
-                    <div class="notification-info">
-                        <div class="notification-title">@item.TieuDe</div>
-                        <div class="notification-description" style="font-size: 14px; color: #475569; margin: 5px 0;">
-                            @item.NoiDung
+                @* Bọc toàn bộ notification-item vào thẻ a để nhấn vào đâu cũng xem được chi tiết *@
+                <a asp-action="ChiTiet" asp-controller="ThongBao" asp-route-id="@item.ThongBaoId" style="text-decoration: none; color: inherit; display: block; margin-bottom: 15px;">
+                    <div class="notification-item @categoryClass @unreadClass" style="transition: transform 0.2s, box-shadow 0.2s; cursor: pointer;">
+                        <div class="notification-icon"><i data-lucide="@iconName"></i></div>
+                        <div class="notification-info">
+                            <div class="notification-title" style="font-weight: 700; color: #1e293b;">@item.TieuDe</div>
+                            <div class="notification-description" style="font-size: 14px; color: #64748b; margin: 5px 0; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">
+                                @item.NoiDung
+                            </div>
+                            <div class="notification-meta" style="font-size: 12px;">
+                                <strong>@item.LoaiThongBao</strong> | Lúc: @item.NgayGui?.ToString("HH:mm - dd/MM/yyyy")
+                            </div>
                         </div>
-                        <div class="notification-meta">
-                            <strong>Loại: @item.LoaiThongBao</strong> | Gửi bởi: @item.NguoiGui | Lúc: @item.NgayGui?.ToString("HH:mm - dd/MM/yyyy")
+                        <div class="unread-dot-wrapper">
+                            @if (unreadClass == "unread")
+                            {
+                                <div class="unread-dot"></div>
+                            }
+                            <i data-lucide="chevron-right" style="width: 18px; color: #cbd5e1; margin-left: 10px;"></i>
                         </div>
-                        @if (!string.IsNullOrEmpty(item.FileDinhKem))
-                        {
-                            <a href="@item.FileDinhKem" class="attachment-link" style="font-size: 12px; color: #3b82f6; text-decoration: none; display: block; margin-top: 5px;">
-                                <i data-lucide="paperclip" style="width: 12px; vertical-align: middle;"></i> Xem file đính kèm
-                            </a>
-                        }
                     </div>
-                    <div class="unread-dot-wrapper">
-                        @if (unreadClass == "unread")
-                        {
-                            <div class="unread-dot"></div>
-                        }
-                    </div>
-                </div>
+                </a>
             }
         }
     </section>
 </div>
+
+<style>
+    /* Hiệu ứng khi di chuột vào mục thông báo */
+    .notification-item:hover {
+        background-color: #f8fafc;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+</style>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+        });
+    </script>
+}
